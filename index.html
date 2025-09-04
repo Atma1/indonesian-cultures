@@ -2724,7 +2724,7 @@
           el.setAttribute("tabindex", "0");
           el.setAttribute("aria-selected", i === active ? "true" : "false");
           el.innerHTML = `
-            <div class="qicon"><img src="${
+            <div class="qicon"><img style="width:100%;" src="${
               ASSETS.icons[it.provId] || ""
             }" alt="${it.provId}"></div>
             <div class="qtitle">${it.title}</div>

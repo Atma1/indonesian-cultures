@@ -603,6 +603,7 @@
         filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
       }
       .qtitle {
+        width: 100%;
         color: #e8e6d8;
         font: 700 14px/1.2 Inter;
       }
@@ -2709,11 +2710,6 @@
         if (!qlist) return;
         qlist.innerHTML = "";
         if (!items || items.length === 0) {
-          const none = document.createElement("div");
-          none.className = "qitem";
-          none.setAttribute("aria-selected", "false");
-          none.innerHTML = `<div class="qtitle">Tidak ada hasil</div>`;
-          qlist.appendChild(none);
           return;
         }
 

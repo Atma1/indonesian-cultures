@@ -4,7 +4,7 @@ import { PROVINCES } from "./data/provinces.js";
 import { makeComputeOffsetCenter } from "./utils/offsetCenter.js";
 import { EXTRA_ZOOM, makeSetCoverView } from "./utils/view.js";
 import { createAudio } from "./audio/index.js";
-import { initModals } from "./ui/modal.js";
+import { initModals } from "./ui/modals.js";
 import { createBorders } from "./map/borders.js";
 import { addProvinceMarkers } from "./map/markers.js";
 import { initDock, buildDefaultDockItems } from "./ui/dock.js";
@@ -12,6 +12,7 @@ import { initQuickShortcuts } from "./ui/quickShortcuts.js";
 import { initSidebar } from "./ui/sidebar.js";
 import { initOnboarding } from "./ui/onboarding.js";
 import { addCloudsLayer } from "./effects/clouds.js";
+import { registerGlobalHotkeys } from "./utils/hotkeys.js";
 
 /* ====== LEAFLET ====== */
 const H = 1365,
@@ -83,12 +84,10 @@ const computeOffsetCenter = makeComputeOffsetCenter({ map, llb, backdrop });
 /* ====== MODAL SYSTEM ====== */
 const { showModal, hideModal, anyModalOpen } = initModals();
 
-// ESC menutup sidebar jika tidak ada modal aktif
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    if (anyModalOpen()) return;
-    closeSidebar();
-  }
+/* ====== Hotkeys global (Escape -> close sidebar jika tidak ada modal) ====== */
+registerGlobalHotkeys({
+  anyModalOpen,
+  onEscapeNoModal: closeSidebar,
 });
 
 /* ====== Marker provinsi ====== */

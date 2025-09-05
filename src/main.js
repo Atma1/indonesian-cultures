@@ -13,6 +13,9 @@ import { initSidebar } from "./ui/sidebar.js";
 import { initOnboarding } from "./ui/onboarding.js";
 import { addCloudsLayer } from "./effects/clouds.js";
 import { registerGlobalHotkeys } from "./utils/hotkeys.js";
+import { initGame } from "./ui/game.js";
+
+
 
 /* ====== LEAFLET ====== */
 const H = 1365,
@@ -133,4 +136,16 @@ initQuickShortcuts({
   hideModal,
   computeOffsetCenter,
   openSidebar,
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const game = initGame();
+
+  // contoh: klik tombol dock icon game
+  const gameBtn = document.getElementById("dockGameBtn");
+  if (gameBtn) {
+    gameBtn.addEventListener("click", () => {
+      game.startGame();
+    });
+  }
 });

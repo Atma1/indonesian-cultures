@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Tari Inai",
+    "description": "Tarian pernikahan Melayu Kepulauan Riau yang ditampilkan saat prosesi malam berinai. Gerakan lembut melambangkan doa restu bagi pengantin.",
+    "featuredImage": "https://pariwisataindonesia.id/wp-content/uploads/2020/08/metrojambi.com-foto-by-tarian-inai-2.jpg",
+    "images": [
+      "https://pariwisataindonesia.id/wp-content/uploads/2020/08/metrojambi.com-foto-by-tarian-inai-2.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Lakse",
+    "description": "Kuliner mi ikan khas Kepulauan Riau, disajikan dengan kuah kari kental berbumbu rempah. Mirip laksa tetapi memakai ikan laut segar.",
+    "featuredImage": "https://pinangpaleo.com/wp-content/uploads/2018/12/laksa-goreng.jpg",
+    "images": [
+      "https://pinangpaleo.com/wp-content/uploads/2018/12/laksa-goreng.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Masjid Raya Sultan Riau Penyengat",
+    "description": "Bangunan masjid bersejarah abad ke-18 dari Pulau Penyengat, dibangun dengan campuran putih telur. Pusat penyebaran Islam dan budaya Melayu.",
+    "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYaSUCJKslWQ4vZD2TobYxYi2T4ZEaZgYS9Q&s",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYaSUCJKslWQ4vZD2TobYxYi2T4ZEaZgYS9Q&s"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=HuEkqXWBXPg"
+  }
+]

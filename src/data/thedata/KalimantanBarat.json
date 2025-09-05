@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Gawai Dayak",
+    "description": "Perayaan syukur panen padi masyarakat Dayak di Kalbar; diisi ritual adat, musik, tarian, dan jamuan bersama.",
+    "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT39oauIfZwBmerMSaGzUjnZbum_ExcJgNHQA&s",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT39oauIfZwBmerMSaGzUjnZbum_ExcJgNHQA&s"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Tari Monong",
+    "description": "Tari/ritual penolak bala dan penyembuhan tradisional Dayak di Kalimantan Barat, dipimpin balian (dukun).",
+    "featuredImage": "https://img.inews.co.id/media/600/files/inews_new/2022/10/04/Tari_Monong_Kalimantan_Barat.jpg",
+    "images": [
+      "https://img.inews.co.id/media/600/files/inews_new/2022/10/04/Tari_Monong_Kalimantan_Barat.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Bubur Pedas Sambas",
+    "description": "Bubur beras dengan rempah dan aneka sayur (daun pakis, daun kesum, dll.), populer di Sambas dan sekitar.",
+    "featuredImage": "https://horizone.co.id/uploads/images/202310/image_750x_653d2fa6b924d.jpg",
+    "images": [
+      "https://horizone.co.id/uploads/images/202310/image_750x_653d2fa6b924d.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Chai Kue Singkawang",
+    "description": "Jajanan Tionghoa-Peranakan berisi sayur/bengkuang/kucai dikukus; sangat lekat dengan kota Singkawang.",
+    "featuredImage": "https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/03/24/jpg_20230324_151810_0000-3255602368.jpg",
+    "images": [
+      "https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/03/24/jpg_20230324_151810_0000-3255602368.jpg",
+      "https://media.suara.com/pictures/970x544/2020/06/03/89844-anti-gagal-begini-cara-membuat-chai-kue-alias-choipan-khas-pontianak-instagramatchoipanpanasponti.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Songket Sambas",
+    "description": "Kain tenun mewah Melayu Sambas dengan benang emas/perak; motif flora-fauna dan simbol kemakmuran.",
+    "featuredImage": "https://asset-3.tstatic.net/jualbeli/img/njajal/2021/12/Melalui-Kain-Tenun-Songket-Sambas-Bisa-Hasilkan-Omzet-Hingga-Ratusan-Juta-Rupiah-master-1954242530.jpg",
+    "images": [
+      "https://asset-3.tstatic.net/jualbeli/img/njajal/2021/12/Melalui-Kain-Tenun-Songket-Sambas-Bisa-Hasilkan-Omzet-Hingga-Ratusan-Juta-Rupiah-master-1954242530.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Mandau",
+    "description": "Senjata tradisional Dayak yang juga karya seni ukir; berfungsi ritual, identitas, dan simbol kehormatan.",
+    "featuredImage": "https://cdn.rri.co.id/berita/42/images/1706249195331-S/vetv7xs1mxjyjug.jpeg",
+    "images": [
+      "https://cdn.rri.co.id/berita/42/images/1706249195331-S/vetv7xs1mxjyjug.jpeg"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=F7onmXIQXD8"
+  }
+]

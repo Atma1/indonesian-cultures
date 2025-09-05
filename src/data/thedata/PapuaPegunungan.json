@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Festival Lembah Baliem (Perang Adat dan Tarian Tradisional)",
+    "description": "Festival tahunan setiap Agustus di Lembah Baliem, menampilkan perang-perangan adat, tarian tradisional, dan peragaan budaya dari suku Dani, Lani, dan Yali di Wamena.",
+    "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaFxlpuMeDf_NAMa7qsagyMG4Y9eRIaupMsw&s",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaFxlpuMeDf_NAMa7qsagyMG4Y9eRIaupMsw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQInwfgaGYPR6i9rSlJtjoZaCEwIcX2RWZ8qA&s"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=1LQ3YZa7Nvw"
+  },
+  {
+    "name": "Alat Musik Pikon",
+    "description": "Alat musik tiup tradisional berupa batang yang bergetar (dari kayu/bambu/tembaga), dimainkan oleh laki-laki suku Dani sebagai hiburan atau bagian festival budaya.",
+    "featuredImage": "https://cdn.rri.co.id/berita/Bovendigoel/o/1727383303183-Pikon_failfaire/zvmegpbch93quyh.jpeg",
+    "images": [
+      "https://cdn.rri.co.id/berita/Bovendigoel/o/1727383303183-Pikon_failfaire/zvmegpbch93quyh.jpeg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwPopM7NnSUpprNADu3PqPPGSKENWdpGSJAw&s"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Barapen",
+    "description": "Tradisi sosial dan kuliner mengubur batu panas dalam lubang bersama daun dan bahan pangan (biasanya ubi dan babi), sebagai wujud syukur dan pertemuan komunitas.",
+    "featuredImage": "https://assets-a1.kompasiana.com/items/album/2023/12/24/tradisi-barapen-foto-goodnewsfromindonesiacok-6587f59c12d50f7782389eb3.jpg",
+    "images": [
+      "https://assets-a1.kompasiana.com/items/album/2023/12/24/tradisi-barapen-foto-goodnewsfromindonesiacok-6587f59c12d50f7782389eb3.jpg",
+      "https://img.antarafoto.com/cache/400x300/2010/06/22/batu-barapen-2a4f-dom.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Lagu Daerah \"Yamko Rambe Yamko\"",
+    "description": "Lagu rakyat Papua yang bertema perjuangan dan pahlawan, melambangkan semangat mempertahankan tanah air.",
+    "featuredImage": "https://froyonion.sgp1.cdn.digitaloceanspaces.com/images/blogdetail/bb1c4a480d7400bfd8c6ee6ea2615859da8cbb12.jpg",
+    "images": [
+      "https://froyonion.sgp1.cdn.digitaloceanspaces.com/images/blogdetail/bb1c4a480d7400bfd8c6ee6ea2615859da8cbb12.jpg",
+      "https://mmc.tirto.id/image/2021/11/13/penutupan-peparnas-papua-antarafoto2_ratio-16x9.jpg"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=9f9SzY5D75Q"
+  }
+]

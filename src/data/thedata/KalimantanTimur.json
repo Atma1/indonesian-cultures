@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Erau Kutai",
+    "description": "Festival budaya Tenggarong untuk mengenang berdirinya Kutai; ada prosesi belimbur, menjamu benua, mengulur naga.",
+    "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXpa_gLt-72E-_0FiiKnJOGVi3S6bO6Nce_w&s",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXpa_gLt-72E-_0FiiKnJOGVi3S6bO6Nce_w&s"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Tari Hudoq",
+    "description": "Tari topeng Dayak (Mask Dayak) bermotif roh/hewan pelindung; dipentaskan pascatanam/di festival Erau.",
+    "featuredImage": "https://www.wwf.id/sites/default/files/blog/_c__wwfid_sugeng_hendratno%20%281%29.jpg",
+    "images": [
+      "https://www.wwf.id/sites/default/files/blog/_c__wwfid_sugeng_hendratno%20%281%29.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Ayam Cincane",
+    "description": "Ayam bakar bumbu merah manis-gurih khas Kutai; sajian hajatan dan jamuan kehormatan di Kaltim.",
+    "featuredImage": "https://assets-pergikuliner.com/kjmH9xGj0QMYDpXetZEgxH2_lvU=/fit-in/1366x768/smart/filters:no_upscale()/https://assets-pergikuliner.com/uploads/bootsy/image/27550/Ayam_Cincane__pergikuliner.com_.PNG",
+    "images": [
+      "https://assets-pergikuliner.com/kjmH9xGj0QMYDpXetZEgxH2_lvU=/fit-in/1366x768/smart/filters:no_upscale()/https://assets-pergikuliner.com/uploads/bootsy/image/27550/Ayam_Cincane__pergikuliner.com_.PNG"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Belimbur",
+    "description": "Tradisi saling siram air (purifikasi) puncak Erau; simbol pembersihan diri dan sukacita bersama warga.",
+    "featuredImage": "https://indonesiakaya.com/wp-content/uploads/2020/10/3__IMG_3744_Tradisi_belimbur_menjadi_wujud_rasa_syukur_masyarakat_atas_kelancaran_pelaksanaan_Erau.jpg",
+    "images": [
+      "https://indonesiakaya.com/wp-content/uploads/2020/10/3__IMG_3744_Tradisi_belimbur_menjadi_wujud_rasa_syukur_masyarakat_atas_kelancaran_pelaksanaan_Erau.jpg"
+    ],
+    "youtubeLink": ""
+  }
+]

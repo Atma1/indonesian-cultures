@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Tarian Aluyen (Aimas, Distrik Sorong)",
+    "description": "Tarian adat dari Distrik Aimas—‘Aluyen’ berarti 'lagu yang dinyanyikan'—sudah ada sejak masa sebelum kemerdekaan, mencerminkan kelanggengan tradisi lokal.",
+    "featuredImage": "https://upload.wikimedia.org/wikipedia/commons/2/24/Tari_Aluyen.jpg",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/2/24/Tari_Aluyen.jpg",
+      "https://pesonapapua.com/wp-content/uploads/2024/04/trisony_TariAluyen2.jpg"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=-fZu4FdpDN4"
+  },
+  {
+    "name": "Tradisi Buka Egek Suku Moi",
+    "description": "Ritual tradisional Suku Moi yang menghias perahu (kama) dan melaut secara berkelanjutan—melambangkan pelestarian alam dan budaya, serta nilai gotong-royong.",
+    "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROCts3q1--T42LmNrYGke2lZM8A7haP5S2tA&s",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROCts3q1--T42LmNrYGke2lZM8A7haP5S2tA&s",
+      "https://econusa.id/wp-content/uploads/2023/06/festival-egek.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Kain Tenun Timor (Weaving Heritage)",
+    "description": "Kain tenun khas yang digunakan sebagai barang tukar pada masa lalu, memperlihatkan hubungan lintas kepulauan antara Sorong dan Timor.",
+    "featuredImage": "https://silviagalikano.wordpress.com/wp-content/uploads/2019/06/sarung-perempuan-dari-ainaro-timor-leste.-foto-silvia-galikano-1.jpg",
+    "images": [
+      "https://silviagalikano.wordpress.com/wp-content/uploads/2019/06/sarung-perempuan-dari-ainaro-timor-leste.-foto-silvia-galikano-1.jpg",
+      "https://images.detik.com/community/media/visual/2015/12/10/ca695893-72d2-4bb6-a952-6887244b84d5_169.jpg?w=620&mark=undefined&image_body_visual_id=177111"
+    ],
+    "youtubeLink": ""
+  }
+]

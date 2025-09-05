@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Sedekah Sungai",
+    "description": "Tradisi masyarakat pesisir Musi, Palembang. Warga melarung sesaji dan doa ke Sungai Musi untuk keselamatan. Diiringi arak-arakan perahu dan musik tradisional.",
+    "featuredImage": "https://bogoronline.com/wp-content/uploads/2024/07/IMG-20240709-WA0070.jpg",
+    "images": [
+      "https://bogoronline.com/wp-content/uploads/2024/07/IMG-20240709-WA0070.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Tari Gending Sriwijaya",
+    "description": "Tarian penyambutan agung dari Palembang, menggambarkan kejayaan Sriwijaya. Penari membawa tepak berisi sirih, gerakan halus penuh wibawa, diiringi syair Gending Sriwijaya.",
+    "featuredImage": "https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/24/2022/12/tari-gending-sriwijaya-min.jpg",
+    "images": [
+      "https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/24/2022/12/tari-gending-sriwijaya-min.jpg",
+      "https://asset.kompas.com/crops/lKB6AAb-aAyyrxzj45fZG7-I-8k=/0x0:855x570/780x390/data/photo/2017/08/22/529604900.jpg"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=_iOgonp5hEk"
+  },
+  {
+    "name": "Pempek",
+    "description": "Makanan khas Palembang dari ikan dan sagu, disajikan dengan kuah cuko asam pedas. Varian pempek kapal selam berisi telur jadi ikon utama kuliner nusantara.",
+    "featuredImage": "https://www.generasimaju.co.id/articles/article/image-thumb__594928__webp/Pempek%20Palembang.webp",
+    "images": [
+      "https://www.generasimaju.co.id/articles/article/image-thumb__594928__webp/Pempek%20Palembang.webp",
+      "https://lingkar.news/wp-content/uploads/2023/03/Aneka-Resep-Pempek-Makanan-Tradisional-Khas-Palembang.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Aesan Gede",
+    "description": "Busana pengantin Palembang dengan dominasi warna merah dan emas, dihiasi songket, mahkota, dan kalung susun. Melambangkan kemewahan dan pengaruh budaya Sriwijaya.",
+    "featuredImage": "https://image.idntimes.com/post/20250525/1000185590-679b8fb0461ad11c7448d145cee7fdab-48dab222b21ae963ce0d9213432d0dfb.jpg",
+    "images": [
+      "https://image.idntimes.com/post/20250525/1000185590-679b8fb0461ad11c7448d145cee7fdab-48dab222b21ae963ce0d9213432d0dfb.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Rumah Limas",
+    "description": "Rumah adat Palembang bertingkat-tingkat (bengkilas) dengan ukiran dinding khas. Simbol strata sosial dan tempat pelaksanaan upacara adat.",
+    "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBl3sowvwVMGRbCww1Y0tHQResbE40KtYAGg&s",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBl3sowvwVMGRbCww1Y0tHQResbE40KtYAGg&s",
+      "https://pariwisataindonesia.id/wp-content/uploads/2020/09/Rumah-Limas-Adat-Sumatera-Selatan-foto-by-gpswisataindonesia.info_.jpg"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=nck7xL2T3-4"
+  }
+]

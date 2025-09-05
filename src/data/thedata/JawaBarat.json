@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Jaipongan",
+    "description": "Jaipongan adalah tarian kontemporer Sunda yang diciptakan oleh Gugum Gumbira dan berakar pada musik Ketuk Tilu serta gerak pencak silat:contentReference[oaicite:27]{index=27}. Tari ini energik dan penuh improvisasi.",
+    "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSI_OhOlTs2Mu7Ar7l2v1X_eda3pEv0-WZuQ&s",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSI_OhOlTs2Mu7Ar7l2v1X_eda3pEv0-WZuQ&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD7nE8tQocsMPQ_rmbZGagW9mvCan_R9HB-g&s"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=VBpuVoKIBp0"
+  },
+  {
+    "name": "Nasi Timbel",
+    "description": "Nasi Timbel terdiri dari nasi hangat dibungkus daun pisang sehingga harum. Disajikan dengan ayam goreng, tahu, tempe, ikan asin, sambal terasi, lalapan, dan kadang sayur asem.",
+    "featuredImage": "https://cdn.yummy.co.id/content-images/images/20210812/aLVYFZIfJBNvNj2fiQt4PxNotnjz8ye9-31363238373238313333d41d8cd98f00b204e9800998ecf8427e.jpg?x-oss-process=image/resize,w_600,h_600,m_fixed,image/format,webp",
+    "images": [
+      "https://cdn.yummy.co.id/content-images/images/20210812/aLVYFZIfJBNvNj2fiQt4PxNotnjz8ye9-31363238373238313333d41d8cd98f00b204e9800998ecf8427e.jpg?x-oss-process=image/resize,w_600,h_600,m_fixed,image/format,webp"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Iket",
+    "description": "Iket adalah kain persegi panjang yang dilipat lalu diikat di kepala, dengan aturan khusus sehingga jika salah tidak disebut iket. Pakaian pangsi berupa baju dan celana longgar yang dahulu berwarna hitam-putih namun kini beraneka warna; pangsi dapat dipakai pria, wanita maupun anak untuk acara formal dan informal.",
+    "featuredImage": "https://jadesta.kemenpar.go.id/imgpost/137934.jpg",
+    "images": [
+      "https://jadesta.kemenpar.go.id/imgpost/137934.jpg"
+    ],
+    "youtubeLink": ""
+  }
+]

@@ -1,5 +1,5 @@
 // src/ui/sidebar.js
-// Sidebar + LoL-like Lightbox (vertical slides, image left + info right)
+// Sidebar + LoL-like Lightbox (vertical slides: image left + info right)
 
 export function initSidebar({ assets }) {
   const backdrop   = document.getElementById("backdrop");
@@ -24,41 +24,78 @@ export function initSidebar({ assets }) {
   let _lightbox = { images: [], index: 0, provName: "", provDesc: "" };
   let _obs = null;
 
+  /* -----------------------------------------
+     UTIL: Normalisasi slides dari berbagai bentuk data
+     - Prioritas: prov.slides (hasil dari JSON per-budaya)
+       item boleh {cover|featuredImage|images[0], title|name, desc|description}
+     - Fallback: featuredImage + images (lama)
+  ----------------------------------------- */
+  function getSlidesOf(prov) {
+    if (Array.isArray(prov.slides) && prov.slides.length) {
+      return prov.slides
+        .map((s) => ({
+          cover:
+            s.cover ||
+            s.featuredImage ||
+            (Array.isArray(s.images) ? s.images[0] : s.image) ||
+            "",
+          title: s.title || s.name || prov.id,
+          desc: s.desc || s.description || prov.desc || "",
+        }))
+        .filter((s) => !!s.cover);
+    }
+
+    const imgs = [];
+    if (prov.featuredImage) imgs.push(prov.featuredImage);
+    if (Array.isArray(prov.images)) imgs.push(...prov.images);
+
+    return imgs.map((src) => ({
+      cover: src,
+      title: prov.id,
+      desc: prov.desc || "",
+    }));
+  }
+
   /* ---------- Sidebar render ---------- */
   function renderChips(prov) {
     sbList.innerHTML = "";
     (prov.culture || []).forEach((it) => {
       const chip = document.createElement("div");
       chip.className = "chip";
-      chip.innerHTML = `<img src="${assets.icons[prov.id]}" alt="">
+      chip.innerHTML = `<img src="${assets?.icons?.[prov.id] || ""}" alt="">
         <strong>${it.t}</strong> ${it.d}`;
       sbList.appendChild(chip);
     });
   }
 
-  function renderGallery(images, prov) {
+  function renderGallery(prov) {
+    const slides = getSlidesOf(prov);
     sbGallery.innerHTML = "";
-    (images || []).forEach((src, i) => {
+
+    slides.forEach((s, i) => {
       const img = document.createElement("img");
-      img.src = src;
-      img.alt = "Gallery image";
+      img.src = s.cover;
+      img.alt = s.title || "Gallery image";
       img.className = "gallery-img";
-      // klik item galeri -> buka lightbox pada index terkait
-      img.addEventListener("click", () =>
-        openLightbox(prov, i + (prov.featuredImage ? 1 : 0))
-      );
+      img.addEventListener("click", () => openLightbox(prov, i));
       sbGallery.appendChild(img);
     });
   }
 
   function openSidebar(prov) {
+    const slides = getSlidesOf(prov);
+
     // header
-    sbIcon.src = assets.icons[prov.id];
+    sbIcon.src = assets?.icons?.[prov.id] || "";
     sbTitle.textContent = prov.id;
     sbSubtitle.textContent = "Budaya & Warisan • " + prov.id;
 
     // hero (klik buat buka lightbox)
-    if (prov.featuredImage) {
+    if (slides.length) {
+      sbHero.src = slides[0].cover;
+      sbHero.style.display = "block";
+      sbHero.onclick = () => openLightbox(prov, 0);
+    } else if (prov.featuredImage) {
       sbHero.src = prov.featuredImage;
       sbHero.style.display = "block";
       sbHero.onclick = () => openLightbox(prov, 0);
@@ -68,7 +105,7 @@ export function initSidebar({ assets }) {
       sbHero.onclick = null;
     }
 
-    // desc + youtube
+    // desc + youtube (desc umum prov; detail per slide ada di lightbox)
     sbDesc.textContent = prov.desc || "";
     if (prov.linkYt) {
       sbYoutube.href = prov.linkYt;
@@ -78,7 +115,7 @@ export function initSidebar({ assets }) {
     }
 
     // gallery + chips
-    renderGallery(prov.images, prov);
+    renderGallery(prov);
     renderChips(prov);
 
     // show sidebar
@@ -112,7 +149,7 @@ export function initSidebar({ assets }) {
   }
   backdrop.addEventListener("click", closeSidebar);
 
-  /* ---------- Lightbox (LoL-like) ---------- */
+  /* ---------- Lightbox (LoL-like, vertical stream) ---------- */
   const pad = (n) => String(n).padStart(2, "0");
 
   function buildSlide({ src, i, total, title, desc }) {
@@ -151,7 +188,7 @@ export function initSidebar({ assets }) {
     meta.className = "img-meta";
     meta.innerHTML = `
       <div class="img-count">${pad(i + 1)} / ${pad(total)}</div>
-      <h3 class="img-title">${title.toUpperCase()}</h3>
+      <h3 class="img-title">${(title || "").toUpperCase()}</h3>
       <div class="img-sub">BUDAYA &amp; WARISAN</div>
       <p class="img-desc">${desc || ""}</p>
     `;
@@ -162,28 +199,26 @@ export function initSidebar({ assets }) {
   }
 
   function openLightbox(prov, startIndex = 0) {
-    const imgs = [];
-    if (prov.featuredImage) imgs.push(prov.featuredImage);
-    (prov.images || []).forEach((s) => imgs.push(s));
-    if (!imgs.length) return;
+    const slides = getSlidesOf(prov);
+    if (!slides.length) return;
 
     _lightbox = {
-      images: imgs,
-      index: Math.max(0, Math.min(startIndex, imgs.length - 1)),
+      images: slides.map((s) => s.cover),
+      index: Math.max(0, Math.min(startIndex, slides.length - 1)),
       provName: prov.id,
       provDesc: prov.desc || "",
     };
 
-    // bangun stream vertikal berisi slide
+    // bangun stream vertikal — pakai meta per slide
     imgStream.innerHTML = "";
-    imgs.forEach((src, i) => {
+    slides.forEach((s, i) => {
       imgStream.appendChild(
         buildSlide({
-          src,
+          src: s.cover,
           i,
-          total: imgs.length,
-          title: prov.id,
-          desc: prov.desc || "",
+          total: slides.length,
+          title: s.title || prov.id,
+          desc: s.desc ?? prov.desc ?? "",
         })
       );
     });
@@ -192,13 +227,9 @@ export function initSidebar({ assets }) {
     iScrim.classList.add("active");
     iModal.classList.add("active");
 
-    // observer untuk update index aktif waktu scroll
     attachObserver();
-
-    // scroll ke index awal
     requestAnimationFrame(() => scrollToIndex(_lightbox.index, false));
 
-    // keyboard
     document.addEventListener("keydown", onKey);
   }
 

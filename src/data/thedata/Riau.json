@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Pacu Jalur",
+    "description": "Lomba perahu tradisional di Sungai Kuantan, Kabupaten Kuantan Singingi. Jalur sepanjang 25–40 meter dinaiki 40–60 orang pendayung. Pacu Jalur awalnya ritual syukuran panen dan peringatan Islam, kini festival pariwisata besar.",
+    "featuredImage": "https://unsia.ac.id/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-16-at-08.04.38.jpeg",
+    "images": [
+      "https://unsia.ac.id/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-16-at-08.04.38.jpeg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmziaJOjf3M5yIGDFVhMAMEF2-NNx8fklFtg&s"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=L1S1QB4kzOI"
+  },
+  {
+    "name": "Tari Zapin Riau",
+    "description": "Tari berakar dari budaya Melayu dan pengaruh Arab. Gerakannya dinamis mengikuti irama gambus dan marwas. Biasanya ditampilkan pada acara adat, pernikahan, hingga festival budaya.",
+    "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZjTxqAJoSPDJhsdS7di5wsYLl26BsIvL3gg&s",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZjTxqAJoSPDJhsdS7di5wsYLl26BsIvL3gg&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJdlpjI972NZafgTm7kVeQo3vPBFk546n0Kg&s"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=fQ4vsI30hQw"
+  },
+  {
+    "name": "Gulai Ikan Patin",
+    "description": "Hidangan khas Riau berupa ikan patin dimasak dengan kuah santan kuning dan rempah seperti kunyit, lengkuas, serai, dan asam kandis. Menjadi ikon kuliner Riau.",
+    "featuredImage": "https://asset-2.tribunnews.com/tribunnews/foto/bank/images/resep-gulai-ikan-patin.jpg",
+    "images": [
+      "https://asset-2.tribunnews.com/tribunnews/foto/bank/images/resep-gulai-ikan-patin.jpg",
+      "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/74/2024/10/29/Resep-Gulai-Ikan-Patin-1650970444.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Legenda Putri Kaca Mayang",
+    "description": "Cerita rakyat Pekanbaru tentang putri cantik yang memilih mengorbankan dirinya demi rakyat. Kisah ini sarat pesan kepemimpinan yang adil dan rela berkorban.",
+    "featuredImage": "https://melayupedia.com/foto_berita/2022/01/2022-01-11-legenda-putri-kaca-mayang-anak-raja-gasib-yang-cantik-jelita.jpg",
+    "images": [
+      "https://melayupedia.com/foto_berita/2022/01/2022-01-11-legenda-putri-kaca-mayang-anak-raja-gasib-yang-cantik-jelita.jpg"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Istana Siak Sri Indrapura",
+    "description": "Bangunan bergaya perpaduan Melayu, Eropa, dan Arab. Istana ini peninggalan Kesultanan Siak, berfungsi sebagai pusat pemerintahan dan simbol kejayaan Melayu Riau.",
+    "featuredImage": "https://digitiket.com/data/image/1367?group=1&m=240802093237&x=4",
+    "images": [
+      "https://digitiket.com/data/image/1367?group=1&m=240802093237&x=4",
+      "https://www.djkn.kemenkeu.go.id/files/images/2022/03/IMG_8409.JPG"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=W8YTJiCncO0"
+  }
+]

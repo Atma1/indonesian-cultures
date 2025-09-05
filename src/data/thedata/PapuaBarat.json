@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Yosim Pancar",
+    "description": "Yospan adalah tari pergaulan populer Papua yang memadukan dua gaya: Yosim (Biak) yang lincah dan Pancar (Waropen/Serui) yang mantap. Di Papua Barat, Yospan menjadi ikon panggung penyambutan tamu dan festival kampung—laki-perempuan berjajar dengan hentakan kaki cepat, lenggang bahu, dan teriakan ritmis mengikuti tifa. Tarian ini mengartikulasikan kegembiraan kolektif, keterbukaan pesisir, serta solidaritas antarsuku.",
+    "featuredImage": "https://rakyatpapua.id/wp-content/uploads/2020/10/yosim-pancar.jpg",
+    "images": [
+      "https://rakyatpapua.id/wp-content/uploads/2020/10/yosim-pancar.jpg",
+      "https://asset.kompas.com/crops/Ajz1guyUf8fVpLBlKFZZDdoDRoI=/0x37:440x331/750x500/data/photo/2021/02/07/601fbdd97ecf8.jpg"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=Tvk3ucBGKDw"
+  },
+  {
+    "name": "Wor",
+    "description": "Wor adalah rangkaian upacara sakral masyarakat Biak yang meliputi doa, narasi mitologis, tarian, dan persembahan pada roh leluhur. Ia hadir dalam daur hidup (kelahiran, pernikahan, kematian), inisiasi, dan syukuran laut. Wor adalah ensiklopedia lisan Biak: melalui kidung dan langkah, nilai-nilai keberanian pelaut, etika berbagi hasil laut, dan tata hubungan dengan kosmos diajarkan berulang lintas generasi.",
+    "featuredImage": "https://asset-2.tribunnews.com/tribunnews/foto/bank/images/ritual-wor-papua.jpg",
+    "images": [
+      "https://asset-2.tribunnews.com/tribunnews/foto/bank/images/ritual-wor-papua.jpg",
+      "https://img.antarafoto.com/cache/1200x842/2023/02/08/tari-wor-biak-di-papua-146ii-dom.jpg"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=JdISMLs4TXs"
+  },
+  {
+    "name": "Sasi Laut Raja Ampat",
+    "description": "Komunitas di pesisir Papua Barat mempraktikkan ‘sasi’—penutupan sementara area tangkap—untuk memulihkan stok ikan, lola, teripang, dan lobster. Penanda sasi dipasang dan seluruh nelayan menghormati masa larang; saat dibuka, panen dilakukan tertib dan diawasi tetua adat. Sasi adalah kearifan pengelolaan laut yang memadukan spiritualitas, pengetahuan ekologi lokal, dan tata kuasa komunal demi keberlanjutan pangan dan ekonomi desa.",
+    "featuredImage": "https://darilaut.id/wp-content/uploads/2018/10/Sasi-di-R4.jpg",
+    "images": [
+      "https://darilaut.id/wp-content/uploads/2018/10/Sasi-di-R4.jpg",
+      "https://cdn.antaranews.com/cache/1200x800/2024/03/25/Tradisi-Buka-Sasi-Kampung-Kapatcol-Papua-250324-Bay-17.jpg"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=nMAVURKvQOg"
+  },
+  {
+    "name": "Rumah Kaki Seribu",
+    "description": "Rumah tradisional suku Arfak di pegunungan Manokwari memiliki deretan tiang banyak—disebut ‘kaki seribu’—untuk kestabilan di tanah miring dan tahan gempa. Lantai papan rapat, dinding kulit kayu, dan atap daun menahan dingin kabut pegunungan. Denah memisahkan ruang keluarga, lumbung, serta area api yang menjadi pusat kehidupan malam. Arsitektur ini adalah adaptasi ekologis sekaligus pernyataan identitas pegunungan Arfak.",
+    "featuredImage": "https://cdn.grid.id/crop/0x0:0x0/700x465/photo/2019/10/08/985129120.jpg",
+    "images": [
+      "https://cdn.grid.id/crop/0x0:0x0/700x465/photo/2019/10/08/985129120.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpvLOs1l-9dhdRG_6E5m_tpFPtKgRnzcCo6g&s"
+    ],
+    "youtubeLink": ""
+  },
+  {
+    "name": "Papeda Kuah Kuning",
+    "description": "Papeda dari sagu khas Papua Barat disajikan bersama kuah ikan kuning beraroma kunyit, serai, dan jeruk. Teknik ‘menggulir’ papeda dengan sumpit kayu menciptakan pengalaman makan komunal yang hangat. Hidangan ini menautkan hutan sagu, laut, dan dapur keluarga—tiga pilar ketahanan pangan Papua yang lentur terhadap musim dan jarak.",
+    "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuYLRgt_eTZ_GVcgg4OZHEgzAevEbGhDV46g&s",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuYLRgt_eTZ_GVcgg4OZHEgzAevEbGhDV46g&s",
+      "https://cdn.rri.co.id/berita/Bukittinggi/o/1732805899030-FotoJet-6-PAPEDA-3121685855/fqbpxma8qa4od0h.webp"
+    ],
+    "youtubeLink": "https://www.youtube.com/watch?v=0_j_IwQBo0Y"
+  }
+]

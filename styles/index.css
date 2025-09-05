@@ -1160,3 +1160,134 @@ body {
   overflow: hidden;
   border-radius: 18px;
 }
+
+/* === Sidebar: LoL-like detail panel === */
+.sb-hero {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid #132033;
+  background: #0a0f14;
+}
+.sb-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sb-desc {
+  padding: 14px 16px;
+  color: #dcdcdc;
+  font: 500 14px/1.6 Inter, system-ui;
+  border-bottom: 1px solid #132033;
+}
+.sb-desc .yt-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #c4302b;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.sb-desc .yt-link:hover { filter: brightness(1.08); }
+
+.sb-gallery {
+  display: flex;
+  gap: 8px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #132033;
+  overflow-x: auto;
+}
+.sb-gallery::-webkit-scrollbar { height: 8px; }
+.sb-gallery::-webkit-scrollbar-thumb {
+  background: #1f2937; border-radius: 999px;
+}
+.sb-gallery .gallery-img {
+  width: 108px; height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: 0 0 auto;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+}
+.sb-gallery .gallery-img:hover { transform: scale(1.05); }
+
+/* === Sidebar: LoL-like detail panel === */
+.sb-hero {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid #132033;
+  background: #0a0f14;
+}
+.sb-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.sb-desc { padding: 14px 16px; color: #dcdcdc; font: 500 14px/1.6 Inter, system-ui; border-bottom: 1px solid #132033; }
+.sb-desc .yt-link {
+  display: inline-block; margin-top: 8px; padding: 8px 12px; border-radius: 6px;
+  background: #c4302b; color: #fff; text-decoration: none; font-weight: 700; letter-spacing: .02em;
+}
+.sb-desc .yt-link:hover { filter: brightness(1.08); }
+
+.sb-gallery { display: flex; gap: 8px; padding: 10px 16px; border-bottom: 1px solid #132033; overflow-x: auto; }
+.sb-gallery::-webkit-scrollbar { height: 8px; }
+.sb-gallery::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 999px; }
+.sb-gallery .gallery-img {
+  width: 108px; height: 72px; object-fit: cover; border-radius: 8px; flex: 0 0 auto; cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease; box-shadow: 0 6px 16px rgba(0,0,0,.25);
+}
+.sb-gallery .gallery-img:hover { transform: scale(1.05); }
+
+/* ===== LoL-like Image Lightbox ===== */
+.imgscrim {
+  position: fixed; inset: 0; z-index: 1100; background: rgba(7,10,16,.6);
+  backdrop-filter: blur(2px); opacity: 0; pointer-events: none; transition: opacity .25s ease;
+}
+.imgscrim.active { opacity: 1; pointer-events: auto; }
+
+.imgmodal {
+  position: fixed; z-index: 1110; top: 4%; left: 50%; transform: translateX(-50%) scale(.98);
+  width: min(1160px, 96vw); height: min(88vh, 920px); background: transparent; display: grid;
+  grid-template-columns: minmax(320px, 1fr) 380px; gap: 28px; opacity: 0; pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+}
+.imgmodal.active { opacity: 1; transform: translateX(-50%) scale(1); pointer-events: auto; }
+
+.img-wrap { position: relative; background: #0c1018; border-radius: 6px; box-shadow: 0 40px 120px rgba(0,0,0,.6); display: grid; place-items: center; }
+#imgLarge { max-width: 100%; max-height: 100%; object-fit: contain; display: block; background: #0c1018; }
+
+.img-nav {
+  position: absolute; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; border-radius: 999px;
+  border: 1px solid #243147; background: #0b1220cc; color: #e8e6d8; display: grid; place-items: center; cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+.img-nav.left { left: 10px; } .img-nav.right { right: 10px; }
+
+.img-close {
+  position: absolute; right: -6px; top: -10px; width: 36px; height: 36px; border-radius: 999px;
+  border: 1px solid #243147; background: #0b1220cc; color: #e8e6d8; cursor: pointer; z-index: 2;
+}
+
+.img-meta {
+  position: relative; padding: 18px 16px; background: rgba(15,19,28,.55);
+  border: 1px solid rgba(200,170,110,.28); border-radius: 10px;
+  box-shadow: 0 30px 140px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.06);
+  backdrop-filter: blur(18px) saturate(120%); overflow: auto;
+}
+.img-count { color:#8aa0bb; font: 700 11px/1 Inter; letter-spacing:.16em; margin-bottom:12px; }
+.img-title { color:#f2ecd5; font: 800 22px/1.2 "Cinzel", serif; margin:0 0 6px; letter-spacing:.02em; }
+.img-sub { color:#a9bbd2; font: 700 11px/1 Inter; letter-spacing:.12em; margin-bottom:14px; }
+.img-desc { color:#cbd5e1; font: 500 14px/1.6 Inter; margin:0; }
+
+@media (max-width: 980px) {
+  .imgmodal { grid-template-columns: 1fr; height: 92vh; gap: 12px; top: 3%; }
+  .img-meta { height: 40vh; }
+  .img-close { right: 6px; top: 6px; }
+}
+
+

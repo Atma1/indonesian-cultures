@@ -1,9 +1,45 @@
 // src/data/provinces.js
-export const PROVINCES = [
+// Panel LoL-ready: setiap provinsi punya name, desc, featuredImage, images, linkYt
+// + tetap mempertahankan field lama (x, y, culture)
+
+// Folder override kalau nama folder gambar beda dari slug otomatis
+const SLUG_OVERRIDE = {
+  "Daerah Khusus Jakarta": "jakarta",
+  "Daerah Istimewa Yogyakarta": "yogyakarta",
+};
+
+function slugify(name) {
+  if (SLUG_OVERRIDE[name]) return SLUG_OVERRIDE[name];
+  return name
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
+}
+
+const DEFAULT_DESC =
+  "Deskripsi singkat provinsi akan ditambahkan. Jelajahi budaya, kuliner, seni pertunjukan, serta warisan yang khas.";
+
+/* =======================
+   DATA DASAR (x, y, culture)
+   ——— JANGAN pake nama BASE_PROVINCES lagi
+   ======================= */
+const RAW_PROVINCES = [
   {
     id: "Aceh",
     x: 0.06,
     y: 0.82,
+    // contoh lengkap
+    desc:
+      "Aceh dikenal sebagai Serambi Mekah dengan tradisi Islam yang kuat. Budaya kolektif tercermin pada Tari Saman, musik Rapai, dan kuliner Mie Aceh.",
+    featuredImage: "/assets/regions/aceh/hero.jpg",
+    images: [
+      "/assets/regions/aceh/1.jpg",
+      "/assets/regions/aceh/2.jpg",
+      "/assets/regions/aceh/3.jpg",
+    ],
+    linkYt: "https://www.youtube.com/watch?v=rTmuK9_3xkA",
     culture: [
       { t: "Tari", d: "Saman" },
       { t: "Kuliner", d: "Mie Aceh" },
@@ -114,10 +150,20 @@ export const PROVINCES = [
     id: "Daerah Khusus Jakarta",
     x: 0.25,
     y: 0.5,
+    // contoh lengkap
+    desc:
+      "Pusat pemerintahan dan budaya urban Indonesia. Di sisi modernitas, Jakarta tetap merawat tradisi Betawi: ondel-ondel, lenong, hingga kuliner Kerak Telor.",
+    featuredImage: "/assets/images/4.jpg",
+    images: [
+      "/assets/images/1.jpeg",
+      "/assets/images/2.jpeg",
+      "/assets/images/3.jpeg",
+    ],
+    linkYt: "https://www.youtube.com/watch?v=mi_pemdaJakarta",
     culture: [
-      { t: "Tari", d: "Saman" },
-      { t: "Kuliner", d: "Mie Aceh" },
-      { t: "Musik", d: "Rapai" },
+      { t: "Tari", d: "Topeng Betawi" },
+      { t: "Kuliner", d: "Kerak Telor" },
+      { t: "Musik", d: "Gambang Kromong" },
     ],
   },
   {
@@ -164,10 +210,20 @@ export const PROVINCES = [
     id: "Bali",
     x: 0.4,
     y: 0.44,
+    // contoh lengkap
+    desc:
+      "Pulau dewata dengan budaya Hindu yang kaya. Pura, upacara, dan seni pertunjukan seperti Tari Kecak serta musik gamelan membentuk identitas Bali.",
+    featuredImage: "/assets/regions/bali/hero.jpg",
+    images: [
+      "/assets/regions/bali/1.jpg",
+      "/assets/regions/bali/2.jpg",
+      "/assets/regions/bali/3.jpg",
+    ],
+    linkYt: "https://www.youtube.com/watch?v=EXAMPLEBALI",
     culture: [
-      { t: "Tari", d: "Saman" },
-      { t: "Kuliner", d: "Mie Aceh" },
-      { t: "Musik", d: "Rapai" },
+      { t: "Tari", d: "Kecak" },
+      { t: "Kuliner", d: "Ayam Betutu" },
+      { t: "Musik", d: "Gamelan Bali" },
     ],
   },
   {
@@ -324,10 +380,20 @@ export const PROVINCES = [
     id: "Papua",
     x: 0.88,
     y: 0.6,
+    // contoh lengkap
+    desc:
+      "Papua dengan ratusan bahasa lokal dan seni ukir Asmat. Festival Danau Sentani dan tradisi bakar batu menjadi sorotan budaya.",
+    featuredImage: "/assets/regions/papua/hero.jpg",
+    images: [
+      "/assets/regions/papua/1.jpg",
+      "/assets/regions/papua/2.jpg",
+      "/assets/regions/papua/3.jpg",
+    ],
+    linkYt: "https://www.youtube.com/watch?v=EXAMPLEPAPUA",
     culture: [
-      { t: "Tari", d: "Saman" },
-      { t: "Kuliner", d: "Mie Aceh" },
-      { t: "Musik", d: "Rapai" },
+      { t: "Tari", d: "Tari Perang" },
+      { t: "Kuliner", d: "Papeda" },
+      { t: "Musik", d: "Tifa" },
     ],
   },
   {
@@ -371,3 +437,22 @@ export const PROVINCES = [
     ],
   },
 ];
+
+// EXPORT: diperkaya untuk panel kanan
+export const PROVINCES = RAW_PROVINCES.map((p) => {
+  const slug = slugify(p.id);
+  return {
+    ...p,
+    name: p.name || p.id,
+    desc: p.desc || DEFAULT_DESC,
+    featuredImage: p.featuredImage || `/assets/regions/${slug}/hero.jpg`,
+    images:
+      p.images || [
+        `/assets/regions/${slug}/1.jpg`,
+        `/assets/regions/${slug}/2.jpg`,
+        `/assets/regions/${slug}/3.jpg`,
+      ],
+    linkYt: p.linkYt || "", // kosong = tombol YouTube disembunyikan
+  };
+});
+ 

@@ -24,7 +24,9 @@ const JSON_BY_KEY = Object.fromEntries(
 const JSON_ALIAS = {
   "Daerah Khusus Jakarta": "DKIJakarta",
   "Daerah Istimewa Yogyakarta": "DIYogyakarta",
-  "Kepulauan Bangka Belitung": "BangkaBelitung"
+  "Kepulauan Bangka Belitung": "BangkaBelitung",
+  "Nusa Tenggara Timur": "NTT",
+  "Nusa Tenggara Barat": "NTB"
 };
 
 function jsonKeyFor(id) {

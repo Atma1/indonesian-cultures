@@ -30,12 +30,13 @@
         position: fixed;
         inset: 0;
       }
+
       .clouds-masked {
         position: absolute;
         z-index: 420;
         pointer-events: none;
-        -webkit-mask-image: url("fog-mask.jpg");
-        mask-image: url("fog-mask.jpg");
+        -webkit-mask-image: url("assets/effects/fog-mask.jpg");
+        mask-image: url("assets/effects/fog-mask.jpg");
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
         -webkit-mask-size: 100% 100%;
@@ -49,7 +50,7 @@
         opacity: 0.18;
         mix-blend-mode: screen;
         pointer-events: none;
-        background-image: url("clouds.jpg");
+        background-image: url("assets/effects/clouds.jpg");
         background-repeat: repeat;
         background-position: 0 0;
         will-change: background-position, background-size;
@@ -57,28 +58,31 @@
       .cloud-tex.parallax {
         opacity: 0.12;
       }
+
       .leaflet-borders-pane {
         z-index: 450 !important;
       }
       .leaflet-icons-pane {
         z-index: 500 !important;
       }
+
       .prov-icon {
-        width: 56px;
-        height: 56px;
+        width: 40px;
+        height: 40px;
         border-radius: 999px;
-        background: #0c1422cc;
-        border: 1px solid #26354e;
+        background: transparent; /* hilangkan bg */
+        border: none; /* hilangkan border */
         display: grid;
         place-items: center;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-        backdrop-filter: blur(4px);
+        box-shadow: none; /* hilangkan shadow supaya bersih */
+        backdrop-filter: none;
         transition: transform 0.18s ease;
       }
       .prov-icon img {
-        width: 44px;
-        height: 44px;
-        object-fit: contain;
+        width: 48px;
+        height: 48px;
+        border-radius: 999px; /* gambar jadi full rounded */
+        object-fit: cover; /* pasti mengisi dan crop secara bagus */
       }
       .prov-icon:hover {
         transform: scale(1.08);
@@ -88,6 +92,7 @@
         transform: translateY(12px) scale(0.6);
         filter: blur(3px);
       }
+
       .backdrop {
         position: fixed;
         inset: 0;
@@ -101,6 +106,7 @@
         opacity: 1;
         pointer-events: auto;
       }
+
       .sidebar {
         position: fixed;
         inset: 0 auto 0 0;
@@ -160,6 +166,7 @@
         color: #9fb0c6;
         font-size: 12px;
       }
+
       .hint {
         position: fixed;
         right: 12px;
@@ -190,6 +197,7 @@
       .music-btn:hover {
         filter: brightness(1.08);
       }
+
       .onboard {
         position: fixed;
         inset: 0;
@@ -252,6 +260,7 @@
         opacity: 0;
         transform: translateY(24px);
       }
+
       .cta {
         display: inline-flex;
         align-items: center;
@@ -282,6 +291,7 @@
         position: relative;
         z-index: 1;
       }
+
       .dock {
         position: fixed;
         left: 50%;
@@ -327,6 +337,7 @@
       .dock:hover .dock-spotlight {
         opacity: 1;
       }
+
       .dock-item {
         width: 56px;
         height: 56px;
@@ -402,6 +413,7 @@
         transform: translateX(-50%) translateY(0);
         transition: all 0.18s ease;
       }
+
       .dock-underline {
         position: absolute;
         height: 3px;
@@ -453,7 +465,12 @@
           height: 38px;
         }
       }
-      .qscrim {
+
+      /* --- Modal shells (reuse existing classes) --- */
+      .qscrim,
+      .sscrim,
+      .pscrim,
+      .gscrim {
         position: fixed;
         inset: 0;
         z-index: 980;
@@ -463,21 +480,26 @@
         pointer-events: none;
         transition: opacity 0.25s ease;
       }
-      .qscrim.active {
+      .qscrim.active,
+      .sscrim.active,
+      .pscrim.active,
+      .gscrim.active {
         opacity: 1;
         pointer-events: auto;
       }
-      .qmodal {
+
+      .qmodal,
+      .smodal,
+      .pmodal,
+      .gmodal {
         position: fixed;
         z-index: 990;
         left: 50%;
-        top: 16%;
         transform: translateX(-50%);
-        width: min(860px, 94vw);
         border-radius: 16px;
         background: rgba(15, 19, 28, 0.55);
         border: 1px solid rgba(200, 170, 110, 0.28);
-        box-shadow: 0 30px 120px rgba(0, 0, 0, 0.55),
+        box-shadow: 0 30px 140px rgba(0, 0, 0, 0.6),
           0 2px 0 rgba(255, 255, 255, 0.06) inset;
         backdrop-filter: blur(18px) saturate(120%);
         contain: layout style paint;
@@ -486,9 +508,41 @@
         transform-origin: 50% 0%;
         pointer-events: none;
       }
-      .qmodal.active {
+      .qmodal.active,
+      .smodal.active,
+      .pmodal.active,
+      .gmodal.active {
         pointer-events: auto;
       }
+
+      /* Specific sizes (kept as in original) */
+      .qmodal {
+        top: 16%;
+        width: min(860px, 94vw);
+      }
+      .smodal {
+        top: 10%;
+        width: min(980px, 96vw);
+        border-radius: 18px;
+        backdrop-filter: blur(22px) saturate(120%);
+      }
+      .pmodal {
+        top: 8%;
+        width: min(920px, 96vw);
+        border-radius: 20px;
+        backdrop-filter: blur(22px) saturate(120%);
+      }
+      .gmodal {
+        top: 8%;
+        width: min(960px, 96vw);
+        border-radius: 18px;
+        background: rgba(15, 19, 28, 0.6);
+        backdrop-filter: blur(22px) saturate(120%);
+      }
+
+      /* (…sisa style konten modal/komponen lain persis seperti semula — dipertahankan) */
+
+      /* ====== SISA STYLE ASLI (dipertahankan) ====== */
       .qrow {
         display: grid;
         grid-template-columns: 1fr auto;
@@ -549,6 +603,7 @@
         filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
       }
       .qtitle {
+        width: 100%;
         color: #e8e6d8;
         font: 700 14px/1.2 Inter;
       }
@@ -579,42 +634,7 @@
         color: #9fb0c6;
         font: 12px/1.2 system-ui;
       }
-      .sscrim {
-        position: fixed;
-        inset: 0;
-        z-index: 980;
-        background: rgba(7, 10, 16, 0.55);
-        backdrop-filter: blur(2px);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.25s ease;
-      }
-      .sscrim.active {
-        opacity: 1;
-        pointer-events: auto;
-      }
-      .smodal {
-        position: fixed;
-        z-index: 990;
-        left: 50%;
-        top: 10%;
-        transform: translateX(-50%);
-        width: min(980px, 96vw);
-        border-radius: 18px;
-        background: rgba(15, 19, 28, 0.55);
-        border: 1px solid rgba(200, 170, 110, 0.28);
-        box-shadow: 0 30px 140px rgba(0, 0, 0, 0.6),
-          0 2px 0 rgba(255, 255, 255, 0.06) inset;
-        backdrop-filter: blur(22px) saturate(120%);
-        contain: layout style paint;
-        opacity: 0;
-        filter: blur(10px);
-        transform-origin: 50% 0%;
-        pointer-events: none;
-      }
-      .smodal.active {
-        pointer-events: auto;
-      }
+
       .shead {
         display: flex;
         align-items: center;
@@ -776,42 +796,7 @@
         color: #9fb0c6;
         font: 12px/1.2 system-ui;
       }
-      .pscrim {
-        position: fixed;
-        inset: 0;
-        z-index: 980;
-        background: rgba(7, 10, 16, 0.55);
-        backdrop-filter: blur(2px);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.25s ease;
-      }
-      .pscrim.active {
-        opacity: 1;
-        pointer-events: auto;
-      }
-      .pmodal {
-        position: fixed;
-        z-index: 990;
-        left: 50%;
-        top: 8%;
-        transform: translateX(-50%);
-        width: min(920px, 96vw);
-        border-radius: 20px;
-        background: rgba(15, 19, 28, 0.55);
-        border: 1px solid rgba(200, 170, 110, 0.28);
-        box-shadow: 0 30px 140px rgba(0, 0, 0, 0.6),
-          0 2px 0 rgba(255, 255, 255, 0.06) inset;
-        backdrop-filter: blur(22px) saturate(120%);
-        contain: layout style paint;
-        opacity: 0;
-        filter: blur(10px);
-        transform-origin: 50% 0%;
-        pointer-events: none;
-      }
-      .pmodal.active {
-        pointer-events: auto;
-      }
+
       .phead {
         display: flex;
         align-items: center;
@@ -977,6 +962,7 @@
         padding: 12px 18px 16px;
         border-top: 1px solid #162338;
       }
+
       .toast {
         position: fixed;
         left: 50%;
@@ -991,42 +977,7 @@
         opacity: 0;
         z-index: 999;
       }
-      .gscrim {
-        position: fixed;
-        inset: 0;
-        z-index: 980;
-        background: rgba(7, 10, 16, 0.55);
-        backdrop-filter: blur(2px);
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.25s ease;
-      }
-      .gscrim.active {
-        opacity: 1;
-        pointer-events: auto;
-      }
-      .gmodal {
-        position: fixed;
-        z-index: 990;
-        left: 50%;
-        top: 8%;
-        transform: translateX(-50%);
-        width: min(960px, 96vw);
-        border-radius: 18px;
-        background: rgba(15, 19, 28, 0.6);
-        border: 1px solid rgba(200, 170, 110, 0.28);
-        box-shadow: 0 30px 140px rgba(0, 0, 0, 0.6),
-          0 2px 0 rgba(255, 255, 255, 0.06) inset;
-        backdrop-filter: blur(22px) saturate(120%);
-        contain: layout style paint;
-        opacity: 0;
-        filter: blur(10px);
-        transform-origin: 50% 0%;
-        pointer-events: none;
-      }
-      .gmodal.active {
-        pointer-events: auto;
-      }
+
       .ghead {
         display: flex;
         align-items: center;
@@ -1233,6 +1184,8 @@
   </head>
   <body>
     <div id="map"></div>
+
+    <!-- Onboarding -->
     <div id="onboard" class="onboard" aria-hidden="false">
       <div class="onboard-inner">
         <div class="ob-subtitle">Explore &amp; Discover</div>
@@ -1285,6 +1238,8 @@
         </button>
       </div>
     </div>
+
+    <!-- Sidebar -->
     <div class="backdrop" id="backdrop"></div>
     <aside class="sidebar" id="sidebar" aria-hidden="true">
       <div class="sb-header">
@@ -1301,17 +1256,23 @@
         Klik overlay untuk menutup • Scroll daftar untuk eksplor
       </div>
     </aside>
+
+    <!-- Dock -->
     <div class="dock" id="dock">
       <div class="dock-inner" id="dockInner" aria-label="Dock Menu">
         <div class="dock-spotlight" id="dockSpotlight"></div>
         <div class="dock-underline" id="dockUnderline"></div>
       </div>
     </div>
+
+    <!-- Controls/Hints -->
     <div class="music-btn" id="musicBtn">🎵 BG Music: OFF</div>
     <div class="hint">
       ☁️ Awan • Hover ikon = SFX • Scroll zoom mulus • Klik ikon = Zoom offset +
       Sidebar • Tekan <b>M</b> untuk musik
     </div>
+
+    <!-- Quick Search -->
     <div id="qscrim" class="qscrim" aria-hidden="true"></div>
     <section
       id="qmodal"
@@ -1345,6 +1306,8 @@
         <div>Tip: Ketik untuk memfilter • Hasil realtime</div>
       </div>
     </section>
+
+    <!-- Subscription -->
     <div id="sscrim" class="sscrim" aria-hidden="true"></div>
     <section
       id="smodal"
@@ -1378,13 +1341,15 @@
       </header>
       <div class="sbody"><div class="grid" id="planGrid"></div></div>
       <footer class="sfoot">
-        <button class="sclose" id="scloseBtn">Close (Esc)</button>
+        <button class="btn" id="scloseBtn">Close (Esc)</button>
         <div class="snote">
           Harga dapat berubah sewaktu-waktu. Pajak/biaya lain mengikuti
           kebijakan wilayah.
         </div>
       </footer>
     </section>
+
+    <!-- Profile -->
     <div id="pscrim" class="pscrim" aria-hidden="true"></div>
     <section
       id="pmodal"
@@ -1467,6 +1432,8 @@
         <button id="pSave" class="btn gold" type="button">Save Changes</button>
       </footer>
     </section>
+
+    <!-- Game -->
     <div id="gscrim" class="gscrim" aria-hidden="true"></div>
     <section
       id="gmodal"
@@ -1515,62 +1482,512 @@
         <button id="gNext" class="gbtn" type="button">Start</button>
       </footer>
     </section>
+
+    <!-- NEW: Event -->
+    <div id="escrim" class="gscrim" aria-hidden="true"></div>
+    <section
+      id="emodal"
+      class="gmodal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="etitle"
+      aria-hidden="true"
+    >
+      <header class="ghead">
+        <div class="gtitle" id="etitle">Event Budaya Terbaru</div>
+        <div class="gstats"><div class="pill">Beta</div></div>
+      </header>
+      <div class="gbody">
+        <article class="gq">
+          <h3>Segera Hadir</h3>
+          <p>
+            Daftar agenda budaya Papua (pekan budaya, festival kuliner,
+            pagelaran tari, dll.) akan tampil di sini.
+          </p>
+        </article>
+        <aside>
+          <div class="hintbox">
+            <h4>Info</h4>
+            <p>
+              Kamu bisa menautkan API/event.json lokal untuk mengisi daftar
+              otomatis.
+            </p>
+          </div>
+        </aside>
+      </div>
+      <footer class="gfoot">
+        <button id="eCloseBtn" class="gbtn" type="button">Close</button>
+      </footer>
+    </section>
+
     <div id="toast" class="toast" role="status" aria-live="polite">
       Tersimpan
     </div>
+
     <script>
+      /* ====== ASET & DATA ====== */
       const ASSETS = {
-        base: "base_map.png",
+        base: "assets/base_map.png",
         overlays: {
-          "Papua Barat": "Batas Papua Barat.png",
-          "Papua Tengah": "Batas Papua Tengah.png",
-          "Papua Selatan": "Batas Papua Selatan.png",
+          "Papua Barat": "assets/regions/region-pabar-min.webp",
+          "Papua Tengah": "assets/regions/region-pateng-min.webp",
+          "Papua Selatan": "assets/regions/region-pasel-min.webp",
+          Papua: "assets/regions/region-papua-min.webp",
+          "Papua Pegunungan": "assets/regions/region-pagu-min.webp",
+          Maluku: "assets/regions/region-maluku-min.webp",
+          "Maluku Utara": "assets/regions/region-maltara-min.webp",
+          "Sulawesi Tenggara": "assets/regions/region-sultengara-min.webp",
+          "Sulawesi Selatan": "assets/regions/region-sulsel-min.webp",
+          "Sulawesi Barat": "assets/regions/region-sulbar-min.webp",
+          "Sulawesi Tengah": "assets/regions/region-sulteng-min.webp",
+          Gorontalo: "assets/regions/region-gorontalo-min.webp",
+          "Sulawesi Utara": "assets/regions/region-sultara-min.webp",
+          "Kalimantan Utara": "assets/regions/region-kaltara-min.webp",
+          "Kalimantan Timur": "assets/regions/region-kaltim-min.webp",
+          "Kalimantan Selatan": "assets/regions/region-kalsel-min.webp",
+          "Kalimantan Tengah": "assets/regions/region-kalteng-min.webp",
+          "Kalimantan Barat": "assets/regions/region-kalbar-min.webp",
+          "Nusa Tenggara Timur": "assets/regions/region-ntt-min.webp",
+          "Nusa Tenggara Barat": "assets/regions/region-ntb-min.webp",
+          Bali: "assets/regions/region-bali-min.webp",
+          "Jawa Timur": "assets/regions/region-jatim-min.webp",
+          "Daerah Istimewa Yogyakarta": "assets/regions/region-diy-min.webp",
+          "Jawa Tengah": "assets/regions/region-jateng-min.webp",
+          "Jawa Barat": "assets/regions/region-jabar-min.webp",
+          "Daerah Khusus Jakarta": "assets/regions/region-dki-jakarta-min.webp",
+          Banten: "assets/regions/region-banten-min.webp",
+          "Kepulauan Bangka Belitung":
+            "assets/regions/region-kep-bangka-min.webp",
+          Lampung: "assets/regions/region-lampung-min.webp",
+          Bengkulu: "assets/regions/region-bengkulu-min.webp",
+          "Sumatera Selatan": "assets/regions/region-sumsel-min.webp",
+          Jambi: "assets/regions/region-jambi-min.webp",
+          "Kepulauan Riau": "assets/regions/region-kep-riau-min.webp",
+          Riau: "assets/regions/region-riau-min.webp",
+          "Sumatera Barat": "assets/regions/region-sumbar-min.webp",
+          "Sumatera Utara": "assets/regions/region-sumut-min.webp",
+          Aceh: "assets/regions/region-aceh-min.webp",
         },
         icons: {
-          "Papua Barat": "icon-papua-barat.png",
-          "Papua Tengah": "icon-papua-tengah.png",
-          "Papua Selatan": "icon-papua-selatan.png",
+          "Papua Barat": "assets/icons/icon-pabar-min.webp",
+          "Papua Tengah": "assets/icons/icon-pateng-min.webp",
+          "Papua Selatan": "assets/icons/icon-pasel-min.webp",
+          Papua: "assets/icons/icon-papua-min.webp",
+          "Papua Pegunungan": "assets/icons/icon-pagu-min.webp",
+          Maluku: "assets/icons/icon-maluku-min.webp",
+          "Maluku Utara": "assets/icons/icon-malutara-min.webp",
+          "Sulawesi Tenggara": "assets/icons/icon-sulteng-min.webp",
+          "Sulawesi Selatan": "assets/icons/icon-sulsel-min.webp",
+          "Sulawesi Barat": "assets/icons/icon-sulbar-min.webp",
+          "Sulawesi Tengah": "assets/icons/icon-sultengah-min.webp",
+          Gorontalo: "assets/icons/icon-gorontalo-min.webp",
+          "Sulawesi Utara": "assets/icons/icon-sultara-min.webp",
+          "Kalimantan Utara": "assets/icons/icon-kaltara-min.webp",
+          "Kalimantan Timur": "assets/icons/icon-kaltim-min.webp",
+          "Kalimantan Selatan": "assets/icons/icon-kalsel-min.webp",
+          "Kalimantan Tengah": "assets/icons/icon-kalteng-min.webp",
+          "Kalimantan Barat": "assets/icons/icon-kalbar-min.webp",
+          "Nusa Tenggara Timur": "assets/icons/icon-ntt-min.webp",
+          "Nusa Tenggara Barat": "assets/icons/icon-ntb-min.webp",
+          Bali: "assets/icons/icon-bali-min.webp",
+          "Jawa Timur": "assets/icons/icon-jatim-min.webp",
+          "Daerah Istimewa Yogyakarta": "assets/icons/icon-diy-min.webp",
+          "Jawa Tengah": "assets/icons/icon-jateng-min.webp",
+          "Jawa Barat": "assets/icons/icon-jabar-min.webp",
+          "Daerah Khusus Jakarta": "assets/icons/icon-dki-jakarta-min.webp",
+          Banten: "assets/icons/icon-banten-min.webp",
+          "Kepulauan Bangka Belitung": "assets/icons/icon-kep-bangka-min.webp",
+          Lampung: "assets/icons/icon-lampung-min.webp",
+          Bengkulu: "assets/icons/icon-bengkulu-min.webp",
+          "Sumatera Selatan": "assets/icons/icon-sumsel-min.webp",
+          Jambi: "assets/icons/icon-jambi-min.webp",
+          "Kepulauan Riau": "assets/icons/icon-kep-riau-min.webp",
+          Riau: "assets/icons/icon-riau-min.webp",
+          "Sumatera Barat": "assets/icons/icon-sumbar-min.webp",
+          "Sumatera Utara": "assets/icons/icon-sumut-min.webp",
+          Aceh: "assets/icons/icon-aceh-min.webp",
         },
         sounds: {
-          hoverSfx: "sfx-hover.mp3",
-          clickSfx: "sfx-click.mp3",
-          bgMusic: "bg-music.mp3",
+          hoverSfx: "assets/musics/sfx-hover.mp3",
+          clickSfx: "assets/musics/sfx-click.mp3",
+          bgMusic: "assets/musics/bg-music.mp3",
         },
       };
 
       const PROVINCES = [
         {
-          id: "Papua Barat",
-          x: 0.885,
-          y: 0.47,
+          id: "Aceh",
+          x: 0.06,
+          y: 0.82,
           culture: [
-            { t: "Tari", d: "Gat" },
-            { t: "Kriya", d: "Ukiran Asmat" },
-            { t: "Rumah Adat", d: "Kaki Seribu" },
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
           ],
         },
         {
-          id: "Papua Tengah",
-          x: 0.925,
-          y: 0.49,
+          id: "Sumatera Utara",
+          x: 0.1,
+          y: 0.75,
           culture: [
-            { t: "Tari", d: "Wor" },
-            { t: "Kuliner", d: "Papeda" },
-            { t: "Musik", d: "Tifa" },
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Sumatera Barat",
+          x: 0.1,
+          y: 0.64,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Riau",
+          x: 0.15,
+          y: 0.68,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Kepulauan Riau",
+          x: 0.22,
+          y: 0.75,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Jambi",
+          x: 0.17,
+          y: 0.62,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Sumatera Selatan",
+          x: 0.19,
+          y: 0.57,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Bengkulu",
+          x: 0.13,
+          y: 0.55,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Lampung",
+          x: 0.19,
+          y: 0.51,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Kepulauan Bangka Belitung",
+          x: 0.24,
+          y: 0.63,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Banten",
+          x: 0.21,
+          y: 0.45,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Daerah Khusus Jakarta",
+          x: 0.25,
+          y: 0.5,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Jawa Barat",
+          x: 0.25,
+          y: 0.428,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Jawa Tengah",
+          x: 0.3,
+          y: 0.43,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Daerah Istimewa Yogyakarta",
+          x: 0.32,
+          y: 0.39,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Jawa Timur",
+          x: 0.35,
+          y: 0.43,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Bali",
+          x: 0.4,
+          y: 0.44,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Nusa Tenggara Barat",
+          x: 0.45,
+          y: 0.44,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Nusa Tenggara Timur",
+          x: 0.55,
+          y: 0.42,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Kalimantan Barat",
+          x: 0.29,
+          y: 0.7,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Kalimantan Tengah",
+          x: 0.37,
+          y: 0.65,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Kalimantan Selatan",
+          x: 0.42,
+          y: 0.62,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Kalimantan Timur",
+          x: 0.43,
+          y: 0.78,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Kalimantan Utara",
+          x: 0.41,
+          y: 0.85,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Sulawesi Utara",
+          x: 0.58,
+          y: 0.82,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Gorontalo",
+          x: 0.56,
+          y: 0.73,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Sulawesi Tengah",
+          x: 0.52,
+          y: 0.67,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Sulawesi Barat",
+          x: 0.47,
+          y: 0.6,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Sulawesi Selatan",
+          x: 0.51,
+          y: 0.52,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Sulawesi Tenggara",
+          x: 0.55,
+          y: 0.57,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Maluku",
+          x: 0.68,
+          y: 0.53,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Maluku Utara",
+          x: 0.65,
+          y: 0.73,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Papua",
+          x: 0.88,
+          y: 0.6,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Papua Barat",
+          x: 0.74,
+          y: 0.65,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
           ],
         },
         {
           id: "Papua Selatan",
-          x: 0.935,
-          y: 0.63,
+          x: 0.9,
+          y: 0.45,
           culture: [
-            { t: "Tari", d: "Yospan" },
-            { t: "Ritual", d: "Bakar Batu" },
-            { t: "Busana", d: "Koteka" },
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Papua Tengah",
+          x: 0.84,
+          y: 0.52,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
+          ],
+        },
+        {
+          id: "Papua Pegunungan",
+          x: 0.93,
+          y: 0.54,
+          culture: [
+            { t: "Tari", d: "Saman" },
+            { t: "Kuliner", d: "Mie Aceh" },
+            { t: "Musik", d: "Rapai" },
           ],
         },
       ];
 
+      /* ====== LEAFLET ====== */
       const H = 1365,
         W = 2048;
       const bounds = [
@@ -1602,27 +2019,25 @@
       L.imageOverlay(ASSETS.base, bounds).addTo(map);
 
       const EXTRA_ZOOM = 2.0;
-
       function setCoverView() {
-        const z = map.getBoundsZoom(bounds, false);
-        map.setMinZoom(z);
-        map.setMaxZoom(z + EXTRA_ZOOM);
-        if (!isFinite(map.getZoom()) || map.getZoom() < z) {
-          map.setView([H / 2, W / 2], z, { animate: false });
-        }
+        const zCover = map.getBoundsZoom(bounds, false);
+        map.setMinZoom(zCover);
+        map.setMaxZoom(zCover + EXTRA_ZOOM);
+        if (!isFinite(map.getZoom()) || map.getZoom() < zCover)
+          map.setView([H / 2, W / 2], zCover, { animate: false });
         map.setMaxBounds(bounds);
       }
-
       setCoverView();
       map.on("resize", setCoverView);
 
-      (function clouds() {
+      /* ====== CLOUDS (GSAP seamless) ====== */
+      (function addCloudsFollowMap() {
         const pane = map.getPanes().overlayPane;
         const cont = L.DomUtil.create("div", "clouds-masked", pane);
         const tex1 = L.DomUtil.create("div", "cloud-tex", cont);
         const tex2 = L.DomUtil.create("div", "cloud-tex parallax", cont);
 
-        function update() {
+        function updatePosAndSize() {
           const nw = map.latLngToLayerPoint(llb.getNorthWest());
           const se = map.latLngToLayerPoint(llb.getSouthEast());
           const sz = se.subtract(nw);
@@ -1638,9 +2053,8 @@
             sz.x / 1.6
           )}px ${Math.max(640, sz.y / 1.6)}px`;
         }
-
-        update();
-        map.on("move zoom viewreset resize", update);
+        updatePosAndSize();
+        map.on("move zoom viewreset resize", updatePosAndSize);
 
         const TILE1 = 1024,
           TILE2 = 1280;
@@ -1664,12 +2078,12 @@
           tex1.style.backgroundPosition = `${-bx1}px ${-by1}px`;
           tex2.style.backgroundPosition = `${-bx2}px ${-by2}px`;
         });
-
         document.addEventListener("visibilitychange", () => {
           gsap.ticker[document.hidden ? "sleep" : "wake"]();
         });
       })();
 
+      /* ====== Overlay batas ====== */
       const borderLayers = {};
       Object.entries(ASSETS.overlays).forEach(([name, file]) => {
         const layer = L.imageOverlay(encodeURI(file), bounds, {
@@ -1685,31 +2099,14 @@
         borderLayers[name] = layer;
       });
 
-      const fadeBorder = (id, to) => {
-        const layer = borderLayers[id];
-        if (!layer) return;
-        const img = layer.getElement();
-        const from = { o: parseFloat(getComputedStyle(img).opacity) || 0 };
-        anime({
-          targets: from,
-          o: to,
-          duration: 280,
-          easing: "easeOutQuad",
-          update: () => {
-            img.style.opacity = from.o;
-          },
-        });
-      };
-
+      /* ====== AUDIO ====== */
       const audio = {
         userInteracted: false,
         hover: new Audio(ASSETS.sounds.hoverSfx),
         click: new Audio(ASSETS.sounds.clickSfx),
         bg: new Audio(ASSETS.sounds.bgMusic),
         lastHoverAt: 0,
-        sfxOn: true,
       };
-
       audio.hover.preload = "auto";
       audio.hover.volume = 0.5;
       audio.click.preload = "auto";
@@ -1721,7 +2118,6 @@
       const musicBtn = document.getElementById("musicBtn");
       const setBtn = (on) =>
         (musicBtn.textContent = on ? "🎵 BG Music: ON" : "🎵 BG Music: OFF");
-
       async function startBgIfAllowed() {
         try {
           await audio.bg.play();
@@ -1730,37 +2126,23 @@
           setBtn(false);
         }
       }
-
       const pauseBg = () => {
         audio.bg.pause();
         setBtn(false);
       };
 
-      window.addEventListener(
-        "pointerdown",
-        async () => {
-          if (!audio.userInteracted) {
-            audio.userInteracted = true;
-            if (profileState.musicOn) await startBgIfAllowed();
-          }
-        },
-        { once: true }
-      );
-
       musicBtn.addEventListener("click", async () => {
         if (audio.bg.paused) await startBgIfAllowed();
         else pauseBg();
       });
-
       window.addEventListener("keydown", async (e) => {
         if (e.key.toLowerCase() === "m") {
           if (audio.bg.paused) await startBgIfAllowed();
           else pauseBg();
         }
       });
-
       const playHoverSfx = () => {
-        if (!audio.userInteracted || !audio.sfxOn) return;
+        if (!audio.userInteracted) return;
         const now = performance.now();
         if (now - audio.lastHoverAt < 150) return;
         audio.lastHoverAt = now;
@@ -1769,48 +2151,48 @@
           audio.hover.play();
         } catch (_) {}
       };
-
       const playClickSfx = () => {
-        if (!audio.sfxOn) return;
         try {
           audio.click.currentTime = 0;
           audio.click.play();
         } catch (_) {}
       };
 
+      /* ====== UTIL offset center ====== */
       const backdrop = document.getElementById("backdrop");
-      const Hh = H,
-        Ww = W;
-      const llbb = llb;
-
       function computeOffsetCenter(latlng, zoom, padX = 160, padY = 130) {
         const sidebarOpen = backdrop.classList.contains("active");
         const padLeftExtra = sidebarOpen ? 120 : 0;
         const size = map.getSize();
         const half = L.point(size.x / 2, size.y / 2);
-        const nwZ = map.project(llbb.getNorthWest(), zoom);
-        const seZ = map.project(llbb.getSouthEast(), zoom);
+        const nwZ = map.project(llb.getNorthWest(), zoom);
+        const seZ = map.project(llb.getSouthEast(), zoom);
         const p = map.project(latlng, zoom);
         let cx = p.x,
           cy = p.y;
-        const right = seZ.x - half.x,
-          left = nwZ.x + half.x,
-          bottom = seZ.y - half.y,
-          top = nwZ.y + half.y;
-        if (p.x > right) cx = p.x - (half.x - padX);
-        else if (p.x < left) cx = p.x + (half.x - (padX + padLeftExtra));
-        if (p.y > bottom) cy = p.y - (half.y - padY);
-        else if (p.y < top) cy = p.y + (half.y - padY);
+
+        const rightLimit = seZ.x - half.x,
+          leftLimit = nwZ.x + half.x;
+        const bottomLimit = seZ.y - half.y,
+          topLimit = nwZ.y + half.y;
+
+        if (p.x > rightLimit) cx = p.x - (half.x - padX);
+        else if (p.x < leftLimit) cx = p.x + (half.x - (padX + padLeftExtra));
+        if (p.y > bottomLimit) cy = p.y - (half.y - padY);
+        else if (p.y < topLimit) cy = p.y + (half.y - padY);
+
         const eps = 1;
         const minX = nwZ.x + half.x + eps,
-          maxX = seZ.x - half.x - eps,
-          minY = nwZ.y + half.y + eps,
+          maxX = seZ.x - half.x - eps;
+        const minY = nwZ.y + half.y + eps,
           maxY = seZ.y - half.y - eps;
         cx = Math.min(Math.max(cx, minX), maxX);
         cy = Math.min(Math.max(cy, minY), maxY);
+
         return map.unproject(L.point(cx, cy), zoom);
       }
 
+      /* ====== Sidebar ====== */
       const sidebar = document.getElementById("sidebar");
       const sbIcon = document.getElementById("sbIcon");
       const sbTitle = document.getElementById("sbTitle");
@@ -1838,26 +2220,121 @@
           easing: "easeOutCubic",
         });
       }
-
       function closeSidebar() {
+        if (!backdrop.classList.contains("active")) return;
         anime({
           targets: sidebar,
           translateX: ["0%", "-110%"],
           duration: 360,
           easing: "easeInCubic",
-          complete: () => {
-            backdrop.classList.remove("active");
-            sidebar.style.transform = "translateX(-110%)";
+          complete: () => backdrop.classList.remove("active"),
+        });
+      }
+      backdrop.addEventListener("click", closeSidebar);
+
+      /* ====== MODAL SYSTEM (FIX CLOSE BUG) ====== */
+      const MODALS = ["qmodal", "smodal", "pmodal", "gmodal", "emodal"];
+      const scrimOf = (id) =>
+        document.getElementById(id.replace("modal", "scrim"));
+      function showModal(id) {
+        const modal = document.getElementById(id);
+        const scrim = scrimOf(id);
+        if (!modal || !scrim) return;
+        modal.classList.add("active");
+        scrim.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+        gsap.fromTo(
+          modal,
+          { opacity: 0, scale: 0.95, filter: "blur(10px)" },
+          {
+            opacity: 1,
+            scale: 1,
+            filter: "blur(0px)",
+            duration: 0.35,
+            ease: "power3.out",
+          }
+        );
+      }
+      function hideModal(id) {
+        const modal = document.getElementById(id);
+        const scrim = scrimOf(id);
+        if (!modal || !scrim || !modal.classList.contains("active")) return;
+        gsap.to(modal, {
+          opacity: 0,
+          scale: 0.98,
+          filter: "blur(8px)",
+          duration: 0.22,
+          ease: "power3.inOut",
+          onComplete: () => {
+            modal.classList.remove("active");
+            scrim.classList.remove("active");
+            modal.setAttribute("aria-hidden", "true");
+            gsap.set(modal, { clearProps: "opacity,filter,transform" });
           },
         });
       }
+      const anyModalOpen = () =>
+        MODALS.some((id) =>
+          document.getElementById(id)?.classList.contains("active")
+        );
 
-      backdrop.addEventListener("click", closeSidebar);
+      // Scrim click closes
+      MODALS.forEach((id) => {
+        const scr = scrimOf(id);
+        if (scr) scr.addEventListener("click", () => hideModal(id));
+      });
+      // ESC to close top-most
       window.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && backdrop.classList.contains("active")) {
+        if (e.key === "Escape") {
+          const openId = MODALS.find((id) =>
+            document.getElementById(id)?.classList.contains("active")
+          );
+          if (openId) {
+            hideModal(openId);
+            e.preventDefault();
+          }
+        }
+      });
+
+      // Sidebar ESC should not fire when any modal open
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          if (anyModalOpen()) return;
           closeSidebar();
         }
       });
+
+      // Wire specific buttons
+      document
+        .getElementById("scloseBtn")
+        ?.addEventListener("click", () => hideModal("smodal"));
+      document
+        .getElementById("pCloseX")
+        ?.addEventListener("click", () => hideModal("pmodal"));
+      document
+        .getElementById("gQuit")
+        ?.addEventListener("click", () => hideModal("gmodal"));
+      document
+        .getElementById("eCloseBtn")
+        ?.addEventListener("click", () => hideModal("emodal"));
+
+      /* ====== Ikon provinsi ====== */
+      const createdMarkers = [];
+      const fadeBorder = (id, toOpacity) => {
+        const layer = borderLayers[id];
+        if (!layer) return;
+        const img = layer.getElement();
+        const from = { o: parseFloat(getComputedStyle(img).opacity) || 0 };
+        anime({
+          targets: from,
+          o: toOpacity,
+          duration: 280,
+          easing: "easeOutQuad",
+          update: () => {
+            img.style.opacity = from.o;
+          },
+        });
+      };
 
       PROVINCES.forEach((p) => {
         const lat = p.y * H,
@@ -1869,30 +2346,36 @@
           icon: L.divIcon({
             html: el,
             className: "",
-            iconSize: [56, 56],
-            iconAnchor: [28, 28],
+            iconSize: [40, 40],
+            iconAnchor: [20, 20],
           }),
           pane: "icons",
           riseOnHover: true,
         }).addTo(map);
+
         marker.on("mouseover", () => {
           fadeBorder(p.id, 1);
           playHoverSfx();
         });
-        marker.on("mouseout", () => fadeBorder(p.id, 0));
+        marker.on("mouseout", () => {
+          fadeBorder(p.id, 0);
+        });
         marker.on("click", () => {
           playClickSfx();
           const zMax = map.getMaxZoom();
-          const c = computeOffsetCenter([lat, lng], zMax);
-          map.flyTo(c, zMax, {
+          const centerMax = computeOffsetCenter([lat, lng], zMax);
+          map.flyTo(centerMax, zMax, {
             animate: true,
             duration: 0.85,
             easeLinearity: 0.24,
           });
           map.once("moveend", () => openSidebar(p));
         });
+
+        createdMarkers.push(marker);
       });
 
+      /* ====== Onboarding ====== */
       const onboard = document.getElementById("onboard");
       const btnExplore = document.getElementById("btnExplore");
       const iconsPane = map.getPane("icons");
@@ -1911,15 +2394,14 @@
           m.touchZoom.enable();
         }
       }
-
       lockInteractions(true);
       iconsPane.classList.add("icons-hidden");
 
-      function prep(poly) {
+      function prepStrokeDraw(poly) {
         if (!poly) return 0;
-        let Lg = 0;
+        let length = 0;
         try {
-          Lg =
+          length =
             typeof poly.getTotalLength === "function"
               ? poly.getTotalLength()
               : Math.max(
@@ -1927,19 +2409,17 @@
                   Math.floor((poly.getBBox ? poly.getBBox().width : 800) * 1.2)
                 );
         } catch (e) {
-          Lg = 800;
+          length = 800;
         }
-        poly.style.strokeDasharray = String(Lg);
+        poly.style.strokeDasharray = String(length);
         poly.style.strokeDashoffset = "0";
-        return Lg;
+        return length;
       }
+      prepStrokeDraw(document.getElementById("ruleMain"));
+      prepStrokeDraw(document.getElementById("ruleSub"));
 
-      prep(document.getElementById("ruleMain"));
-      prep(document.getElementById("ruleSub"));
-
-      gsap
-        .timeline({ defaults: { ease: "power3.out" } })
-        .to("#obTitle", { opacity: 1, y: 0, duration: 0.6, delay: 0.05 })
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+      tl.to("#obTitle", { opacity: 1, y: 0, duration: 0.6, delay: 0.05 })
         .to(".ob-subtitle", { opacity: 1, y: 0, duration: 0.5 }, "-=.35")
         .to(
           ".onboard .onboard-rule",
@@ -1952,28 +2432,29 @@
           "-=.10"
         );
 
-      btnExplore?.addEventListener("mouseenter", () =>
+      btnExplore.addEventListener("mouseenter", () => {
         gsap.to(btnExplore, {
           y: -2,
-          boxShadow: "0 6px 18px rgba(200,170,110,0.45)",
+          boxShadow: "0 6px 18px rgba(200,170,110,.45)",
           duration: 0.25,
           ease: "power3.out",
-        })
-      );
-
-      btnExplore?.addEventListener("mouseleave", () =>
+        });
+      });
+      btnExplore.addEventListener("mouseleave", () => {
         gsap.to(btnExplore, {
           y: 0,
-          boxShadow: "0 8px 22px rgba(0,0,0,0.35)",
+          boxShadow: "0 8px 22px rgba(0,0,0,.35)",
           duration: 0.25,
           ease: "power3.inOut",
-        })
-      );
+        });
+      });
 
-      btnExplore?.addEventListener("click", async () => {
+      btnExplore.addEventListener("click", async () => {
         playClickSfx();
-        audio.userInteracted = true;
-        await startBgIfAllowed();
+        if (!audio.userInteracted) {
+          audio.userInteracted = true;
+          await startBgIfAllowed();
+        }
         anime({
           targets: onboard,
           opacity: [1, 0],
@@ -1984,13 +2465,15 @@
           },
         });
         lockInteractions(false);
-        const z = map.getMinZoom();
-        const t = Math.min(map.getMaxZoom(), z + 0.9);
-        map.flyTo([H / 2, W / 2], t, {
+
+        const zCover = map.getMinZoom();
+        const targetZ = Math.min(map.getMaxZoom(), zCover + 0.9);
+        map.flyTo([H / 2, W / 2], targetZ, {
           animate: true,
           duration: 0.9,
           easeLinearity: 0.24,
         });
+
         map.once("moveend", () => {
           const nodes = iconsPane.querySelectorAll(".prov-icon");
           iconsPane.classList.remove("icons-hidden");
@@ -2007,56 +2490,72 @@
         });
       });
 
+      /* ====== DOCK ITEMS (including Event) ====== */
       const DOCK_ITEMS = [
         {
           id: "profile",
           label: "User Profile",
-          icon: "user-profile.png",
-          action: () => openUserProfile(),
+          icon: "assets/menus/user-profile.png",
+          action: () => showModal("pmodal"),
         },
         {
           id: "game",
           label: "Game",
-          icon: "game.png",
-          action: () => openGame(),
+          icon: "assets/menus/game.png",
+          action: () => showModal("gmodal"),
         },
         {
           id: "shortcuts",
           label: "Pintasan Cepat",
-          icon: "shortcut.png",
-          action: () => openQuickShortcuts(),
+          icon: "assets/menus/shortcut.png",
+          action: () => showModal("qmodal"),
         },
         {
           id: "event",
           label: "Event",
-          icon: "event.png",
-          action: () => console.log("Open Event"),
+          icon: "assets/menus/event.png",
+          action: () => showModal("emodal"),
         },
         {
           id: "dashboard",
           label: "Dashboard",
-          icon: "dashboard.png",
-          action: () => console.log("Open Dashboard"),
+          icon: "assets/menus/dashboard.png",
+          action: () => {
+            const toast = document.getElementById("toast");
+            toast.textContent = "Dashboard masih dalam pengembangan";
+            toast.style.opacity = "1";
+            toast.style.transform = "translateX(-50%) translateY(0)";
+            setTimeout(() => {
+              toast.style.opacity = "0";
+              toast.style.transform = "translateX(-50%) translateY(16px)";
+            }, 2000);
+          },
         },
         {
           id: "subscription",
           label: "Subscription",
-          icon: "subscription.png",
-          action: () => openSubscription(),
+          icon: "assets/menus/subscription.png",
+          action: () => showModal("smodal"),
         },
       ];
 
       const dockInner = document.getElementById("dockInner");
       const underline = document.getElementById("dockUnderline");
       const spotlight = document.getElementById("dockSpotlight");
-      const dockEls = [];
 
+      const dockEls = [];
       DOCK_ITEMS.forEach((it) => {
         const wrap = document.createElement("div");
         wrap.className = "dock-item";
-        wrap.innerHTML = `<button type="button" aria-label="${it.label}" data-id="${it.id}"><img class="dock-icon" src="${it.icon}" alt="" /><span class="dock-tip">${it.label}</span><span class="ripple" hidden></span></button>`;
+        wrap.innerHTML = `
+          <button type="button" aria-label="${it.label}" data-id="${it.id}">
+            <img class="dock-icon" src="${it.icon}" alt="" />
+            <span class="dock-tip">${it.label}</span>
+            <span class="ripple" hidden></span>
+          </button>`;
         dockInner.appendChild(wrap);
         const btn = wrap.querySelector("button");
+
         btn.addEventListener("mouseenter", () => {
           playHoverSfx();
           wrap.classList.add("show-tip");
@@ -2066,12 +2565,11 @@
             ease: "power2.out",
           });
         });
-        btn.addEventListener("mouseleave", () =>
-          wrap.classList.remove("show-tip")
-        );
+        btn.addEventListener("mouseleave", () => {
+          wrap.classList.remove("show-tip");
+        });
+
         btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
           it.action?.();
           const r = wrap.querySelector(".ripple");
           r.hidden = false;
@@ -2093,7 +2591,7 @@
             }
           );
           const ring = document.createElement("span");
-          ring.style.cssText = `position:absolute;left:${rx}px;top:${ry}px;width:8px;height:8px;border-radius:999px;transform:translate(-50%,-50%) scale(1);box-shadow:0 0 0 0 rgba(233,213,150,.35);pointer-events:none;`;
+          ring.style.cssText = `position:absolute; left:${rx}px; top:${ry}px; width:8px;height:8px; border-radius:999px; transform:translate(-50%,-50%) scale(1); box-shadow:0 0 0 0 rgba(233,213,150,.35); pointer-events:none;`;
           r.appendChild(ring);
           gsap.to(ring, {
             duration: 0.6,
@@ -2108,10 +2606,11 @@
         dockEls.push(wrap);
       });
 
+      // Intro animation dock
       gsap.set(dockInner, { opacity: 0, y: 16, filter: "blur(6px)" });
       gsap.set(dockEls, { opacity: 0, y: 10, scale: 0.92 });
-      gsap
-        .timeline({ defaults: { ease: "power3.out" } })
+      const dockIntro = gsap.timeline({ defaults: { ease: "power3.out" } });
+      dockIntro
         .to(dockInner, {
           opacity: 1,
           y: 0,
@@ -2125,6 +2624,7 @@
           "-=.25"
         );
 
+      // Magnify nav ala dock
       const sigma = 90,
         maxScale = 1.8,
         yLift = 14;
@@ -2132,26 +2632,25 @@
         s: gsap.quickTo(el, "scale", { duration: 0.18, ease: "power3.out" }),
         y: gsap.quickTo(el, "y", { duration: 0.18, ease: "power3.out" }),
       }));
-
-      function updateMagnify(x) {
+      function updateMagnify(clientX) {
         const dockRect = dockInner.getBoundingClientRect();
-        spotlight.style.setProperty("--x", `${x - dockRect.left}px`);
+        spotlight.style.setProperty("--x", `${clientX - dockRect.left}px`);
         let best = { idx: -1, scale: 1 };
         dockEls.forEach((el, i) => {
           const r = el.getBoundingClientRect();
           const cx = r.left + r.width / 2;
-          const d = Math.abs(x - cx);
-          const k = Math.exp(-(d * d) / (2 * sigma * sigma));
-          const sc = 1 + (maxScale - 1) * k;
-          quick[i].s(sc);
-          quick[i].y(-yLift * k);
-          if (sc > best.scale) best = { idx: i, scale: sc };
+          const dist = Math.abs(clientX - cx);
+          const k = Math.exp(-(dist * dist) / (2 * sigma * sigma));
+          const scale = 1 + (maxScale - 1) * k;
+          const lift = yLift * k;
+          quick[i].s(scale);
+          quick[i].y(-lift);
+          if (scale > best.scale) best = { idx: i, scale };
         });
         if (best.idx >= 0) {
           const r = dockEls[best.idx].getBoundingClientRect();
-          const dockRect2 = dockInner.getBoundingClientRect();
           const w = Math.max(32, 34 + (best.scale - 1) * 18);
-          const left = r.left - dockRect2.left + (r.width - w) / 2;
+          const left = r.left - dockRect.left + (r.width - w) / 2;
           gsap.to(underline, {
             left,
             width: w,
@@ -2161,7 +2660,6 @@
           });
         }
       }
-
       dockInner.addEventListener("mousemove", (e) => updateMagnify(e.clientX));
       dockInner.addEventListener("mouseenter", (e) => {
         spotlight.style.opacity = 1;
@@ -2185,902 +2683,144 @@
         });
       });
 
+      /* ====== QUICK SHORTCUTS ====== */
       const qscrim = document.getElementById("qscrim");
       const qmodal = document.getElementById("qmodal");
       const qinput = document.getElementById("qinput");
       const qlist = document.getElementById("qlist");
 
-      const SHORTCUTS = [
-        {
-          id: "open-dashboard",
-          title: "Buka Dashboard",
-          desc: "Pergi ke halaman dasbor analitik",
-          tag: "NAV",
-          icon: "dashboard.png",
-          action: () => console.log("Go Dashboard"),
-        },
-        {
-          id: "open-profile",
-          title: "Profil Pengguna",
-          desc: "Lihat & ubah profil",
-          tag: "USER",
-          icon: "user-profile.png",
-          action: () => openUserProfile(),
-        },
-        {
-          id: "open-game",
-          title: "Game Mini",
-          desc: "Mainkan mini-game edukasi budaya",
-          tag: "FUN",
-          icon: "game.png",
-          action: () => openGame(),
-        },
-        ...PROVINCES.flatMap((p) =>
-          p.culture.map((c) => ({
-            id: `${p.id}-${c.t}-${c.d}`,
-            title: `${c.t}: ${c.d}`,
-            desc: `Budaya • ${p.id}`,
-            tag: "CULTURE",
-            icon: ASSETS.icons[p.id],
-            action: () => {
-              const lat = p.y * H,
-                lng = p.x * W;
-              const z = map.getMaxZoom();
-              const cpos = computeOffsetCenter([lat, lng], z);
-              map.flyTo(cpos, z, {
-                animate: true,
-                duration: 0.85,
-                easeLinearity: 0.24,
-              });
-              map.once("moveend", () => openSidebar(p));
-              closeQuickShortcuts();
-            },
-          }))
-        ),
-      ];
+      // Build quick shortcuts from PROVINCES -> one entry per cultural item
+      const SHORTCUTS = PROVINCES.flatMap((p) =>
+        (p.culture || []).map((c, idx) => ({
+          id: `${p.id}::${c.t}::${idx}`,
+          title: `${c.t} — ${c.d}`,
+          provId: p.id,
+          prov: p,
+          lat: p.y * H,
+          lng: p.x * W,
+          meta: c,
+        }))
+      );
 
-      let filtered = SHORTCUTS.slice(),
-        activeIdx = 0;
+      // state
+      let filtered = SHORTCUTS.slice();
+      let activeIndex = 0;
 
       function renderList(items, active = 0) {
+        if (!qlist) return;
         qlist.innerHTML = "";
-        items.forEach((it, idx) => {
-          const node = document.createElement("div");
-          node.className = "qitem";
-          node.setAttribute("role", "option");
-          node.setAttribute("data-id", it.id);
-          node.setAttribute("tabindex", "-1");
-          if (idx === active) node.setAttribute("aria-selected", "true");
-          node.innerHTML = `<img class="qicon" src="${it.icon}" alt=""><div><div class="qtitle">${it.title}</div><div class="qdesc">${it.desc}</div></div><span class="qtag">${it.tag}</span>`;
-          node.addEventListener("mouseenter", () => highlightIndex(idx));
-          node.addEventListener("click", () => selectIndex(idx));
-          qlist.appendChild(node);
+        if (!items || items.length === 0) {
+          return;
+        }
+
+        items.forEach((it, i) => {
+          const el = document.createElement("div");
+          el.className = "qitem";
+          el.setAttribute("role", "button");
+          el.setAttribute("tabindex", "0");
+          el.setAttribute("aria-selected", i === active ? "true" : "false");
+          el.innerHTML = `
+            <div class="qicon"><img style="width:100%;" src="${
+              ASSETS.icons[it.provId] || ""
+            }" alt="${it.provId}"></div>
+            <div class="qtitle">${it.title}</div>
+            <div class="qdesc">${it.provId}</div>
+          `;
+          el.addEventListener("click", () => selectIndex(i));
+          el.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") selectIndex(i);
+          });
+          qlist.appendChild(el);
         });
-        activeIdx = Math.min(active, items.length - 1);
+
+        activeIndex = Math.max(0, Math.min(active, items.length - 1));
+        const activeEl = qlist.children[activeIndex];
+        activeEl?.scrollIntoView({ block: "nearest" });
       }
 
       function filterList(q) {
-        const s = q.trim().toLowerCase();
-        filtered = !s
-          ? SHORTCUTS.slice()
-          : SHORTCUTS.filter((it) =>
-              (it.title + " " + it.desc + " " + (it.tag || ""))
-                .toLowerCase()
-                .includes(s)
-            );
-        activeIdx = 0;
-        renderList(filtered, activeIdx);
+        if (!q || !q.trim()) filtered = SHORTCUTS.slice();
+        else {
+          const qq = q.trim().toLowerCase();
+          filtered = SHORTCUTS.filter((it) =>
+            `${it.title} ${it.provId}`.toLowerCase().includes(qq)
+          );
+        }
+        renderList(filtered, 0);
       }
 
       function highlightIndex(i) {
-        const nodes = [...qlist.children];
-        nodes.forEach((n) => n.removeAttribute("aria-selected"));
-        if (nodes[i]) nodes[i].setAttribute("aria-selected", "true");
-        activeIdx = i;
-        if (nodes[i]) nodes[i].scrollIntoView({ block: "nearest" });
+        if (!qlist) return;
+        const prev = qlist.children[activeIndex];
+        if (prev) prev.setAttribute("aria-selected", "false");
+        activeIndex = Math.max(0, Math.min(i, filtered.length - 1));
+        const cur = qlist.children[activeIndex];
+        if (cur) {
+          cur.setAttribute("aria-selected", "true");
+          cur.scrollIntoView({ block: "nearest" });
+        }
       }
 
       function selectIndex(i) {
-        const item = filtered[i];
-        if (!item) return;
+        const it = filtered[i];
+        if (!it) return;
+        const target = L.latLng(it.lat, it.lng);
+        // choose a zoom that's near the max but not exceeding it
+        const desiredZoom = Math.min(
+          map.getMaxZoom(),
+          (map.getMinZoom() + map.getMaxZoom()) / 2 + 1.2
+        );
+        // perform fly with offset centering
+        map.flyTo(computeOffsetCenter(target, desiredZoom), desiredZoom, {
+          animate: true,
+          duration: 1.0,
+        });
         playClickSfx();
-        try {
-          item.action?.();
-        } catch (e) {
-          console.error(e);
-        }
-        closeQuickShortcuts();
+        hideModal("qmodal");
+        // Open sidebar (slide data) after fly animation finishes
+        setTimeout(() => {
+          openSidebar(it.prov);
+        }, 1050);
       }
 
       function openQuickShortcuts() {
-        qscrim.classList.add("active");
-        qscrim.setAttribute("aria-hidden", "false");
-        qmodal.classList.add("active");
-        qmodal.setAttribute("aria-hidden", "false");
-        gsap.set(qmodal, {
-          opacity: 0,
-          y: -12,
-          scale: 0.96,
-          filter: "blur(10px)",
-        });
+        if (!qinput) return;
+        qinput.value = "";
         filterList("");
-        gsap.to(qmodal, {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          filter: "blur(0px)",
-          duration: 0.45,
-          ease: "power3.out",
-        });
-        setTimeout(() => qinput.focus({ preventScroll: true }), 10);
-        document.documentElement.style.overflow = "hidden";
+        showModal("qmodal");
+        setTimeout(() => qinput?.focus(), 80);
       }
 
       function closeQuickShortcuts() {
-        gsap.to(qmodal, {
-          y: -8,
-          scale: 0.98,
-          opacity: 0,
-          filter: "blur(8px)",
-          duration: 0.25,
-          ease: "power2.in",
-          onComplete: () => {
-            qmodal.classList.remove("active");
-            qmodal.setAttribute("aria-hidden", "true");
-          },
-        });
-        qscrim.classList.remove("active");
-        qscrim.setAttribute("aria-hidden", "true");
-        document.documentElement.style.overflow = "";
+        hideModal("qmodal");
       }
 
-      qscrim.addEventListener("click", closeQuickShortcuts);
-
-      window.addEventListener("keydown", (e) => {
-        if (qmodal.classList.contains("active")) {
-          if (e.key === "Escape") {
-            e.preventDefault();
-            closeQuickShortcuts();
-          } else if (e.key === "ArrowDown") {
-            e.preventDefault();
-            highlightIndex(Math.min(activeIdx + 1, filtered.length - 1));
-          } else if (e.key === "ArrowUp") {
-            e.preventDefault();
-            highlightIndex(Math.max(activeIdx - 1, 0));
-          } else if (e.key === "Enter") {
-            e.preventDefault();
-            selectIndex(activeIdx);
-          }
-        }
-      });
-
+      // wire listeners
+      qscrim?.addEventListener("click", closeQuickShortcuts);
       qinput?.addEventListener("input", (e) => filterList(e.target.value));
 
-      document.addEventListener("focusin", (e) => {
-        if (!qmodal.classList.contains("active")) return;
-        if (!qmodal.contains(e.target) && e.target !== qinput) {
-          e.stopPropagation();
-          qinput.focus({ preventScroll: true });
-        }
-      });
-
-      const sscrim = document.getElementById("sscrim");
-      const smodal = document.getElementById("smodal");
-      const scloseBtn = document.getElementById("scloseBtn");
-      const planGrid = document.getElementById("planGrid");
-      const billSwitch = document.getElementById("billSwitch");
-
-      const PLANS = [
-        {
-          key: "starter",
-          name: "Starter",
-          badge: "Best for Tryout",
-          monthly: 49000,
-          features: [
-            "Akses Peta Budaya dasar",
-            "3 Provinsi favorit",
-            "Mode offline terbatas",
-            "Email support (48h)",
-          ],
-        },
-        {
-          key: "pro",
-          name: "Pro",
-          badge: "Popular",
-          monthly: 99000,
-          features: [
-            "Semua provinsi + layer batas",
-            "Eksport snapshot HD",
-            "Quick Shortcuts lanjutan",
-            "Priority support (24h)",
-          ],
-        },
-        {
-          key: "elite",
-          name: "Elite",
-          badge: "For Power Users",
-          monthly: 199000,
-          features: [
-            "Semua fitur Pro + integrasi data",
-            "Ekspor video animasi awan",
-            "Koleksi SFX premium",
-            "VIP support (6h)",
-          ],
-        },
-      ];
-
-      let yearly = false,
-        activePlan = "pro";
-      const fmt = (n) => new Intl.NumberFormat("id-ID").format(n);
-      const price = (p) =>
-        yearly ? Math.round(p.monthly * 12 * 0.8) : p.monthly;
-      const unit = () => (yearly ? "/tahun" : "/bulan");
-
-      function renderPlans() {
-        planGrid.innerHTML = "";
-        PLANS.forEach((p) => {
-          const card = document.createElement("article");
-          card.className = "card" + (p.key === activePlan ? " active" : "");
-          card.tabIndex = 0;
-          card.dataset.key = p.key;
-          card.innerHTML = `
-        <div class="chead">
-          <div class="cname">${p.name}</div>
-          <div class="cbadge">${p.badge}</div>
-        </div>
-        <div class="cprice">Rp ${fmt(
-          price(p)
-        )} <span class="cunit">${unit()}</span></div>
-        <ul class="clist">
-          ${p.features.map((f) => `<li>${f}</li>`).join("")}
-        </ul>
-        <button class="ccta" type="button">Subscribe Now</button>
-      `;
-          card.addEventListener("mouseenter", () => playHoverSfx());
-          card.addEventListener("click", (e) => {
-            const btn = e.target.closest(".ccta");
-            if (btn) {
-              subscribe(p.key);
-            } else {
-              selectPlan(p.key);
-            }
-          });
-          card.addEventListener("keydown", (e) => {
-            if (e.key === "Enter") {
-              subscribe(p.key);
-            } else if (e.key === " ") {
-              e.preventDefault();
-              selectPlan(p.key);
-            }
-          });
-          planGrid.appendChild(card);
-        });
-      }
-
-      function selectPlan(k) {
-        activePlan = k;
-        [...planGrid.children].forEach((c) => {
-          const on = c.dataset.key === k;
-          c.classList.toggle("active", on);
-          if (on)
-            gsap.fromTo(
-              c,
-              { scale: 0.98 },
-              { scale: 1, duration: 0.18, ease: "power2.out" }
-            );
-        });
-      }
-
-      function subscribe(k) {
-        playClickSfx();
-        const p = PLANS.find((x) => x.key === k);
-        console.log("SUBSCRIBE:", {
-          plan: p.name,
-          billing: yearly ? "yearly" : "monthly",
-          price: price(p),
-        });
-        closeSubscription();
-      }
-
-      function openSubscription() {
-        sscrim.classList.add("active");
-        sscrim.setAttribute("aria-hidden", "false");
-        smodal.classList.add("active");
-        smodal.setAttribute("aria-hidden", "false");
-        gsap.set(smodal, {
-          opacity: 0,
-          y: -12,
-          scale: 0.96,
-          filter: "blur(10px)",
-        });
-        renderPlans();
-        selectPlan(activePlan);
-        gsap.to(smodal, {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          filter: "blur(0px)",
-          duration: 0.45,
-          ease: "power3.out",
-        });
-        document.documentElement.style.overflow = "hidden";
-      }
-
-      function closeSubscription() {
-        gsap.to(smodal, {
-          y: -8,
-          scale: 0.98,
-          opacity: 0,
-          filter: "blur(8px)",
-          duration: 0.25,
-          ease: "power2.in",
-          onComplete: () => {
-            smodal.classList.remove("active");
-            smodal.setAttribute("aria-hidden", "true");
-          },
-        });
-        sscrim.classList.remove("active");
-        sscrim.setAttribute("aria-hidden", "true");
-        document.documentElement.style.overflow = "";
-      }
-
-      sscrim.addEventListener("click", closeSubscription);
-      scloseBtn?.addEventListener("click", closeSubscription);
-
-      function toggleBilling() {
-        yearly = !yearly;
-        billSwitch.dataset.on = yearly ? "true" : "false";
-        billSwitch.setAttribute("aria-checked", yearly ? "true" : "false");
-        renderPlans();
-        selectPlan(activePlan);
-      }
-
-      billSwitch?.addEventListener("click", toggleBilling);
-      billSwitch?.addEventListener("keydown", (e) => {
-        if (e.key === " " || e.key === "Enter") {
-          e.preventDefault();
-          toggleBilling();
-        }
-      });
-
       window.addEventListener("keydown", (e) => {
-        if (smodal.classList.contains("active")) {
-          if (e.key === "Escape") {
-            e.preventDefault();
-            closeSubscription();
-          } else if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
-            e.preventDefault();
-            const idx = PLANS.findIndex((p) => p.key === activePlan);
-            const next =
-              e.key === "ArrowRight"
-                ? Math.min(idx + 1, PLANS.length - 1)
-                : Math.max(idx - 1, 0);
-            selectPlan(PLANS[next].key);
-          } else if (e.key === "Enter") {
-            e.preventDefault();
-            subscribe(activePlan);
-          }
-        }
-      });
-
-      document.addEventListener("focusin", (e) => {
-        if (!smodal.classList.contains("active")) return;
-        if (!smodal.contains(e.target) && e.target !== billSwitch) {
-          e.stopPropagation();
-          const act =
-            planGrid.querySelector(".card.active") ||
-            planGrid.querySelector(".card");
-          (act || smodal).focus({ preventScroll: true });
-        }
-      });
-
-      const pscrim = document.getElementById("pscrim");
-      const pmodal = document.getElementById("pmodal");
-      const pCloseX = document.getElementById("pCloseX");
-
-      const pName = document.getElementById("pName");
-      const pEmail = document.getElementById("pEmail");
-
-      const pAvatarFile = document.getElementById("pAvatarFile");
-      const pAvatar = document.getElementById("pAvatar");
-      const pAvatarRemove = document.getElementById("pAvatarRemove");
-      const pAvatarInitials = document.getElementById("pAvatarInitials");
-      const avatarDrop = document.getElementById("avatarDrop");
-
-      const pReset = document.getElementById("pReset");
-      const pSave = document.getElementById("pSave");
-      const toast = document.getElementById("toast");
-
-      const DEFAULT_PROFILE = {
-        name: "User Profile",
-        email: "",
-        musicOn: false,
-        sfxOn: true,
-        avatarData: "",
-      };
-
-      let profileState = loadProfile();
-
-      function loadProfile() {
-        try {
-          const raw = localStorage.getItem("user_profile_simple");
-          const parsed = raw ? JSON.parse(raw) : DEFAULT_PROFILE;
-          return { ...DEFAULT_PROFILE, ...parsed };
-        } catch (_) {
-          return { ...DEFAULT_PROFILE };
-        }
-      }
-
-      function saveProfile(st) {
-        localStorage.setItem("user_profile_simple", JSON.stringify(st));
-      }
-
-      function showToast(msg = "Tersimpan") {
-        toast.textContent = msg;
-        gsap.fromTo(
-          toast,
-          { opacity: 0, y: 16 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.22,
-            ease: "power2.out",
-            onComplete: () =>
-              setTimeout(
-                () =>
-                  gsap.to(toast, {
-                    opacity: 0,
-                    y: 16,
-                    duration: 0.22,
-                    ease: "power2.in",
-                  }),
-                1100
-              ),
-          }
-        );
-      }
-
-      function setAvatarPreview(dataURL) {
-        if (dataURL) {
-          pAvatar.src = dataURL;
-          pAvatar.style.display = "block";
-          pAvatarInitials.style.display = "none";
-        } else {
-          pAvatar.style.display = "none";
-          const initials =
-            (pName.value || profileState.name || "UP")
-              .split(" ")
-              .map((s) => s[0])
-              .join("")
-              .slice(0, 2)
-              .toUpperCase() || "UP";
-          pAvatarInitials.textContent = initials;
-          pAvatarInitials.style.display = "grid";
-        }
-      }
-
-      function applyProfileToUI() {
-        if (pName) pName.value = profileState.name || "";
-        if (pEmail) pEmail.value = profileState.email || "";
-        setAvatarPreview(profileState.avatarData);
-        audio.sfxOn = !!profileState.sfxOn;
-        if (profileState.musicOn && audio.userInteracted) {
-          startBgIfAllowed();
-        }
-      }
-
-      function gatherProfile() {
-        return {
-          ...profileState,
-          name: (pName?.value || "User Profile").trim(),
-          email: (pEmail?.value || "").trim(),
-          sfxOn: profileState.sfxOn,
-          musicOn: profileState.musicOn,
-          avatarData: profileState.avatarData || "",
-        };
-      }
-
-      function validate() {
-        const nameOK = (pName?.value || "").trim().length > 0;
-        const emailVal = (pEmail?.value || "").trim();
-        const emailOK =
-          emailVal === "" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal);
-        return nameOK && emailOK;
-      }
-
-      function openUserProfile() {
-        pscrim.classList.add("active");
-        pscrim.setAttribute("aria-hidden", "false");
-        pmodal.classList.add("active");
-        pmodal.setAttribute("aria-hidden", "false");
-        gsap.set(pmodal, {
-          opacity: 0,
-          y: -12,
-          scale: 0.96,
-          filter: "blur(10px)",
-        });
-        applyProfileToUI();
-        gsap.to(pmodal, {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          filter: "blur(0px)",
-          duration: 0.45,
-          ease: "power3.out",
-        });
-        document.documentElement.style.overflow = "hidden";
-        setTimeout(() => pName?.focus({ preventScroll: true }), 10);
-      }
-
-      function closeUserProfile() {
-        gsap.to(pmodal, {
-          y: -8,
-          scale: 0.98,
-          opacity: 0,
-          filter: "blur(8px)",
-          duration: 0.25,
-          ease: "power2.in",
-          complete: () => {
-            pmodal.classList.remove("active");
-            pmodal.setAttribute("aria-hidden", "true");
-          },
-        });
-        pscrim.classList.remove("active");
-        pscrim.setAttribute("aria-hidden", "true");
-        document.documentElement.style.overflow = "";
-      }
-
-      pscrim.addEventListener("click", closeUserProfile);
-      pCloseX?.addEventListener("click", closeUserProfile);
-
-      pAvatarFile?.addEventListener("change", (e) => {
-        const f = e.target.files?.[0];
-        if (!f) return;
-        const reader = new FileReader();
-        reader.onload = () => {
-          profileState.avatarData = reader.result;
-          setAvatarPreview(profileState.avatarData);
-        };
-        reader.readAsDataURL(f);
-      });
-
-      pAvatarRemove?.addEventListener("click", () => {
-        profileState.avatarData = "";
-        setAvatarPreview("");
-      });
-
-      ["dragenter", "dragover"].forEach((ev) =>
-        avatarDrop?.addEventListener(ev, (e) => {
+        // keyboard navigation when qmodal is active
+        if (!qmodal || !qmodal.classList.contains("active")) return;
+        if (e.key === "ArrowDown") {
           e.preventDefault();
-          e.stopPropagation();
-          avatarDrop.style.borderColor = "#c8aa6e88";
-        })
-      );
-
-      ["dragleave", "drop"].forEach((ev) =>
-        avatarDrop?.addEventListener(ev, (e) => {
+          highlightIndex(activeIndex + 1);
+        } else if (e.key === "ArrowUp") {
           e.preventDefault();
-          e.stopPropagation();
-          avatarDrop.style.borderColor = "#384a64";
-        })
-      );
-
-      avatarDrop?.addEventListener("drop", (e) => {
-        const f = e.dataTransfer.files?.[0];
-        if (!f) return;
-        const reader = new FileReader();
-        reader.onload = () => {
-          profileState.avatarData = reader.result;
-          setAvatarPreview(profileState.avatarData);
-        };
-        reader.readAsDataURL(f);
-      });
-
-      avatarDrop?.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          pAvatarFile?.click();
-        }
-      });
-
-      avatarDrop?.addEventListener("click", () => pAvatarFile?.click());
-
-      function saveAndApply() {
-        if (!validate()) return;
-        profileState = gatherProfile();
-        saveProfile(profileState);
-        applyProfileToUI();
-        showToast("Tersimpan");
-      }
-
-      pSave?.addEventListener("click", () => {
-        playClickSfx();
-        saveAndApply();
-      });
-
-      pReset?.addEventListener("click", () => {
-        if (confirm("Reset profile ke default?")) {
-          profileState = { ...DEFAULT_PROFILE };
-          saveProfile(profileState);
-          applyProfileToUI();
-          showToast("Reset selesai");
-        }
-      });
-
-      window.addEventListener("keydown", (e) => {
-        if (pmodal.classList.contains("active")) {
-          if (e.key === "Escape") {
-            e.preventDefault();
-            closeUserProfile();
-          } else if (e.key === "Enter") {
-            e.preventDefault();
-            saveAndApply();
-          }
-        }
-      });
-
-      document.addEventListener("focusin", (e) => {
-        if (!pmodal.classList.contains("active")) return;
-        if (!pmodal.contains(e.target)) {
-          e.stopPropagation();
-          pName?.focus({ preventScroll: true });
-        }
-      });
-
-      applyProfileToUI();
-
-      const gscrim = document.getElementById("gscrim");
-      const gmodal = document.getElementById("gmodal");
-      const gRound = document.getElementById("gRound");
-      const gScore = document.getElementById("gScore");
-      const gStreak = document.getElementById("gStreak");
-      const gProg = document.getElementById("gProg");
-      const gNext = document.getElementById("gNext");
-      const gQuit = document.getElementById("gQuit");
-      const qText = document.getElementById("qText");
-      const qSub = document.getElementById("qSub");
-      const answersWrap = document.getElementById("answers");
-      const gHint = document.getElementById("gHint");
-      const gconfetti = document.getElementById("gconfetti");
-
-      const ROUNDS = 5;
-      let round = 0,
-        score = 0,
-        streak = 0,
-        locked = false,
-        currentCorrect = null,
-        roundData = null;
-
-      function openGame() {
-        gscrim.classList.add("active");
-        gscrim.setAttribute("aria-hidden", "false");
-        gmodal.classList.add("active");
-        gmodal.setAttribute("aria-hidden", "false");
-        gsap.set(gmodal, {
-          opacity: 0,
-          y: -12,
-          scale: 0.96,
-          filter: "blur(10px)",
-        });
-        gsap.to(gmodal, {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          filter: "blur(0px)",
-          duration: 0.45,
-          ease: "power3.out",
-        });
-        document.documentElement.style.overflow = "hidden";
-        resetGame();
-      }
-
-      function closeGame() {
-        gsap.to(gmodal, {
-          y: -8,
-          scale: 0.98,
-          opacity: 0,
-          filter: "blur(8px)",
-          duration: 0.22,
-          ease: "power2.in",
-          onComplete: () => {
-            gmodal.classList.remove("active");
-            gmodal.setAttribute("aria-hidden", "true");
-          },
-        });
-        gscrim.classList.remove("active");
-        gscrim.setAttribute("aria-hidden", "true");
-        document.documentElement.style.overflow = "";
-      }
-
-      gscrim.addEventListener("click", closeGame);
-      gQuit?.addEventListener("click", closeGame);
-
-      function resetGame() {
-        round = 0;
-        score = 0;
-        streak = 0;
-        updateStats();
-        if (gNext) gNext.textContent = "Start";
-        if (qText) qText.textContent = "Siap bermain?";
-        if (qSub) qSub.textContent = "Tebak budaya milik provinsi yang tepat.";
-        if (answersWrap) answersWrap.innerHTML = "";
-        if (gProg) gProg.style.width = "0%";
-      }
-
-      function updateStats() {
-        if (gRound)
-          gRound.textContent = `Round ${Math.min(round + 1, ROUNDS)}/${ROUNDS}`;
-        if (gScore) gScore.textContent = `Score: ${score}`;
-        if (gStreak) gStreak.textContent = `Streak: ${streak}`;
-      }
-
-      function shuffle(a) {
-        for (let i = a.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [a[i], a[j]] = [a[j], a[i]];
-        }
-        return a;
-      }
-
-      function pickQuestion() {
-        const prov = PROVINCES[Math.floor(Math.random() * PROVINCES.length)];
-        const item =
-          prov.culture[Math.floor(Math.random() * prov.culture.length)];
-        const other = PROVINCES.filter((p) => p.id !== prov.id).map(
-          (p) => p.id
-        );
-        const distract = shuffle(other).slice(0, 2);
-        const choices = shuffle([prov.id, ...distract]);
-        return {
-          question: `${item.t}: ${item.d}`,
-          answer: prov.id,
-          choices,
-          hint: `Kategori: ${item.t}. Coba ingat persebaran suku & tradisi: ${prov.id} memiliki ${item.d} yang terkenal.`,
-        };
-      }
-
-      function renderQuestion() {
-        roundData = pickQuestion();
-        currentCorrect = roundData.answer;
-        if (qText) qText.textContent = "Budaya milik provinsi mana?";
-        if (qSub) qSub.textContent = roundData.question;
-        if (gHint) gHint.textContent = roundData.hint;
-        if (answersWrap) answersWrap.innerHTML = "";
-        roundData.choices.forEach((opt, idx) => {
-          const btn = document.createElement("button");
-          btn.type = "button";
-          btn.className = "ans";
-          btn.innerHTML = `<span style="opacity:.7;">${idx + 1}.</span> ${opt}`;
-          btn.addEventListener("mouseenter", playHoverSfx);
-          btn.addEventListener("click", () => selectAnswer(opt, btn));
-          answersWrap.appendChild(btn);
-        });
-        locked = false;
-      }
-
-      function celebrate() {
-        for (let i = 0; i < 18; i++) {
-          const s = document.createElement("span");
-          const x = Math.random() * 100,
-            rot = (Math.random() * 360) | 0;
-          s.style.cssText = `position:absolute; left:${x}%; top:-10px; width:8px; height:12px; border-radius:2px; background:linear-gradient(180deg,#e9d596,#b8944e); transform:rotate(${rot}deg);`;
-          gconfetti.appendChild(s);
-          gsap.to(s, {
-            y: gmodal.clientHeight + 40,
-            x: Math.random() * 120 - 60,
-            rotation: rot + 360,
-            duration: 1.6 + Math.random() * 0.9,
-            ease: "power2.out",
-            onComplete: () => s.remove(),
-          });
-        }
-      }
-
-      function selectAnswer(opt, node) {
-        if (locked) return;
-        locked = true;
-        playClickSfx();
-        const nodes = [...answersWrap.querySelectorAll(".ans")];
-        nodes.forEach((n) => (n.disabled = true));
-        const correct = opt === currentCorrect;
-        if (correct) {
-          node.classList.add("correct");
-          score += 100 + Math.min(200, streak * 20);
-          streak++;
-          celebrate();
-        } else {
-          node.classList.add("wrong");
-          nodes
-            .find((n) => n.textContent.includes(currentCorrect))
-            ?.classList.add("correct");
-          streak = 0;
-        }
-        updateStats();
-        gsap.fromTo(
-          node,
-          { scale: 0.98 },
-          { scale: 1, duration: 0.16, ease: "power2.out" }
-        );
-        gProg.style.width = `${((round + 1) / ROUNDS) * 100}%`;
-        gNext.textContent = round + 1 >= ROUNDS ? "Finish" : "Next";
-      }
-
-      function showResult() {
-        const accuracy = Math.round((score / (ROUNDS * 100)) * 100);
-        const msg =
-          accuracy >= 80
-            ? "Kamu Panutan Budaya! 👑"
-            : accuracy >= 60
-            ? "Mantap! Terus Eksplor 👏"
-            : "Ayo Coba Lagi 🔁";
-        answersWrap.innerHTML = `
-      <div class="result center">
-        <h3>${msg}</h3>
-        <p>Skor akhir: <b>${score}</b> dari maksimal ${ROUNDS * 300}</p>
-        <div class="badge">Akurasi ~ ${accuracy}%</div>
-      </div>
-    `;
-        qText.textContent = "Selesai!";
-        qSub.textContent = "Mau main lagi? Tekan Replay.";
-        gNext.textContent = "Replay";
-      }
-
-      gNext?.addEventListener("click", () => {
-        if (gNext.textContent === "Start") {
-          round = 0;
-          score = 0;
-          streak = 0;
-          updateStats();
-          gProg.style.width = "0%";
-          gNext.textContent = "Next";
-          renderQuestion();
-          return;
-        }
-        if (gNext.textContent === "Replay") {
-          round = 0;
-          score = 0;
-          streak = 0;
-          updateStats();
-          gProg.style.width = "0%";
-          gNext.textContent = "Next";
-          renderQuestion();
-          return;
-        }
-        if (round + 1 > ROUNDS - 1) {
-          showResult();
-          return;
-        }
-        round++;
-        updateStats();
-        renderQuestion();
-      });
-
-      window.addEventListener("keydown", (e) => {
-        if (!gmodal.classList.contains("active")) return;
-        if (e.key === "Escape") {
-          e.preventDefault();
-          closeGame();
-          return;
-        }
-        if (["1", "2", "3", "4"].includes(e.key)) {
-          const idx = parseInt(e.key, 10) - 1;
-          const node = answersWrap.querySelectorAll(".ans")[idx];
-          if (node) node.click();
+          highlightIndex(activeIndex - 1);
         } else if (e.key === "Enter") {
-          gNext.click();
+          e.preventDefault();
+          selectIndex(activeIndex);
         }
       });
 
-      function openSidebarIf(provId) {
-        const prov = PROVINCES.find((p) => p.id === provId);
-        if (!prov) return;
-        const lat = prov.y * H,
-          lng = prov.x * W;
-        const z = map.getMaxZoom();
-        const c = computeOffsetCenter([lat, lng], z);
-        map.flyTo(c, z, { animate: true, duration: 0.6, easeLinearity: 0.24 });
-        map.once("moveend", () => openSidebar(prov));
-      }
+      document.addEventListener("focusin", (e) => {
+        if (!qmodal || !qmodal.classList.contains("active")) return;
+        // keep focus inside modal input
+        if (!qmodal.contains(e.target)) {
+          qinput?.focus();
+        }
+      });
     </script>
   </body>
 </html>

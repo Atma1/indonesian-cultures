@@ -1,0 +1,29 @@
+{
+  "name": "indonesian-cultures",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aswin-art/indonesian-cultures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Aswin-art/indonesian-cultures/issues"
+  },
+  "homepage": "https://github.com/Aswin-art/indonesian-cultures#readme",
+  "devDependencies": {
+    "vite": "^7.1.4"
+  },
+  "dependencies": {
+    "animejs": "^4.1.3",
+    "gsap": "^3.13.0",
+    "leaflet": "^1.9.4"
+  }
+}

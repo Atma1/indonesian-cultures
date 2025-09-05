@@ -209,22 +209,13 @@
       <footer class="gfoot"><button id="eCloseBtn" class="gbtn" type="button">Close</button></footer>
     </section>
 
-    <!-- Image Lightbox (LoL-like) -->
     <div id="iscrim" class="imgscrim" aria-hidden="true"></div>
     <section id="imodal" class="imgmodal" role="dialog" aria-modal="true" aria-labelledby="imgTitle" aria-hidden="true">
       <button class="img-close" id="imgClose" aria-label="Close">✕</button>
-      <div class="img-wrap">
-        <img id="imgLarge" alt="Preview" />
-        <button id="imgPrev" class="img-nav left" aria-label="Previous">‹</button>
-        <button id="imgNext" class="img-nav right" aria-label="Next">›</button>
-      </div>
-      <aside class="img-meta">
-        <div class="img-count" id="imgCount">01 / 01</div>
-        <h3 class="img-title" id="imgTitle">–</h3>
-        <div class="img-sub" id="imgSub">BUDAYA &amp; WARISAN</div>
-        <p class="img-desc" id="imgDesc"></p>
-      </aside>
+      <div id="imgStream" class="img-stream" aria-live="polite"></div>
     </section>
+    
+
 
     <div id="toast" class="toast" role="status" aria-live="polite">Tersimpan</div>
 

@@ -1,33 +1,28 @@
 // src/ui/sidebar.js
-// Sidebar + LoL-like image lightbox
+// Sidebar + LoL-like Lightbox (vertical slides, image left + info right)
 
 export function initSidebar({ assets }) {
-  const backdrop = document.getElementById("backdrop");
-  const sidebar = document.getElementById("sidebar");
-  const sbIcon = document.getElementById("sbIcon");
-  const sbTitle = document.getElementById("sbTitle");
+  const backdrop   = document.getElementById("backdrop");
+  const sidebar    = document.getElementById("sidebar");
+  const sbIcon     = document.getElementById("sbIcon");
+  const sbTitle    = document.getElementById("sbTitle");
   const sbSubtitle = document.getElementById("sbSubtitle");
-  const sbList = document.getElementById("sbList");
+  const sbList     = document.getElementById("sbList");
 
-  // panel tambahan
-  const sbHero = document.getElementById("sbHero");
-  const sbDesc = document.getElementById("sbDesc");
+  // panel sidebar
+  const sbHero    = document.getElementById("sbHero");
+  const sbDesc    = document.getElementById("sbDesc");
   const sbGallery = document.getElementById("sbGallery");
   const sbYoutube = document.getElementById("sbYoutube");
 
-  // lightbox elements
-  const iScrim = document.getElementById("iscrim");
-  const iModal = document.getElementById("imodal");
-  const imgLarge = document.getElementById("imgLarge");
-  const imgTitle = document.getElementById("imgTitle");
-  const imgSub = document.getElementById("imgSub");
-  const imgDesc = document.getElementById("imgDesc");
-  const imgCount = document.getElementById("imgCount");
-  const imgPrev = document.getElementById("imgPrev");
-  const imgNext = document.getElementById("imgNext");
-  const imgClose = document.getElementById("imgClose");
+  // lightbox (markup sudah ada di HTML)
+  const iScrim    = document.getElementById("iscrim");
+  const iModal    = document.getElementById("imodal");
+  const imgClose  = document.getElementById("imgClose");
+  const imgStream = document.getElementById("imgStream");
 
   let _lightbox = { images: [], index: 0, provName: "", provDesc: "" };
+  let _obs = null;
 
   /* ---------- Sidebar render ---------- */
   function renderChips(prov) {
@@ -48,6 +43,7 @@ export function initSidebar({ assets }) {
       img.src = src;
       img.alt = "Gallery image";
       img.className = "gallery-img";
+      // klik item galeri -> buka lightbox pada index terkait
       img.addEventListener("click", () =>
         openLightbox(prov, i + (prov.featuredImage ? 1 : 0))
       );
@@ -61,7 +57,7 @@ export function initSidebar({ assets }) {
     sbTitle.textContent = prov.id;
     sbSubtitle.textContent = "Budaya & Warisan • " + prov.id;
 
-    // hero
+    // hero (klik buat buka lightbox)
     if (prov.featuredImage) {
       sbHero.src = prov.featuredImage;
       sbHero.style.display = "block";
@@ -116,7 +112,55 @@ export function initSidebar({ assets }) {
   }
   backdrop.addEventListener("click", closeSidebar);
 
-  /* ---------- Lightbox ---------- */
+  /* ---------- Lightbox (LoL-like) ---------- */
+  const pad = (n) => String(n).padStart(2, "0");
+
+  function buildSlide({ src, i, total, title, desc }) {
+    const slide = document.createElement("article");
+    slide.className = "slide";
+    slide.dataset.index = i;
+
+    // kiri: gambar + tombol nav
+    const wrap = document.createElement("div");
+    wrap.className = "img-wrap";
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = title;
+    wrap.appendChild(img);
+
+    if (i > 0) {
+      const prev = document.createElement("button");
+      prev.className = "img-nav left";
+      prev.setAttribute("aria-label", "Sebelumnya");
+      prev.textContent = "‹";
+      prev.addEventListener("click", () => scrollToIndex(i - 1));
+      wrap.appendChild(prev);
+    }
+    if (i < total - 1) {
+      const next = document.createElement("button");
+      next.className = "img-nav right";
+      next.setAttribute("aria-label", "Berikutnya");
+      next.textContent = "›";
+      next.addEventListener("click", () => scrollToIndex(i + 1));
+      wrap.appendChild(next);
+    }
+
+    // kanan: meta
+    const meta = document.createElement("aside");
+    meta.className = "img-meta";
+    meta.innerHTML = `
+      <div class="img-count">${pad(i + 1)} / ${pad(total)}</div>
+      <h3 class="img-title">${title.toUpperCase()}</h3>
+      <div class="img-sub">BUDAYA &amp; WARISAN</div>
+      <p class="img-desc">${desc || ""}</p>
+    `;
+
+    slide.appendChild(wrap);
+    slide.appendChild(meta);
+    return slide;
+  }
+
   function openLightbox(prov, startIndex = 0) {
     const imgs = [];
     if (prov.featuredImage) imgs.push(prov.featuredImage);
@@ -129,53 +173,82 @@ export function initSidebar({ assets }) {
       provName: prov.id,
       provDesc: prov.desc || "",
     };
-    updateLightbox();
+
+    // bangun stream vertikal berisi slide
+    imgStream.innerHTML = "";
+    imgs.forEach((src, i) => {
+      imgStream.appendChild(
+        buildSlide({
+          src,
+          i,
+          total: imgs.length,
+          title: prov.id,
+          desc: prov.desc || "",
+        })
+      );
+    });
+
+    // tampilkan
     iScrim.classList.add("active");
     iModal.classList.add("active");
+
+    // observer untuk update index aktif waktu scroll
+    attachObserver();
+
+    // scroll ke index awal
+    requestAnimationFrame(() => scrollToIndex(_lightbox.index, false));
+
+    // keyboard
     document.addEventListener("keydown", onKey);
   }
 
-  function updateLightbox() {
-    const { images, index, provName, provDesc } = _lightbox;
-    imgLarge.src = images[index];
-    imgTitle.textContent = provName.toUpperCase();
-    imgSub.textContent = "BUDAYA & WARISAN";
-    imgDesc.textContent = provDesc;
-    imgCount.textContent = `${String(index + 1).padStart(2, "0")} / ${String(
-      images.length
-    ).padStart(2, "0")}`;
+  function attachObserver() {
+    if (_obs) _obs.disconnect();
+    const slides = imgStream.querySelectorAll(".slide");
+    _obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            _lightbox.index = Number(en.target.dataset.index || 0);
+          }
+        });
+      },
+      { root: imgStream, threshold: 0.6 }
+    );
+    slides.forEach((s) => _obs.observe(s));
+  }
 
-    const single = images.length <= 1;
-    imgPrev.style.display = single ? "none" : "grid";
-    imgNext.style.display = single ? "none" : "grid";
+  function scrollToIndex(i, smooth = true) {
+    const slides = imgStream.querySelectorAll(".slide");
+    if (!slides.length) return;
+    const idx = Math.max(0, Math.min(i, slides.length - 1));
+    _lightbox.index = idx;
+    slides[idx].scrollIntoView({
+      behavior: smooth ? "smooth" : "auto",
+      block: "start",
+    });
+  }
+
+  function onKey(e) {
+    if (e.key === "Escape") return closeLightbox();
+    if (e.key === "ArrowDown" || e.key === "ArrowRight")
+      return scrollToIndex(_lightbox.index + 1);
+    if (e.key === "ArrowUp" || e.key === "ArrowLeft")
+      return scrollToIndex(_lightbox.index - 1);
   }
 
   function closeLightbox() {
     iScrim.classList.remove("active");
     iModal.classList.remove("active");
     document.removeEventListener("keydown", onKey);
+    if (_obs) { _obs.disconnect(); _obs = null; }
   }
 
-  function onKey(e) {
-    if (e.key === "Escape") return closeLightbox();
-    if (e.key === "ArrowLeft") return nav(-1);
-    if (e.key === "ArrowRight") return nav(1);
-  }
-
-  function nav(step) {
-    const { images } = _lightbox;
-    if (!images.length) return;
-    _lightbox.index = (_lightbox.index + step + images.length) % images.length;
-    updateLightbox();
-  }
-
-  // modal bindings
+  // bindings modal
   iScrim.addEventListener("click", closeLightbox);
   imgClose.addEventListener("click", closeLightbox);
-  imgPrev.addEventListener("click", () => nav(-1));
-  imgNext.addEventListener("click", () => nav(1));
 
-  // API publik
+  // API
   return {
     openSidebar,
     closeSidebar,

@@ -1161,133 +1161,367 @@ body {
   border-radius: 18px;
 }
 
-/* === Sidebar: LoL-like detail panel === */
-.sb-hero {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-bottom: 1px solid #132033;
-  background: #0a0f14;
-}
-.sb-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+/* ================================
+   FINAL OVERRIDES — paste di paling bawah
+   ================================ */
 
-.sb-desc {
+/* 1) SIDEBAR: foto saja (stack vertikal) */
+#sidebar .sb-hero,
+#sidebar .sb-desc,
+#sidebar .sb-list { display: none !important; }
+
+#sidebar .sb-gallery{
+  display: grid !important;
+  grid-template-columns: 1fr;   /* satu kolom = foto berjejer ke bawah */
+  gap: 12px;
   padding: 14px 16px;
-  color: #dcdcdc;
-  font: 500 14px/1.6 Inter, system-ui;
-  border-bottom: 1px solid #132033;
+  border: 0;
 }
-.sb-desc .yt-link {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  background: #c4302b;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: .02em;
-}
-.sb-desc .yt-link:hover { filter: brightness(1.08); }
-
-.sb-gallery {
-  display: flex;
-  gap: 8px;
-  padding: 10px 16px;
-  border-bottom: 1px solid #132033;
-  overflow-x: auto;
-}
-.sb-gallery::-webkit-scrollbar { height: 8px; }
-.sb-gallery::-webkit-scrollbar-thumb {
-  background: #1f2937; border-radius: 999px;
-}
-.sb-gallery .gallery-img {
-  width: 108px; height: 72px;
-  object-fit: cover;
-  border-radius: 8px;
-  flex: 0 0 auto;
-  cursor: pointer;
-  transition: transform .18s ease, box-shadow .18s ease;
-  box-shadow: 0 6px 16px rgba(0,0,0,.25);
-}
-.sb-gallery .gallery-img:hover { transform: scale(1.05); }
-
-/* === Sidebar: LoL-like detail panel === */
-.sb-hero {
+#sidebar .sb-gallery .gallery-img{
   width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-bottom: 1px solid #132033;
-  background: #0a0f14;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(200,170,110,.20);
+  background: #0c1725;
+  box-shadow: 0 10px 28px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.04);
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
 }
-.sb-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-.sb-desc { padding: 14px 16px; color: #dcdcdc; font: 500 14px/1.6 Inter, system-ui; border-bottom: 1px solid #132033; }
-.sb-desc .yt-link {
-  display: inline-block; margin-top: 8px; padding: 8px 12px; border-radius: 6px;
-  background: #c4302b; color: #fff; text-decoration: none; font-weight: 700; letter-spacing: .02em;
-}
-.sb-desc .yt-link:hover { filter: brightness(1.08); }
-
-.sb-gallery { display: flex; gap: 8px; padding: 10px 16px; border-bottom: 1px solid #132033; overflow-x: auto; }
-.sb-gallery::-webkit-scrollbar { height: 8px; }
-.sb-gallery::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 999px; }
-.sb-gallery .gallery-img {
-  width: 108px; height: 72px; object-fit: cover; border-radius: 8px; flex: 0 0 auto; cursor: pointer;
-  transition: transform .18s ease, box-shadow .18s ease; box-shadow: 0 6px 16px rgba(0,0,0,.25);
-}
-.sb-gallery .gallery-img:hover { transform: scale(1.05); }
-
-/* ===== LoL-like Image Lightbox ===== */
-.imgscrim {
-  position: fixed; inset: 0; z-index: 1100; background: rgba(7,10,16,.6);
-  backdrop-filter: blur(2px); opacity: 0; pointer-events: none; transition: opacity .25s ease;
-}
-.imgscrim.active { opacity: 1; pointer-events: auto; }
-
-.imgmodal {
-  position: fixed; z-index: 1110; top: 4%; left: 50%; transform: translateX(-50%) scale(.98);
-  width: min(1160px, 96vw); height: min(88vh, 920px); background: transparent; display: grid;
-  grid-template-columns: minmax(320px, 1fr) 380px; gap: 28px; opacity: 0; pointer-events: none;
-  transition: opacity .25s ease, transform .25s ease;
-}
-.imgmodal.active { opacity: 1; transform: translateX(-50%) scale(1); pointer-events: auto; }
-
-.img-wrap { position: relative; background: #0c1018; border-radius: 6px; box-shadow: 0 40px 120px rgba(0,0,0,.6); display: grid; place-items: center; }
-#imgLarge { max-width: 100%; max-height: 100%; object-fit: contain; display: block; background: #0c1018; }
-
-.img-nav {
-  position: absolute; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; border-radius: 999px;
-  border: 1px solid #243147; background: #0b1220cc; color: #e8e6d8; display: grid; place-items: center; cursor: pointer;
-  box-shadow: 0 10px 24px rgba(0,0,0,.35);
-}
-.img-nav.left { left: 10px; } .img-nav.right { right: 10px; }
-
-.img-close {
-  position: absolute; right: -6px; top: -10px; width: 36px; height: 36px; border-radius: 999px;
-  border: 1px solid #243147; background: #0b1220cc; color: #e8e6d8; cursor: pointer; z-index: 2;
+#sidebar .sb-gallery .gallery-img:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+  box-shadow: 0 16px 40px rgba(0,0,0,.42);
 }
 
-.img-meta {
-  position: relative; padding: 18px 16px; background: rgba(15,19,28,.55);
-  border: 1px solid rgba(200,170,110,.28); border-radius: 10px;
-  box-shadow: 0 30px 140px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.06);
-  backdrop-filter: blur(18px) saturate(120%); overflow: auto;
+/* 2) LIGHTBOX: bersih, 2 kolom (gambar kiri — info kanan) */
+.imgscrim{
+  position: fixed; inset: 0;
+  background: rgba(7,10,16,.65);
+  backdrop-filter: blur(2px);
+  z-index: 1200;
+  opacity: 0; pointer-events: none;
+  transition: opacity .25s ease;
 }
-.img-count { color:#8aa0bb; font: 700 11px/1 Inter; letter-spacing:.16em; margin-bottom:12px; }
-.img-title { color:#f2ecd5; font: 800 22px/1.2 "Cinzel", serif; margin:0 0 6px; letter-spacing:.02em; }
-.img-sub { color:#a9bbd2; font: 700 11px/1 Inter; letter-spacing:.12em; margin-bottom:14px; }
-.img-desc { color:#cbd5e1; font: 500 14px/1.6 Inter; margin:0; }
+.imgscrim.active{ opacity: 1; pointer-events: auto; }
 
-@media (max-width: 980px) {
-  .imgmodal { grid-template-columns: 1fr; height: 92vh; gap: 12px; top: 3%; }
-  .img-meta { height: 40vh; }
-  .img-close { right: 6px; top: 6px; }
+.imgmodal{
+  position: fixed; inset: 3% 2%;
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.25fr .9fr; gap: 22px;
+  background: rgba(15,19,28,.55);
+  border: 1px solid rgba(200,170,110,.28);
+  border-radius: 18px;
+  box-shadow: 0 30px 140px rgba(0,0,0,.6), 0 2px 0 rgba(255,255,255,.06) inset;
+  backdrop-filter: blur(18px) saturate(120%);
+  z-index: 1210;
+  transform: translateY(8px) scale(.985);
+  opacity: 0; pointer-events: none;
+  transition: transform .25s ease, opacity .25s ease;
+}
+.imgmodal.active{ opacity: 1; pointer-events: auto; transform: translateY(0) scale(1); }
+
+/* tombol close */
+.img-close{
+  position: absolute; right: 16px; top: 14px;
+  width: 36px; height: 36px; border-radius: 999px;
+  border: 1px solid rgba(200,170,110,.28);
+  background: #0c1725; color: #f2ecd5;
+  box-shadow: 0 8px 20px rgba(0,0,0,.35);
+  cursor: pointer; z-index: 2;
 }
 
+/* panel gambar */
+.img-wrap{
+  position: relative;
+  border-radius: 14px; overflow: hidden;
+  background: #0b1523; border: 1px solid #243147;
+  display: grid; place-items: center; min-height: 420px;
+  box-shadow: 0 12px 48px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.05);
+}
+#imgLarge{ width: 100%; height: 100%; object-fit: cover; display: block; }
+.img-nav{
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 999px;
+  display: grid; place-items: center;
+  border: 1px solid rgba(200,170,110,.35);
+  background: rgba(14,20,30,.65); color: #e9d596;
+  box-shadow: 0 10px 26px rgba(0,0,0,.45);
+  cursor: pointer; transition: filter .18s, transform .18s;
+}
+.img-nav.left{ left: 14px; } .img-nav.right{ right: 14px; }
+.img-nav:hover{ filter: brightness(1.12); transform: translateY(-50%) scale(1.04); }
+
+/* panel info (kanan) */
+.img-meta{
+  border-radius: 16px;
+  border: 1px solid rgba(200,170,110,.20);
+  background: rgba(16,20,29,.66);
+  padding: 18px 20px; color: #e8e6d8;
+  box-shadow: 0 14px 48px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.05);
+  display: grid; grid-template-rows: auto auto 1fr; gap: 8px;
+}
+#imgCount{
+  justify-self: start;
+  padding: 6px 10px; border-radius: 10px;
+  background: rgba(200,170,110,.18); border: 1px solid #3a2e16;
+  color: #d9c89a; font: 700 11px/1 Inter; letter-spacing: .08em;
+}
+#imgTitle{
+  margin: 2px 0; color: #f2ecd5;
+  font: 800 22px/1.2 "Cinzel", serif; letter-spacing: .02em;
+}
+#imgSub{
+  color: #aebbd1; font: 700 11px/1 Inter;
+  letter-spacing: .14em; text-transform: uppercase; margin-bottom: 8px;
+}
+#imgDesc{
+  margin-top: 6px; color: #cbd5e1; font: 600 13px/1.6 Inter;
+  max-height: 48vh; overflow: auto; scrollbar-width: thin;
+  scrollbar-color: #243147 transparent;
+}
+
+/* responsif */
+@media (max-width: 980px){
+  .imgmodal{ inset: 3% 3.5%; grid-template-columns: 1fr; gap: 14px; }
+  .img-wrap{ min-height: 44vh; }
+  .img-nav{ width: 40px; height: 40px; }
+}
+
+/* ===== LoL-like Lightbox (image left + info right, vertical slides) ===== */
+
+/* layer & transisi */
+.imgscrim{
+  position: fixed; inset:0; z-index:1400;
+  background: rgba(7,10,16,.68);
+  backdrop-filter: blur(3px);
+  opacity:0; pointer-events:none; transition:opacity .25s ease;
+}
+.imgscrim.active{ opacity:1; pointer-events:auto; }
+
+.imgmodal{
+  position: fixed; z-index:1410;
+  left:50%; top:3%; transform:translateX(-50%) scale(.985);
+  width:min(1400px, 96vw); height:min(92vh, 920px);
+  background: rgba(15,19,28,.55);
+  border:1px solid rgba(200,170,110,.28);
+  border-radius:18px;
+  box-shadow:0 30px 140px rgba(0,0,0,.6), 0 2px 0 rgba(255,255,255,.06) inset;
+  opacity:0; filter:blur(6px); pointer-events:none;
+  transition: transform .25s ease, opacity .25s ease, filter .25s ease;
+  overflow:hidden;
+}
+.imgmodal.active{ transform:translateX(-50%) scale(1); opacity:1; filter:none; pointer-events:auto; }
+
+/* tombol close */
+.img-close{
+  position:absolute; right:14px; top:12px; z-index:2;
+  width:36px; height:36px; border-radius:999px;
+  border:1px solid rgba(200,170,110,.28);
+  background:#0c1725; color:#f2ecd5; cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+
+/* stream & slide */
+.img-stream{
+  height:100%; overflow-y:auto; padding:16px;
+  scroll-snap-type:y mandatory;
+  scrollbar-width:thin; scrollbar-color:#243147 transparent;
+}
+.img-stream::-webkit-scrollbar{ width:10px; }
+.img-stream::-webkit-scrollbar-thumb{ background:#243147; border-radius:999px; }
+
+.slide{
+  scroll-snap-align:start;
+  display:grid;
+  grid-template-columns:minmax(600px, 65%) 35%;
+  gap: clamp(16px, 2vw, 28px);
+  align-items:start;
+  min-height:calc(100% - 16px);
+  padding: 6px 2px 28px;
+}
+
+/* kiri: gambar */
+.slide .img-wrap{
+  position:relative; height: clamp(420px, 68vh, 820px);
+  border-radius:16px; overflow:hidden;
+  border:1px solid #243147; background:#0b1523;
+  box-shadow:0 20px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.05);
+  display:grid; place-items:center;
+}
+.slide .img-wrap img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* panah */
+.slide .img-nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:44px; height:44px; border-radius:999px;
+  border:1px solid rgba(200,170,110,.35);
+  background:rgba(14,20,30,.68); color:#e9d596; font-size:22px;
+  display:grid; place-items:center; cursor:pointer;
+  box-shadow:0 10px 26px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.06);
+  transition:filter .18s ease, transform .18s ease;
+}
+.slide .img-nav.left{ left:14px; }
+.slide .img-nav.right{ right:14px; }
+.slide .img-nav:hover{ filter:brightness(1.12); transform:translateY(-50%) scale(1.05); }
+
+/* kanan: panel info (sticky + scroll kalau panjang) */
+.slide .img-meta{
+  position:sticky; top:8px;
+  max-height: calc(92vh - 60px);
+  overflow:auto;
+  border-radius:16px;
+  border:1px solid rgba(200,170,110,.20);
+  background:linear-gradient(180deg, rgba(17,21,30,.62), rgba(12,16,24,.48));
+  box-shadow:0 16px 54px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.05);
+  padding:18px 20px; color:#e8e6d8;
+  scrollbar-width:thin; scrollbar-color:#243147 transparent;
+}
+.slide .img-meta::-webkit-scrollbar{ width:10px; }
+.slide .img-meta::-webkit-scrollbar-thumb{ background:#243147; border-radius:999px; }
+
+.slide .img-count{
+  display:inline-block; margin:0 0 8px; padding:6px 10px; border-radius:10px;
+  background:rgba(200,170,110,.18); border:1px solid #3a2e16;
+  color:#d9c89a; font:700 11px/1 Inter, system-ui; letter-spacing:.08em;
+}
+.slide .img-title{ margin:4px 0 2px; color:#f2ecd5; font:800 22px/1.2 "Cinzel", serif; letter-spacing:.02em; }
+.slide .img-sub{ color:#aebbd1; font:700 11px/1 Inter; letter-spacing:.14em; text-transform:uppercase; margin-bottom:6px; }
+.slide .img-desc{ margin-top:4px; color:#cbd5e1; font:500 14px/1.65 Inter, system-ui; }
+
+/* mobile: stack */
+@media (max-width: 980px){
+  .slide{ grid-template-columns:1fr; gap:12px; }
+  .slide .img-wrap{ height: 52vh; }
+  .slide .img-meta{ position:relative; top:0; max-height:40vh; }
+}
+
+/* === FIX: kunci style Lightbox biar ga bentrok === */
+
+/* scrim */
+#iscrim {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 1400 !important;
+  background: rgba(7,10,16,.68) !important;
+  backdrop-filter: blur(3px) !important;
+  opacity: 0; pointer-events: none;
+  transition: opacity .25s ease;
+}
+#iscrim.active { opacity: 1; pointer-events: auto; }
+
+/* modal container — JANGAN grid di level ini */
+#imodal {
+  position: fixed !important;
+  left: 50% !important; top: 3% !important;
+  transform: translateX(-50%) scale(.985);
+  width: min(1400px, 96vw) !important;
+  height: min(92vh, 920px) !important;
+  padding: 16px !important;       /* ruang untuk scrollbar stream */
+  display: block !important;       /* override rule lama yang set grid */
+  overflow: hidden !important;
+
+  background: rgba(15,19,28,.55);
+  border: 1px solid rgba(200,170,110,.28);
+  border-radius: 18px;
+  box-shadow: 0 30px 140px rgba(0,0,0,.6),
+              0 2px 0 rgba(255,255,255,.06) inset;
+  z-index: 1410 !important;
+  opacity: 0; filter: blur(6px); pointer-events: none;
+  transition: transform .25s ease, opacity .25s ease, filter .25s ease;
+}
+#imodal.active { transform: translateX(-50%) scale(1); opacity: 1; filter: none; pointer-events: auto; }
+
+/* tombol close */
+#imodal .img-close{
+  position:absolute; right:14px; top:12px; z-index:3;
+  width:36px; height:36px; border-radius:999px;
+  border:1px solid rgba(200,170,110,.28);
+  background:#0c1725; color:#f2ecd5; cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+
+/* stream vertikal (scroller) */
+#imodal .img-stream{
+  height: 100% !important;
+  overflow-y: auto !important;
+  padding-right: 8px;              /* biar scrollbar ga niban panel kanan */
+  scroll-snap-type: y mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: #243147 transparent;
+}
+#imodal .img-stream::-webkit-scrollbar{ width:10px; }
+#imodal .img-stream::-webkit-scrollbar-thumb{ background:#243147; border-radius:999px; }
+
+/* tiap slide = 2 kolom (gambar kiri, info kanan) */
+#imodal .slide{
+  width: 100%;
+  min-height: calc(100% - 16px);
+  padding: 6px 0 26px;
+  scroll-snap-align: start;
+
+  display: grid !important;
+  grid-template-columns: minmax(560px, 62%) 38% !important;
+  gap: clamp(16px, 2vw, 28px);
+  align-items: start;
+}
+
+/* kiri: gambar besar */
+#imodal .slide .img-wrap{
+  position: relative;
+  height: clamp(420px, 70vh, 820px);
+  border-radius: 16px; overflow: hidden;
+  border: 1px solid #243147; background:#0b1523;
+  box-shadow: 0 20px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.05);
+  display: grid; place-items: center;
+}
+#imodal .slide .img-wrap img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* panah */
+#imodal .slide .img-nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:44px; height:44px; border-radius:999px;
+  border:1px solid rgba(200,170,110,.35);
+  background:rgba(14,20,30,.68); color:#e9d596; font-size:22px;
+  display:grid; place-items:center; cursor:pointer;
+  box-shadow:0 10px 26px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.06);
+  transition:filter .18s ease, transform .18s ease;
+}
+#imodal .slide .img-nav.left{ left:14px; }
+#imodal .slide .img-nav.right{ right:14px; }
+#imodal .slide .img-nav:hover{ filter:brightness(1.12); transform:translateY(-50%) scale(1.05); }
+
+/* kanan: panel info (sticky + scroll internal) */
+#imodal .slide .img-meta{
+  position: sticky; top: 8px;
+  max-height: calc(92vh - 60px);
+  overflow: auto;
+
+  border-radius: 16px;
+  border: 1px solid rgba(200,170,110,.20);
+  background: linear-gradient(180deg, rgba(17,21,30,.62), rgba(12,16,24,.48));
+  box-shadow: 0 16px 54px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.05);
+  padding: 18px 20px; color:#e8e6d8;
+  scrollbar-width: thin; scrollbar-color: #243147 transparent;
+}
+#imodal .slide .img-meta::-webkit-scrollbar{ width:10px; }
+#imodal .slide .img-meta::-webkit-scrollbar-thumb{ background:#243147; border-radius:999px; }
+
+#imodal .slide .img-count{
+  display:inline-block; margin:0 0 8px; padding:6px 10px; border-radius:10px;
+  background:rgba(200,170,110,.18); border:1px solid #3a2e16;
+  color:#d9c89a; font:700 11px/1 Inter; letter-spacing:.08em;
+}
+#imodal .slide .img-title{ margin:4px 0 2px; color:#f2ecd5; font:800 22px/1.2 "Cinzel", serif; letter-spacing:.02em; }
+#imodal .slide .img-sub{ color:#aebbd1; font:700 11px/1 Inter; letter-spacing:.14em; text-transform:uppercase; margin-bottom:6px; }
+#imodal .slide .img-desc{ margin-top:4px; color:#cbd5e1; font:500 14px/1.65 Inter, system-ui; }
+
+/* mobile */
+@media (max-width: 980px){
+  #imodal{ padding: 12px !important; }
+  #imodal .slide{ grid-template-columns: 1fr !important; gap: 12px; }
+  #imodal .slide .img-wrap{ height: 52vh; }
+  #imodal .slide .img-meta{ position: relative; top: 0; max-height: 40vh; }
+}
 

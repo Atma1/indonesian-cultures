@@ -149,17 +149,20 @@ const RAW_PROVINCES = [
   {
     id: "Daerah Khusus Jakarta",
     x: 0.25,
-    y: 0.5,
-    // contoh lengkap
-    desc:
-      "Pusat pemerintahan dan budaya urban Indonesia. Di sisi modernitas, Jakarta tetap merawat tradisi Betawi: ondel-ondel, lenong, hingga kuliner Kerak Telor.",
+    y: 0.50,
+
+    // dipakai sidebar + lightbox
     featuredImage: "/assets/images/4.jpg",
     images: [
       "/assets/images/1.jpeg",
       "/assets/images/2.jpeg",
       "/assets/images/3.jpeg",
     ],
-    linkYt: "https://www.youtube.com/watch?v=mi_pemdaJakarta",
+    linkYt: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    desc:
+      "Pusat pemerintahan dan budaya urban Indonesia. Di sisi modernitas, Jakarta tetap merawat tradisi Betawi: ondel-ondel, lenong, hingga kuliner Kerak Telor.",
+
+    // chip lama (tetap didukung)
     culture: [
       { t: "Tari", d: "Topeng Betawi" },
       { t: "Kuliner", d: "Kerak Telor" },

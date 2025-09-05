@@ -2,6 +2,7 @@
   {
     "name": "Tenun Ikat Sasak-Samawa-Mbojo",
     "description": "Tenun ikat menjadi identitas utama NTB. Sasak, Samawa, dan Mbojo memiliki motif khas berbahan dasar kapas dengan benang emas. Kain ini dipakai untuk upacara adat dan simbol status suku dan daerah.",
+    "category": "kerajinan",
     "featuredImage": "https://firstlomboktour.com/wp-content/uploads/2019/12/Wanita-Menggunakan-Pakaian-Adat-Sasak-sumber-wolipop.detik_.com_-820x1024.jpeg.webp",
     "images": [
       "https://firstlomboktour.com/wp-content/uploads/2019/12/Wanita-Menggunakan-Pakaian-Adat-Sasak-sumber-wolipop.detik_.com_-820x1024.jpeg.webp"
@@ -11,6 +12,7 @@
   {
     "name": "Peresean",
     "description": "Peresean adalah seni bela diri tradisional Sasak berupa duel menggunakan cambuk rotan dan perisai kulit. Biasanya ditampilkan saat festival Bau Nyale sebagai simbol kekuatan dan keberanian.",
+    "category": "adat",
     "featuredImage": "https://assets-a1.kompasiana.com/items/album/2022/01/23/peresean-sasak-61ed02774b660d1fbb694f25.jpg",
     "images": [
       "https://assets-a1.kompasiana.com/items/album/2022/01/23/peresean-sasak-61ed02774b660d1fbb694f25.jpg"
@@ -20,6 +22,7 @@
   {
     "name": "Ayam Taliwang",
     "description": "Ayam bakar pedas dari Lombok, dibumbui khusus seperti cabai rawit dan jeruk, dikenal hingga nasional. Rasanya khas dan menjadi ikon kuliner Lombok.",
+    "category": "makanan",
     "featuredImage": "https://cnc-magazine.oramiland.com/parenting/original_images/shutterstock_1681180648.jpg",
     "images": [
       "https://cnc-magazine.oramiland.com/parenting/original_images/shutterstock_1681180648.jpg"
@@ -29,6 +32,7 @@
   {
     "name": "Plecing Kangkung",
     "description": "Tumis kangkung dengan sambal kesat tomat dan jeruk nipis, disajikan sebagai lauk ringan. Pedas dan menyegarkan, masakan sehari-hari yang terkenal di Lombok.",
+    "category": "makanan",
     "featuredImage": "https://awsimages.detik.net.id/community/media/visual/2021/11/30/resep-plecing-kangkung-khas-lombok_43.jpeg?w=600&q=90",
     "images": [
       "https://awsimages.detik.net.id/community/media/visual/2021/11/30/resep-plecing-kangkung-khas-lombok_43.jpeg?w=600&q=90"
@@ -38,6 +42,7 @@
   {
     "name": "Sate Rembiga",
     "description": "Sate daging kambing/kuda pedas dari Rembiga, Mataram. Disajikan dengan sambal khas dan lontong, menjadi kuliner malam hari favorit warga NTB.",
+    "category": "makanan",
     "featuredImage": "https://asset.kompas.com/crops/eISQmfsUdlzxJCZ9gaG40jk8BsE=/1x0:1000x666/1200x800/data/photo/2023/05/20/6468bc799c8c7.jpg",
     "images": [
       "https://asset.kompas.com/crops/eISQmfsUdlzxJCZ9gaG40jk8BsE=/1x0:1000x666/1200x800/data/photo/2023/05/20/6468bc799c8c7.jpg"
@@ -47,6 +52,7 @@
   {
     "name": "Museum Negeri NTB",
     "description": "Museum di Mataram menyimpan alat tradisional, tenun, foto, dan artefak masyarakat Sasak, Samawa, dan Bima. Ini menjadi pusat edukasi budaya lokal.",
+    "category": "bangunan",
     "featuredImage": "https://statik.tempo.co/data/2021/07/02/id_1032194/1032194_720.jpg",
     "images": [
       "https://statik.tempo.co/data/2021/07/02/id_1032194/1032194_720.jpg"
@@ -56,6 +62,7 @@
   {
     "name": "Festival Bau Nyale",
     "description": "Festival tahunan memancing cacing laut (nyale) di Pantai Lombok yang diadakan saat musim tertentu. Festival ini sarat makna spiritual dan peringatan mitos rakyat, penuh dengan ritual laut, tarian, dan kegiatan adat.",
+    "category": "adat",
     "featuredImage": "https://phinemo.com/wp-content/uploads/2018/02/festival-bau-nyale-1.jpg",
     "images": [
       "https://phinemo.com/wp-content/uploads/2018/02/festival-bau-nyale-1.jpg"

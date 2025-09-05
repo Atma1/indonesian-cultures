@@ -2,6 +2,7 @@
   {
     "name": "Sedekah Sungai",
     "description": "Tradisi masyarakat pesisir Musi, Palembang. Warga melarung sesaji dan doa ke Sungai Musi untuk keselamatan. Diiringi arak-arakan perahu dan musik tradisional.",
+    "category": "adat",
     "featuredImage": "https://bogoronline.com/wp-content/uploads/2024/07/IMG-20240709-WA0070.jpg",
     "images": [
       "https://bogoronline.com/wp-content/uploads/2024/07/IMG-20240709-WA0070.jpg"
@@ -11,6 +12,7 @@
   {
     "name": "Tari Gending Sriwijaya",
     "description": "Tarian penyambutan agung dari Palembang, menggambarkan kejayaan Sriwijaya. Penari membawa tepak berisi sirih, gerakan halus penuh wibawa, diiringi syair Gending Sriwijaya.",
+    "category": "tarian",
     "featuredImage": "https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/24/2022/12/tari-gending-sriwijaya-min.jpg",
     "images": [
       "https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/24/2022/12/tari-gending-sriwijaya-min.jpg",
@@ -21,6 +23,7 @@
   {
     "name": "Pempek",
     "description": "Makanan khas Palembang dari ikan dan sagu, disajikan dengan kuah cuko asam pedas. Varian pempek kapal selam berisi telur jadi ikon utama kuliner nusantara.",
+    "category": "makanan",
     "featuredImage": "https://www.generasimaju.co.id/articles/article/image-thumb__594928__webp/Pempek%20Palembang.webp",
     "images": [
       "https://www.generasimaju.co.id/articles/article/image-thumb__594928__webp/Pempek%20Palembang.webp",
@@ -31,6 +34,7 @@
   {
     "name": "Aesan Gede",
     "description": "Busana pengantin Palembang dengan dominasi warna merah dan emas, dihiasi songket, mahkota, dan kalung susun. Melambangkan kemewahan dan pengaruh budaya Sriwijaya.",
+    "category": "pakaian",
     "featuredImage": "https://image.idntimes.com/post/20250525/1000185590-679b8fb0461ad11c7448d145cee7fdab-48dab222b21ae963ce0d9213432d0dfb.jpg",
     "images": [
       "https://image.idntimes.com/post/20250525/1000185590-679b8fb0461ad11c7448d145cee7fdab-48dab222b21ae963ce0d9213432d0dfb.jpg"
@@ -40,6 +44,7 @@
   {
     "name": "Rumah Limas",
     "description": "Rumah adat Palembang bertingkat-tingkat (bengkilas) dengan ukiran dinding khas. Simbol strata sosial dan tempat pelaksanaan upacara adat.",
+    "category": "bangunan",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBl3sowvwVMGRbCww1Y0tHQResbE40KtYAGg&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBl3sowvwVMGRbCww1Y0tHQResbE40KtYAGg&s",

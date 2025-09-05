@@ -6,7 +6,8 @@
     "images": [
       "https://cdn.rri.co.id/berita/Tarakan/o/1728216422359-mengenal-iraw-tengkayu-tradisi-mengarak-perahu-hias-khas-suku-tidung-XygUjNxJtr/fohzwpe0svi2eju.jpeg"
     ],
-    "youtubeLink": ""
+    "youtubeLink": "",
+    "category": "adat"
   },
   {
     "name": "Busana Adat Tidung",
@@ -15,7 +16,8 @@
     "images": [
       "https://image-korankaltim.sgp1.cdn.digitaloceanspaces.com/berita/medium/95ddd81f2703701b2735257955e559fd_20081805221239582.jpeg"
     ],
-    "youtubeLink": ""
+    "youtubeLink": "",
+    "category": "pakaian"
   },
   {
     "name": "Anyaman Pandan/Rotan Tidung",
@@ -24,7 +26,8 @@
     "images": [
       "https://asset-3.tstatic.net/jualbeli/img/njajal/2021/11/Inilah-Cara-Membuat-Kerajinan-Tas-Anyaman-Pandan-Purun-Khas-Tidung-master-1440736067.jpg"
     ],
-    "youtubeLink": ""
+    "youtubeLink": "",
+    "category": "kerajinan"
   },
   {
     "name": "Gelaran Budaya Malinau",
@@ -33,6 +36,7 @@
     "images": [
       "https://ugm.ac.id/wp-content/uploads/2024/11/Malinau-2-678x510.jpg"
     ],
-    "youtubeLink": ""
+    "youtubeLink": "",
+    "category": "adat"
   }
 ]

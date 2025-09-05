@@ -2,6 +2,7 @@
   {
     "name": "Noken",
     "description": "Tas tradisional multifungsi yang dirajut atau diknot dari serat kulit kayu atau daun, dibawa di atas kepala, digunakan untuk membawa barang sehari-hari seperti hasil pertanian, pasar, bahkan bayi; simbol ketahanan, persatuan dan kreativitas masyarakat Papua; diakui UNESCO sebagai warisan budaya takbenda yang perlu dilindungi.",
+    "category": "kerajinan",
     "featuredImage": "https://www.katolikana.com/wp-content/uploads/2024/12/Noken-Papua.jpg",
     "images": [
       "https://www.katolikana.com/wp-content/uploads/2024/12/Noken-Papua.jpg",
@@ -12,6 +13,7 @@
   {
     "name": "Tari Isosolo",
     "description": "Tarian perahu dari masyarakat Sentani di sekitar Jayapura, menampilkan kelompok berbagai usia dan gender menari dengan gembira di atas kano di Danau Sentani, melambangkan kerukunan antar-suku.",
+    "category": "tarian",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX2NZNpjDFyb6dNS08r_Awcf7QSy0xn4mauw&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX2NZNpjDFyb6dNS08r_Awcf7QSy0xn4mauw&s",
@@ -22,6 +24,7 @@
   {
     "name": "Tifa",
     "description": "Alat musik drum tradisional berbahan kayu (Lenggua) dan kulit binatang, digunakan untuk menyambut tamu, pesta adat, dan tari-tarian. Setiap motif pada tifa mencerminkan identitas klan.",
+    "category": "musik",
     "featuredImage": "https://awsimages.detik.net.id/community/media/visual/2020/09/10/alat-musik-tradisional-papua-tifa_43.jpeg?w=1200",
     "images": [
       "https://awsimages.detik.net.id/community/media/visual/2020/09/10/alat-musik-tradisional-papua-tifa_43.jpeg?w=1200",
@@ -32,6 +35,7 @@
   {
     "name": "Tari Musyoh",
     "description": "Tarian tradisional untuk mengusir roh jahat atau menyambut tamu, dibawakan oleh pria (untuk roh) atau pria dan wanita (menyambut tamu), mengenakan kostum sederhana dari kulit kayu dan akar, dihiasi cat tubuh dan aksesori.",
+    "category": "tarian",
     "featuredImage": "https://img.inews.co.id/media/1200/files/inews_new/2023/09/18/tari_musyoh.jpg",
     "images": [
       "https://img.inews.co.id/media/1200/files/inews_new/2023/09/18/tari_musyoh.jpg",
@@ -42,6 +46,7 @@
   {
     "name": "Kariwari",
     "description": "Rumah adat suku Tobati-Enggros di sekitar Teluk Youtefa (Jayapura), berbentuk piramida segi-delapan, dua lantai dan tiga ruang, digunakan khusus untuk pendidikan dan ritual—bersifat sakral.",
+    "category": "bangunan",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6a1aPhCYZvm_q5udGwv1UKOVbu24-6w2QhA&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6a1aPhCYZvm_q5udGwv1UKOVbu24-6w2QhA&s",

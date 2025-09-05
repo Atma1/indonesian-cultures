@@ -2,6 +2,7 @@
   {
     "name": "Pela Gandong",
     "description": "Pela Gandong adalah pranata kekerabatan antar-negeri (desa) di Maluku yang mengikat komunitas berbeda agama maupun etnis dalam sumpah persaudaraan. Ikatan ini mengatur saling bantu saat bencana, hak lintas wilayah, dan prioritas damai bila terjadi sengketa. Secara kultural, Pela Gandong adalah mekanisme resolusi konflik dan modal sosial Maluku—warisan yang menjaga kohesi masyarakat kepulauan di jalur niaga rempah yang plural sejak lama.",
+    "category": "adat",
     "featuredImage": "https://www.harapanrakyat.com/wp-content/uploads/2025/01/Mengenal-Tradisi-Sejarah-Pela-Gandong-di-Maluku.jpg",
     "images": [
       "https://www.harapanrakyat.com/wp-content/uploads/2025/01/Mengenal-Tradisi-Sejarah-Pela-Gandong-di-Maluku.jpg"
@@ -11,6 +12,7 @@
   {
     "name": "Sasi",
     "description": "Sasi adalah larangan adat sementara untuk mengambil hasil laut atau hutan di wilayah tertentu sampai waktu yang ditentukan. Tanda ‘sasi tutup’ dipasang dan seluruh warga menghormatinya; pelanggaran dikenai sanksi moral dan material. Dengan demikian, sasi menjadi instrumen konservasi berbasis adat yang efisien—menjamin stok ikan, teripang, dan hasil kebun pulih—serta wadah pendidikan ekologis antargenerasi.",
+    "category": "adat",
     "featuredImage": "https://asset-a.grid.id/crop/0x0:0x0/x/photo/2023/10/19/tradisi-sasijpeg-20231019113943.jpeg",
     "images": [
       "https://asset-a.grid.id/crop/0x0:0x0/x/photo/2023/10/19/tradisi-sasijpeg-20231019113943.jpeg"
@@ -20,6 +22,7 @@
   {
     "name": "Cakalele",
     "description": "Cakalele adalah tari perang Maluku yang ditarikan pria dengan pedang dan tameng Salawaku, diiringi tifa dan suling bambu. Kostum merah-putih kontras, teriakan ritmis, serta hentakan kaki kuat menghadirkan suasana heroik. Cakalele mengukuhkan memori kolektif atas kejayaan pelaut Maluku sekaligus menyublimkan agresi menjadi energi estetis pada pesta panen, peresmian negeri, atau penyambutan pejabat.",
+    "category": "tarian",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThdpmkgh4AcG3LSjhZatYQeixo9vEEFCS8ow&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThdpmkgh4AcG3LSjhZatYQeixo9vEEFCS8ow&s"
@@ -29,6 +32,7 @@
   {
     "name": "Bambu Gila",
     "description": "Ritual hiburan sakral di mana sebatang bambu ‘menjadi liar’ ketika pawang membacakan mantra dan membakar kemenyan. Sejumlah pemuda memegang tali di ujung bambu berusaha menahan tenaganya yang mendadak liar—menggambarkan kekuatan alam yang harus dihormati dan diseimbangkan. Bambu Gila populer di Ambon dan Seram sebagai tontonan sekaligus ruang edukasi spiritualitas lokal.",
+    "category": "adat",
     "featuredImage": "https://exploremaluku.com/wp-content/uploads/2022/03/images-100.jpeg",
     "images": [
       "https://exploremaluku.com/wp-content/uploads/2022/03/images-100.jpeg"
@@ -38,6 +42,7 @@
   {
     "name": "Baileo",
     "description": "Baileo adalah rumah adat berteras luas tanpa dinding yang berfungsi sebagai balai musyawarah, gudang pusaka, dan panggung ritus negeri. Letaknya strategis dekat alun-alun dan pohon beringin, dengan tiang-tiang kayu yang memuat simbol silsilah. Arsitektur terbuka memfasilitasi partisipasi warga dan menandakan bahwa urusan negeri diputuskan di ruang yang transparan dan setara.",
+    "category": "bangunan",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShRigNFratQEjKeMpPNuKiXwOSoEQ8ETIldg&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShRigNFratQEjKeMpPNuKiXwOSoEQ8ETIldg&s"

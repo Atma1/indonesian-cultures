@@ -2,6 +2,7 @@
   {
     "name": "Palang Pintu",
     "description": "Palang Pintu adalah ritual adat Betawi dalam rangkaian pernikahan. Di upacara ini rombongan mempelai pria \"ditahan\" di gerbang rumah mempelai wanita dan harus menghadapi demonstrasi silat sebelum diterima.",
+    "category": "adat",
     "featuredImage": "https://www.senibudayabetawi.com/wp-content/uploads/2021/12/1639376899781-scaled.jpg",
     "images": [
       "https://www.senibudayabetawi.com/wp-content/uploads/2021/12/1639376899781-scaled.jpg"
@@ -11,6 +12,7 @@
   {
     "name": "Ondel‑ondel",
     "description": "Ondel‑ondel adalah boneka raksasa yang tampil dalam seni pertunjukan rakyat Betawi. Ia merupakan ikon Jakarta yang tampil pada festival dan menyambut tamu; asalnya dipercaya untuk menolak bala dan mewakili roh nenek moyang. Pembuatan ondel‑ondel dilakukan dengan ritual dan persembahan agar rohnya bersifat baik.",
+    "category": "folklore",
     "featuredImage": "https://indonesiakaya.com/wp-content/uploads/2020/10/ondel-ondel_1200.jpg",
     "images": [
       "https://indonesiakaya.com/wp-content/uploads/2020/10/ondel-ondel_1200.jpg"
@@ -20,6 +22,7 @@
   {
     "name": "Kerak Telor",
     "description": "Kerak Telor merupakan makanan khas Betawi berupa nasi ketan dengan telur bebek atau ayam yang dimasak dalam wajan tanpa minyak, lalu dibalik dan disajikan dengan serundeng (kelapa parut sangrai), bawang goreng dan udang kering.",
+    "category": "makanan",
     "featuredImage": "https://lingkar.news/wp-content/uploads/2023/03/Cara-Membuat-Kerak-Telor-Makanan-Tradisional-Khas-Jakarta.jpg",
     "images": [
       "https://lingkar.news/wp-content/uploads/2023/03/Cara-Membuat-Kerak-Telor-Makanan-Tradisional-Khas-Jakarta.jpg"
@@ -29,6 +32,7 @@
   {
     "name": "Rumah Kebaya (Bapang)",
     "description": "Rumah adat Betawi memiliki atap pelana dengan ornamen gigi balang dan serambi depan luas (langkan):contentReference[oaicite:23]{index=23}. Tipe rumah kebaya atau rumah bapang merupakan salah satu bentuk rumah tradisional Betawi yang mencerminkan kesejukan dan keterbukaan.",
+    "category": "bangunan",
     "featuredImage": "https://pariwisataindonesia.id/wp-content/uploads/2023/07/PariwisataIndonesia-Foto-Rumah-Panggung-Betawi-740x500.png",
     "images": [
       "https://pariwisataindonesia.id/wp-content/uploads/2023/07/PariwisataIndonesia-Foto-Rumah-Panggung-Betawi-740x500.png"

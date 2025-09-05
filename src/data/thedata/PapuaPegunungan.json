@@ -2,6 +2,7 @@
   {
     "name": "Festival Lembah Baliem (Perang Adat dan Tarian Tradisional)",
     "description": "Festival tahunan setiap Agustus di Lembah Baliem, menampilkan perang-perangan adat, tarian tradisional, dan peragaan budaya dari suku Dani, Lani, dan Yali di Wamena.",
+    "category": "adat",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaFxlpuMeDf_NAMa7qsagyMG4Y9eRIaupMsw&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaFxlpuMeDf_NAMa7qsagyMG4Y9eRIaupMsw&s",
@@ -12,6 +13,7 @@
   {
     "name": "Alat Musik Pikon",
     "description": "Alat musik tiup tradisional berupa batang yang bergetar (dari kayu/bambu/tembaga), dimainkan oleh laki-laki suku Dani sebagai hiburan atau bagian festival budaya.",
+    "category": "musik",
     "featuredImage": "https://cdn.rri.co.id/berita/Bovendigoel/o/1727383303183-Pikon_failfaire/zvmegpbch93quyh.jpeg",
     "images": [
       "https://cdn.rri.co.id/berita/Bovendigoel/o/1727383303183-Pikon_failfaire/zvmegpbch93quyh.jpeg",
@@ -22,6 +24,7 @@
   {
     "name": "Barapen",
     "description": "Tradisi sosial dan kuliner mengubur batu panas dalam lubang bersama daun dan bahan pangan (biasanya ubi dan babi), sebagai wujud syukur dan pertemuan komunitas.",
+    "category": "makanan",
     "featuredImage": "https://assets-a1.kompasiana.com/items/album/2023/12/24/tradisi-barapen-foto-goodnewsfromindonesiacok-6587f59c12d50f7782389eb3.jpg",
     "images": [
       "https://assets-a1.kompasiana.com/items/album/2023/12/24/tradisi-barapen-foto-goodnewsfromindonesiacok-6587f59c12d50f7782389eb3.jpg",
@@ -32,6 +35,7 @@
   {
     "name": "Lagu Daerah \"Yamko Rambe Yamko\"",
     "description": "Lagu rakyat Papua yang bertema perjuangan dan pahlawan, melambangkan semangat mempertahankan tanah air.",
+    "category": "musik",
     "featuredImage": "https://froyonion.sgp1.cdn.digitaloceanspaces.com/images/blogdetail/bb1c4a480d7400bfd8c6ee6ea2615859da8cbb12.jpg",
     "images": [
       "https://froyonion.sgp1.cdn.digitaloceanspaces.com/images/blogdetail/bb1c4a480d7400bfd8c6ee6ea2615859da8cbb12.jpg",

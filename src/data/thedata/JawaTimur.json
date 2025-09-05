@@ -2,6 +2,7 @@
   {
     "name": "Reog Ponorogo",
     "description": "Reog Ponorogo adalah upacara dan seni pertunjukan dari Ponorogo, Jawa Timur, yang menampilkan topeng besar berbentuk kepala singa (barongan) dihiasi bulu merak serta diiringi musik gamelan dan tarian. Upacara ini dianggap sebagai simbol perlawanan dan keberanian masyarakat Ponorogo.",
+    "category": "adat",
     "featuredImage": "https://static.uc.ac.id/htb/2019/01/portal-bisnis-wisata.jpg",
     "images": [
       "https://static.uc.ac.id/htb/2019/01/portal-bisnis-wisata.jpg",
@@ -12,6 +13,7 @@
   {
     "name": "Ludruk",
     "description": "Ludruk merupakan teater rakyat Jawa Timur yang menampilkan drama komedi tentang kehidupan sehari-hari. Para pemain pria memerankan tokoh laki-laki maupun perempuan dengan dialog spontan dan disertai jula-juli (tembang jenaka).",
+    "category": "senipertunjukan",
     "featuredImage": "https://indonesiakaya.com/wp-content/uploads/2020/10/Ludruk_1200.jpg",
     "images": [
       "https://indonesiakaya.com/wp-content/uploads/2020/10/Ludruk_1200.jpg"
@@ -21,6 +23,7 @@
   {
     "name": "Rujak Cingur",
     "description": "Rujak Cingur adalah makanan khas Surabaya berupa campuran irisan buah, sayuran dan irisan moncong sapi (cingur) yang disiram saus petis udang khas. Hidangan ini memiliki cita rasa gurih, manis, pedas dan segar.",
+    "category": "makanan",
     "featuredImage": "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/21044422/cara-membuat-rujak-cingur-sederhana-khas-surabaya.jpg",
     "images": [
       "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/21044422/cara-membuat-rujak-cingur-sederhana-khas-surabaya.jpg",

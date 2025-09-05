@@ -2,6 +2,7 @@
   {
     "name": "Seren Taun",
     "description": "Seren Taun adalah festival syukuran panen padi yang dilakukan masyarakat Sunda, termasuk di Kasepuhan Banten Kidul. Upacara ini menandai pergantian tahun pertanian, mengucap syukur atas panen dan memohon kelimpahan untuk musim berikutnya.",
+    "category": "adat",
     "featuredImage": "https://static.republika.co.id/uploads/images/headline_slide/warga-membawa-padi-sebagai-simbol-kebersamaan-saat-perayaan-adat-_170914134329-213.jpg",
     "images": [
       "https://static.republika.co.id/uploads/images/headline_slide/warga-membawa-padi-sebagai-simbol-kebersamaan-saat-perayaan-adat-_170914134329-213.jpg",
@@ -12,6 +13,7 @@
   {
     "name": "Debus",
     "description": "Debus merupakan seni bela diri tradisional Sunda yang terkenal dengan atraksi kekebalan terhadap senjata tajam. Seni ini berasal dari Banten dan Jawa Barat.",
+    "category": "adat",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_HJ5yhXQg8s9yfGTjMnAUYElihptUOn5qcA&s",
     "images": [
       "https://cdn1-production-images-kly.akamaized.net/8sogIalswU9oPhaADTJ_fSojuAg=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1577306/original/072927900_1493193642-20170426-atraksi-debus-batam.jpg"
@@ -21,6 +23,7 @@
   {
     "name": "Congklak",
     "description": "Congklak (dakon) adalah permainan tradisional dengan papan 14 lubang dan 2 lubang besar. Pemain memindahkan biji ke seluruh lubang; permainan ini mengajarkan kejujuran, kesabaran dan strategi.",
+    "category": "permainan",
     "featuredImage": "https://assets-a1.kompasiana.com/items/album/2023/11/14/congklak-1-6553839aedff7671602e1822.jpg",
     "images": [
       "https://assets-a1.kompasiana.com/items/album/2023/11/14/congklak-1-6553839aedff7671602e1822.jpg"
@@ -30,6 +33,7 @@
   {
     "name": "Sate Bandeng",
     "description": "Sate Bandeng adalah sate ikan bandeng tanpa tulang yang berasal dari era Kesultanan Banten. Ikan dibumbui, diisi kembali dagingnya, lalu dipanggang; hidangan ini muncul sebagai masakan istana dan kini disajikan pada upacara dan festival.",
+    "category": "makanan",
     "featuredImage": "https://akcdn.detik.net.id/visual/2023/09/01/ilustrasi-sate-bandeng_43.jpeg?w=720&q=90",
     "images": [
       "https://akcdn.detik.net.id/visual/2023/09/01/ilustrasi-sate-bandeng_43.jpeg?w=720&q=90"
@@ -39,6 +43,7 @@
   {
     "name": "Pakaian Baduy",
     "description": "Suku Baduy (Kanekes) di Banten mengenakan pakaian tradisional yang sederhana. Baduy dalam memakai pakaian putih atau biru tua dan ikat kepala putih serta tidak memakai pakaian modern. Baduy luar memakai sarung dan baju berwarna yang lebih beragam; dulu mereka menggunakan kain biru hitam dan dilarang memakai celana panjang.",
+    "category": "pakaian",
     "featuredImage": "https://goodformom.id/upload/postingan/1726723131_Perempuan%20Baduy%20(1).jpg",
     "images": [
       "https://goodformom.id/upload/postingan/1726723131_Perempuan%20Baduy%20(1).jpg"
@@ -48,6 +53,7 @@
   {
     "name": "Golok Banten",
     "description": "Golok merupakan senjata tajam mirip parang yang digunakan di seluruh Nusantara. Di Indonesia, golok diasosiasikan dengan masyarakat Sunda dan Betawi. Golok memiliki dua jenis: gablongan (alat rumah tangga) dan golok simpenan untuk perlindungan; golok menjadi simbol kejantanan dan keberanian.",
+    "category": "senjata",
     "featuredImage": "https://beritabanten.com/wp-content/uploads/2024/10/Golok-Ciomas-Banten-Foto-Instagram-@Syahrul_batawi.jpg",
     "images": [
       "https://beritabanten.com/wp-content/uploads/2024/10/Golok-Ciomas-Banten-Foto-Instagram-@Syahrul_batawi.jpg"
@@ -57,6 +63,7 @@
   {
     "name": "Legenda Sangkuriang",
     "description": "Sangkuriang adalah legenda Sunda tentang seorang pemuda yang jatuh cinta kepada ibunya, Dayang Sumbi. Kisah ini menjelaskan asal-usul Danau Bandung dan gunung-gunung seperti Tangkuban Parahu serta sering dibandingkan dengan mitos Oedipus:contentReference.",
+    "category": "folklore",
     "featuredImage": "https://cdn.timesmedia.co.id/images/2020/11/08/Sangkuriang.jpg",
     "images": [
       "https://cdn.timesmedia.co.id/images/2020/11/08/Sangkuriang.jpg"
@@ -66,6 +73,7 @@
   {
     "name": "Masjid Agung Banten",
     "description": "Masjid Agung Banten dibangun sekitar 1566 pada masa Sultan Maulana Yusuf. Masjid ini mewakili gaya arsitektur Jawa dengan pengaruh Islam, Hindu, Budha, Tionghoa dan Belanda, sehingga menjadi salah satu sisa peninggalan kota pelabuhan Banten lama.",
+    "category": "bangunan",
     "featuredImage": "https://www.djkn.kemenkeu.go.id/files/images/2024/09/f1.jpeg",
     "images": [
       "https://www.djkn.kemenkeu.go.id/files/images/2024/09/f1.jpeg"

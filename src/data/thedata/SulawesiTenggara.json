@@ -2,6 +2,7 @@
   {
     "name": "Posuo",
     "description": "Ritual pingitan bagi gadis remaja Buton sebagai penanda kedewasaan sebelum memasuki jenjang perkawinan. Peserta dibimbing perempuan senior mempelajari adab, agama, dan ketrampilan rumah tangga. Prosesi diakhiri ‘keluar pingitan’ dengan busana seremonial dan doa syukur—menjembatani transisi biologis, sosial, dan spiritual.",
+    "category": "adat",
     "featuredImage": "https://bahasainggrismudahsite.files.wordpress.com/2018/04/ritual-posuo-di-sulawesi.png?w=622&h=349&crop=1",
     "images": [
       "https://bahasainggrismudahsite.files.wordpress.com/2018/04/ritual-posuo-di-sulawesi.png?w=622&h=349&crop=1",
@@ -12,6 +13,7 @@
   {
     "name": "Tari Lariangi",
     "description": "Tari istana Kesultanan Buton yang dibawakan perempuan dengan formasi simetris dan nyanyian pujian. Kostum berlapis dengan mahkota rendah dan selendang sutra menghadirkan aura agung. Lariangi menjadi etalase etiket istana, kesopanan gerak, serta musikalitas syair Wolio yang terjaga ratusan tahun.",
+    "category": "tarian",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrYIxlemQv7vLSJcXbQSmXUxz0mFYCeZ-Iww&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrYIxlemQv7vLSJcXbQSmXUxz0mFYCeZ-Iww&s",
@@ -23,6 +25,7 @@
   {
     "name": "Lulo (Tari Pergaulan Sultra)",
     "description": "Tarian lingkar yang populer di Kendari dan pedalaman, dilakukan bergandengan sambil melangkah mengikuti pola ritmis sederhana. Lulo fleksibel: untuk syukuran panen, pernikahan, hingga penyambutan tamu. Di ruang modern, ia menjadi media inklusif mempertemukan warga kota dan desa dalam satu ritme kebersamaan.",
+    "category": "tarian",
     "featuredImage": "https://www.kolakadesa.id/wowatamboli.kolakadesa.id/desa/upload/artikel/sedang_1742329392_tari_lulo.jpg",
     "images": [
       "https://www.kolakadesa.id/wowatamboli.kolakadesa.id/desa/upload/artikel/sedang_1742329392_tari_lulo.jpg",
@@ -33,6 +36,7 @@
   {
     "name": "Parende",
     "description": "Sup ikan karang berkuah bening dengan bumbu minimalis: jahe, serai, jeruk, dan kemangi. Kesegaran bahan menjadi kunci, sehingga nelayan memasaknya segera setelah mendarat. Parende adalah contoh kuliner bahari yang menonjolkan kealamian rasa tanpa menutupi karakter ikan.",
+    "category": "makanan",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ2JaXa4i-UBS1_D2RAHEuDmrHPr2-hxXPnQ&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ2JaXa4i-UBS1_D2RAHEuDmrHPr2-hxXPnQ&s",

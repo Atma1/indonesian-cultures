@@ -2,6 +2,7 @@
   {
     "name": "Tiwah Dayak Ngaju",
     "description": "Ritual sekunder kematian: penggalian dan pembersihan tulang, arak-arakan, lalu disemayamkan di Sandung.",
+    "category": "adat",
     "featuredImage": "https://mmc.kalteng.go.id/files/berita/04072025025343_0.jpg",
     "images": [
       "https://mmc.kalteng.go.id/files/berita/04072025025343_0.jpg"
@@ -11,6 +12,7 @@
   {
     "name": "Karungut",
     "description": "Seni tutur/nyanyian berpantun khas Dayak Kalteng, berisi petuah, sejarah, dan nilai adat setempat.",
+    "category": "seni",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy5WNh9RDxbyGLu5m5Cb7YYjB1909_7he2nA&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy5WNh9RDxbyGLu5m5Cb7YYjB1909_7he2nA&s"
@@ -20,6 +22,7 @@
   {
     "name": "Kalumpe",
     "description": "Olahan daun singkong tumbuk dimasak rempah, disajikan dengan ikan asin atau daging; kuliner Dayak populer.",
+    "category": "makanan",
     "featuredImage": "https://cdn.yummy.co.id/content-images/images/20240516/25DrOGglbJypqMg2atZQgSIRHc4VntF5-31373135383439333930d41d8cd98f00b204e9800998ecf8427e.jpg?x-oss-process=image/resize,w_388,h_388,m_fixed,x-oss-process=image/format,webp",
     "images": [
       "https://cdn.yummy.co.id/content-images/images/20240516/25DrOGglbJypqMg2atZQgSIRHc4VntF5-31373135383439333930d41d8cd98f00b204e9800998ecf8427e.jpg?x-oss-process=image/resize,w_388,h_388,m_fixed,x-oss-process=image/format,webp"
@@ -29,6 +32,7 @@
   {
     "name": "Benang Bintik",
     "description": "Motif batik khas Kalteng bertitik-titik menyerupai manik; terinspirasi hiasan Dayak dan alam hutan rimba.",
+    "category": "kerajinan",
     "featuredImage": "https://img.antarafoto.com/cache/1200x800/2023/07/04/produksi-batik-benang-bintik-khas-kalteng-176q0-dom.jpg",
     "images": [
       "https://img.antarafoto.com/cache/1200x800/2023/07/04/produksi-batik-benang-bintik-khas-kalteng-176q0-dom.jpg"
@@ -38,6 +42,7 @@
   {
     "name": "Huma Betang",
     "description": "Rumah panjang Dayak sebagai konsep hidup bersama: musyawarah, gotong royong, dan tata nilai komunitas.",
+    "category": "bangunan",
     "featuredImage": "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/243/2024/08/07/aa03f806-23d4-403a-9ef2-aa1edfa81b84-1136194719.jpeg",
     "images": [
       "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/243/2024/08/07/aa03f806-23d4-403a-9ef2-aa1edfa81b84-1136194719.jpeg"

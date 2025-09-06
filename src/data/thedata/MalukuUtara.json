@@ -2,6 +2,7 @@
   {
     "name": "Legu Gam",
     "description": "Legu Gam adalah festival akbar Keraton Ternate yang semula merupakan upacara internal istana untuk memperingati ulang tahun Sultan, lalu berkembang menjadi perayaan rakyat yang menyatukan istana dan masyarakat. Selama beberapa hari, alun-alun keraton dan kampung-kampung di Ternate dipenuhi iring-iringan adat, ziarah ke situs leluhur, prosesi panji-panji Kesultanan, sampai pasar budaya yang menampilkan musik tifa, tarian perang, kuliner rempah, serta pameran kerajinan keris dan perak. Inti ritualnya menegaskan legitimasi moral Sultan sebagai payung adat, sekaligus medium publik untuk menjaga memori maritim rempah yang pernah menempatkan Ternate di jantung jaringan perdagangan dunia.",
+    "category": "adat",
     "featuredImage": "https://indonesiatimur.co/wp-content/uploads/2015/03/Festival-Legu-Gam.jpg",
     "images": [
       "https://indonesiatimur.co/wp-content/uploads/2015/03/Festival-Legu-Gam.jpg"
@@ -11,6 +12,7 @@
   {
     "name": "Tari Soya-Soya",
     "description": "Tari Soya-Soya merupakan tarian perang ikonik dari Ternate yang menggambarkan semangat perlawanan dan kejayaan bahari. Para penari pria mengenakan kostum merah dengan atribut senjata simbolik, melangkah tegas selaras ketukan tifa dan tiupan seruling bambu. Pola lantainya repetitif dan simetris, mencipta suasana heroik yang kontras dengan gerak tangan yang disiplin. Ditampilkan pada penyambutan tamu kehormatan, Legu Gam, atau momen kenegaraan lokal, Soya-Soya menjadi kanal pengetahuan generasi muda akan etos keberanian, disiplin, dan kehormatan rumpun Kesultanan di Maluku Utara.",
+    "category": "tarian",
     "featuredImage": "https://indonesiakaya.com/wp-content/uploads/2020/10/tari_soya-soya_1200.jpg",
     "images": [
       "https://indonesiakaya.com/wp-content/uploads/2020/10/tari_soya-soya_1200.jpg"
@@ -20,6 +22,7 @@
   {
     "name": "Kololi Kie",
     "description": "Kololi Kie berarti ‘mengelilingi gunung’—ritus masyarakat Tidore yang dilakukan dengan berkeliling kaki Gunung Kie Matubu (Gunung Tidore) sebagai ungkapan syukur, penghormatan pada leluhur, sekaligus memohon keselamatan bagi negeri. Prosesi ini merangkai doa, tabuhan tifa, dan penanda-penanda ruang sakral seperti mata air dan batu penunggu. Ritus mematri kesadaran ekologis bahwa gunung adalah penyangga sumber air dan penentu siklus tanam, sehingga Kololi Kie juga dimaknai sebagai kontrak moral untuk merawat hutan cengkeh dan pala yang menjadi nadi ekonomi penduduk.",
+    "category": "adat",
     "featuredImage": "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1554788406/voob1anvgplqobvkrxny.jpg",
     "images": [
       "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1554788406/voob1anvgplqobvkrxny.jpg"
@@ -29,6 +32,7 @@
   {
     "name": "Sasadu",
     "description": "Sasadu adalah balai adat komunal masyarakat Sahu di Halmahera Barat, berupa bangunan tanpa dinding dengan atap daun sagu dan struktur kayu yang lentur terhadap gempa. Di ruang terbuka ini warga bermusyawarah, menggelar pesta panen, mengatur ‘sasi’ (tata kelola sumber daya), hingga memutus sengketa keluarga. Arsitektur terbuka membuat sirkulasi udara baik, menyesuaikan iklim lembab pesisir dan hutan. Filosofinya, dinding yang ‘dihilangkan’ adalah ajakan untuk transparansi, partisipasi, serta kontrol sosial berbasis adat.",
+    "category": "bangunan",
     "featuredImage": "https://ik.imagekit.io/goodid/gnfi/uploads/articles/large-37989066-1881219555506145-2542848208074178560-n-1-997ab5971b4ff24363e798407481c4b2.jpg?tr=w-768,h-576,fo-center",
     "images": [
       "https://ik.imagekit.io/goodid/gnfi/uploads/articles/large-37989066-1881219555506145-2542848208074178560-n-1-997ab5971b4ff24363e798407481c4b2.jpg?tr=w-768,h-576,fo-center"
@@ -38,6 +42,7 @@
   {
     "name": "Gohu Ikan Ternate",
     "description": "Gohu adalah ‘sashimi’ ala Ternate—ikan cakalang atau tuna segar dipotong dadu dan ‘dimatangkan’ dalam campuran perasan jeruk, garam, bawang, dan cabai, lalu diberi percikan minyak panas agar aromanya terangkat. Hidangan ringan ini hadir dalam jamuan adat maupun keseharian sebagai cermin lanskap kuliner pulau rempah: sederhana, segar, dan menonjolkan keaslian bahan. Keakraban warga terhadap ikan segar dan teknik pengasaman alami menandai kearifan pengawetan sekaligus selera maritim khas Maluku Utara.",
+    "category": "makanan",
     "featuredImage": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Gohu_Ikan_in_Ternate.jpg",
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/e/e1/Gohu_Ikan_in_Ternate.jpg"
@@ -47,6 +52,7 @@
   {
     "name": "Bagea Sagu",
     "description": "Bagea adalah kue kering berbahan tepung sagu—pati dari batang pohon sagu—yang dipanggang hingga renyah. Teksturnya padat rapuh dengan cita rasa manis-rempah dari kayu manis dan cengkeh, mewarisi sejarah Ternate dan Tidore sebagai poros niaga rempah global. Dalam bingkai budaya, bagea bukan sekadar kudapan, melainkan penanda identitas ekologis masyarakat kepulauan yang bergantung pada sagu sebagai sumber karbohidrat sekaligus cadangan pangan saat paceklik.",
+    "category": "makanan",
     "featuredImage": "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/74/2024/10/30/Bagea-Sagu-763656230.jpg",
     "images": [
       "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/74/2024/10/30/Bagea-Sagu-763656230.jpg"

@@ -2,6 +2,7 @@
   {
     "name": "Mappacci (Malam Pacci)",
     "description": "Ritus pra-pernikahan Bugis–Makassar ketika keluarga dan kerabat memercikkan daun pacci (pacci) ke telapak tangan mempelai sebagai simbol penyucian dan doa restu. Prosesi diiringi zikir, nasyid, serta doa tetua adat, sementara rumah dihias kain sutra. Mappacci menjadi ruang transfer nilai—kesopanan, kesetiaan, dan tanggung jawab rumah tangga—sebelum pasangan memasuki bahtera.",
+    "category": "adat",
     "featuredImage": "https://inspirasinusantara.id/wp-content/uploads/2024/12/IMG_8182.jpg",
     "images": [
       "https://inspirasinusantara.id/wp-content/uploads/2024/12/IMG_8182.jpg",
@@ -12,6 +13,7 @@
   {
     "name": "Tari Pakarena",
     "description": "Tarian klasik Gowa yang ditampilkan perempuan dengan gerak halus, tatapan tertahan, dan kipas yang berputar ritmis. Pakarena melambangkan ketaatan, kesetiaan, dan kebijaksanaan yang diturunkan dari mitos pertemuan manusia–dewata. Tata busananya—baju bodo sutra, hias kepala, dan sarung lipa’ sabbe—membingkai wibawa penari di panggung kehormatan.",
+    "category": "tarian",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-S2ig_RVg6JwCkPjBabbqNtVikbx2clnQ7g&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-S2ig_RVg6JwCkPjBabbqNtVikbx2clnQ7g&s",
@@ -22,6 +24,7 @@
   {
     "name": "Ma’raga (Sepak Raga Bugis)",
     "description": "Pertunjukan olahraga tradisional menggunakan bola rotan yang dioper dari kaki ke dada–bahu–kepala tanpa jatuh. Pemain membentuk lingkaran dan memperagakan trik akrobatik yang menuntut fokus dan kekompakan. Ma’raga adalah cikal bakal sepak takraw Asia Tenggara dan menjadi atraksi favorit pada festival budaya pesisir Makassar.",
+    "category": "adat",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLLohPUGWCVUpnFcCH2neE3Rf5zI1JOlgHeA&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLLohPUGWCVUpnFcCH2neE3Rf5zI1JOlgHeA&s",
@@ -32,6 +35,7 @@
   {
     "name": "Coto Makassar",
     "description": "Sup daging dan jeroan dengan bumbu kacang sangrai, rempah, dan kuah pekat berwarna cokelat keemasan. Disajikan dengan burasa atau ketupat, coto memadukan bagian sapi ‘nose-to-tail’ sehingga minim limbah. Di warung kota hingga hajatan kampung, coto menjadi perekat jejaring sosial warga Makassar.",
+    "category": "makanan",
     "featuredImage": "https://lingkar.news/wp-content/uploads/2023/03/Resep-coto-makassar-kuah-kental-Makanan-Tradisional-Indonesia.jpg",
     "images": [
       "https://lingkar.news/wp-content/uploads/2023/03/Resep-coto-makassar-kuah-kental-Makanan-Tradisional-Indonesia.jpg",

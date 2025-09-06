@@ -2,6 +2,7 @@
   {
     "name": "Balia (Ritual Penyembuhan Kaili)",
     "description": "Ritual terapeutik yang memadukan doa, musik tabuh, nyanyian, dan tarian trance untuk memulihkan keseimbangan batin–komunitas. Dukun (tina) memimpin prosesi dengan tata cara ketat—dari persiapan sesaji, pemanggilan roh penjaga, hingga penutupan. Balia berperan sebagai ‘psikoterapi budaya’ yang menenangkan trauma dan konflik sosial di kampung-kampung Kaili.",
+    "category": "adat",
     "featuredImage": "https://pariwisataindonesia.id/wp-content/uploads/2020/11/upacara-balia-foto-by-kebudayaa-kemdikbud-go-id-640x424.jpg",
     "images": [
       "https://pariwisataindonesia.id/wp-content/uploads/2020/11/upacara-balia-foto-by-kebudayaa-kemdikbud-go-id-640x424.jpg",
@@ -12,6 +13,7 @@
   {
     "name": "Dero (Tari Lingkar Lore–Poso)",
     "description": "Tarian komunal berbentuk lingkar yang dilakukan bergandengan tangan sambil melantunkan syair berulang. Langkahnya sederhana namun menumbuhkan kebersamaan, cocok untuk perayaan panen, penyambutan tamu, sampai rekonsiliasi komunitas. Dero menjadi ruang ‘bernapas’ sosial—tempat orang saling bertemu, berdiskusi, dan memperkuat jaringan kekerabatan.",
+    "category": "tarian",
     "featuredImage": "https://asset-2.tribunnews.com/palu/foto/bank/originals/tari-dero-suku-pamona-sulawesi-tengah.jpg",
     "images": [
       "https://asset-2.tribunnews.com/palu/foto/bank/originals/tari-dero-suku-pamona-sulawesi-tengah.jpg",
@@ -22,6 +24,7 @@
   {
     "name": "Raego",
     "description": "Seni vokal–tari Kaili yang menyatukan mantra, pantun, dan gerak ritmis. Penampil mengenakan busana adat dengan hiasan kepala dan membawa simbol pelindung. Raego sering dibawakan untuk pembukaan acara adat atau ritual pemurnian, menegaskan otoritas budaya dan spiritual para tetua.",
+    "category": "tarian",
     "featuredImage": "https://cdn.antaranews.com/cache/1200x800/2018/09/TARI-SANREGO.jpg.webp",
     "images": [
       "https://cdn.antaranews.com/cache/1200x800/2018/09/TARI-SANREGO.jpg.webp",
@@ -32,6 +35,7 @@
   {
     "name": "Kaledo (Kaki Lembu Donggala)",
     "description": "Sup tulang dan kaki sapi yang dimasak lama hingga empuk, disajikan dengan kuah asam pedas segar dan sambal rica. Kaledo merefleksikan tradisi kuliner Palu–Donggala yang memanfaatkan potongan daging ekonomis namun kaya kolagen. Kehangatan kuah menjadikannya makanan pemersatu keluarga, terutama pada malam hari.",
+    "category": "makanan",
     "featuredImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Kaledo_soup%2C_Central_Sulawesi%2C_2018-09-16.jpg/1200px-Kaledo_soup%2C_Central_Sulawesi%2C_2018-09-16.jpg",
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Kaledo_soup%2C_Central_Sulawesi%2C_2018-09-16.jpg/1200px-Kaledo_soup%2C_Central_Sulawesi%2C_2018-09-16.jpg",
@@ -42,6 +46,7 @@
   {
     "name": "Uta Kelo",
     "description": "Olahan daun kelor dengan santan ringan atau kuah bening bersama ikan/udang, populer di Palu dan pesisir Teluk. Kaya mikronutrien, Uta Kelo adalah contoh kuliner fungsional yang menggabungkan kesehatan, sederhana, dan rasa rumahan. Menu ini kerap hadir dalam jamuan harian maupun pesta kecil komunitas pesisir.",
+    "category": "makanan",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzYjJA5Rk6ZzjFglgtwPBCz_frXCHFibDkog&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzYjJA5Rk6ZzjFglgtwPBCz_frXCHFibDkog&s",
@@ -52,6 +57,7 @@
   {
     "name": "Baju Nggembe",
     "description": "Busana perempuan dan laki-laki Kaili model longgar dengan potongan sederhana, nyaman untuk iklim panas lembab. Warna-warna cerah dipadukan kain sarung bermotif lokal, menonjolkan kesopanan dan keanggunan. Baju Nggembe dipakai dalam upacara keluarga, pertunjukan Raego, hingga penyambutan tamu resmi.",
+    "category": "pakaian",
     "featuredImage": "https://pdbifiles.nos.jkt-1.neo.id/files/2017/10/28/taehyung_PakaianAdatTradisionalNggembe.jpg",
     "images": [
       "https://pdbifiles.nos.jkt-1.neo.id/files/2017/10/28/taehyung_PakaianAdatTradisionalNggembe.jpg",

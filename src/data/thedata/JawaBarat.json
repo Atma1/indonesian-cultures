@@ -1,7 +1,8 @@
 [
   {
     "name": "Jaipongan",
-    "description": "Jaipongan adalah tarian kontemporer Sunda yang diciptakan oleh Gugum Gumbira dan berakar pada musik Ketuk Tilu serta gerak pencak silat:contentReference[oaicite:27]{index=27}. Tari ini energik dan penuh improvisasi.",
+    "description": "Jaipongan adalah tarian kontemporer Sunda yang diciptakan oleh Gugum Gumbira dan berakar pada musik Ketuk Tilu serta gerak pencak silat. Tari ini energik dan penuh improvisasi.",
+    "category": "tarian",
     "featuredImage": "https://newsletter.kagumhotels.com/wp-content/uploads/2021/06/Jaipong-01-1024x682.jpg",
     "images": [
       "https://newsletter.kagumhotels.com/wp-content/uploads/2021/06/Jaipong-01-1024x682.jpg",
@@ -12,6 +13,7 @@
   {
     "name": "Nasi Timbel",
     "description": "Nasi Timbel terdiri dari nasi hangat dibungkus daun pisang sehingga harum. Disajikan dengan ayam goreng, tahu, tempe, ikan asin, sambal terasi, lalapan, dan kadang sayur asem.",
+    "category": "makanan",
     "featuredImage": "https://cdn.yummy.co.id/content-images/images/20210812/aLVYFZIfJBNvNj2fiQt4PxNotnjz8ye9-31363238373238313333d41d8cd98f00b204e9800998ecf8427e.jpg?x-oss-process=image/resize,w_600,h_600,m_fixed,image/format,webp",
     "images": [
       "https://cdn.yummy.co.id/content-images/images/20210812/aLVYFZIfJBNvNj2fiQt4PxNotnjz8ye9-31363238373238313333d41d8cd98f00b204e9800998ecf8427e.jpg?x-oss-process=image/resize,w_600,h_600,m_fixed,image/format,webp"
@@ -21,6 +23,7 @@
   {
     "name": "Iket",
     "description": "Iket adalah kain persegi panjang yang dilipat lalu diikat di kepala, dengan aturan khusus sehingga jika salah tidak disebut iket. Pakaian pangsi berupa baju dan celana longgar yang dahulu berwarna hitam-putih namun kini beraneka warna; pangsi dapat dipakai pria, wanita maupun anak untuk acara formal dan informal.",
+    "category": "pakaian",
     "featuredImage": "https://xposeindonesia.com/wp-content/uploads/2021/01/IKET.jpg",
     "images": [
       "https://xposeindonesia.com/wp-content/uploads/2021/01/IKET.jpg"
@@ -30,6 +33,7 @@
   {
     "name": "Seblak",
     "description": "Seblak adalah masakan khas Sunda yang berasal dari wilayah Parahyangan dengan cita rasa gurih dan cenderung pedas. Seblak umumnya terbuat dari kerupuk yang terdiri dari bawang putih dengan kencur. Dalam Kamus Basa Sunda dijelaskan bahwa seblak, nyeblak: rasa haté dina waktu inget kana balai.",
+    "category": "makanan",
     "featuredImage": "https://www.unileverfoodsolutions.co.id/dam/global-ufs/mcos/SEA/calcmenu/recipes/ID-recipes/chicken-&-other-poultry-dishes/Seblak-Ceker-Gurih-dan-Pedas-Nagih-/SEBLAK%20CEKER-header.jpeg",
     "images": [
       "https://www.unileverfoodsolutions.co.id/dam/global-ufs/mcos/SEA/calcmenu/recipes/ID-recipes/chicken-&-other-poultry-dishes/Seblak-Ceker-Gurih-dan-Pedas-Nagih-/SEBLAK%20CEKER-header.jpeg"
@@ -39,6 +43,7 @@
   {
     "name": "Wayang Golek",
     "description": "Wayang golek merupakan salah satu aliran dari kesenian wayang. Umumnya wayang ini dipentaskan di wilayah Parahyangan, Jawa Barat dengan menggunakan Bahasa Sunda. Dan Bahasa Jawa Di Jawa Tengah seperti di Surakarta Brebes dan Cilacap di Jawa Tengah.",
+    "category": "seni_pertunjukan",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5t6popC_VEqP0am8kOP4OqhIP0ec4qICEiQ&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5t6popC_VEqP0am8kOP4OqhIP0ec4qICEiQ&s"

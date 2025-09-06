@@ -2,6 +2,7 @@
   {
     "name": "Sayyang Pattu’du (Kuda Menari Mandar)",
     "description": "Ritual perayaan khatam Al-Qur’an di Mandar yang menampilkan kuda berhias kain sutra dan manik, ‘menari’ mengikuti irama gendang. Penunggang—biasanya santri—diarak keliling kampung sebagai ungkapan syukur. Prosesi ini memadukan dakwah, kegembiraan, dan kebanggaan orang tua atas capaian pendidikan anak, memperlihatkan kedekatan Islam dan budaya lokal Mandar.",
+    "category": "adat",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf_mIokBbbblUA0cfZGmddl1yQUEqWroPq9A&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf_mIokBbbblUA0cfZGmddl1yQUEqWroPq9A&s",
@@ -12,6 +13,7 @@
   {
     "name": "Lomba Sandeq (Lomba Perahu Layar Mandar)",
     "description": "Regatta tradisional perahu sandeq—perahu berlayar sempit nan cepat—yang menyusuri pantai barat Sulawesi. Kompetisi ini lahir dari tradisi melaut Mandar yang ulung membaca angin dan arus. Di luar sportivitas, sandeq menghidupkan kembali teknik pembuatan perahu, navigasi tradisional, serta jejaring dagang pesisir yang menjadi identitas Mandar sejak lama.",
+    "category": "adat",
     "featuredImage": "https://api.kemenpar.go.id/storage/app/resources/image_artikel/WhatsApp%20Image%202025-08-27%20at%2014.29.01.jpeg",
     "images": [
       "https://api.kemenpar.go.id/storage/app/resources/image_artikel/WhatsApp%20Image%202025-08-27%20at%2014.29.01.jpeg",
@@ -22,6 +24,7 @@
   {
     "name": "Tari Pattuddu’",
     "description": "Tarian klasik perempuan Mandar yang menonjolkan sikap halus, gerak tangan lembut, dan langkah kecil teratur. Kostum warna terang dengan hiasan kepala dan kebaya sutra menandai status keluarga. Tarian ini umumnya tampil dalam hajatan besar, menghadirkan etika keramahtamahan dan keindahan gerak yang tertib.",
+    "category": "tarian",
     "featuredImage": "https://pariwisataindonesia.id/wp-content/uploads/2020/11/tari-massal-pattudu-by-antarafoto.com_.jpg",
     "images": [
       "https://pariwisataindonesia.id/wp-content/uploads/2020/11/tari-massal-pattudu-by-antarafoto.com_.jpg",
@@ -32,6 +35,7 @@
   {
     "name": "Kalindaqdaq (Sastra Lisan Mandar)",
     "description": "Puisi lisan berirama yang dilantunkan dalam berbagai upacara: pernikahan, panen, hingga musyawarah kampung. Pantun-pantun kalindaqdaq memuat nasihat, humor, dan kritik sosial yang disampaikan indah namun tajam. Keberlanjutannya ditopang interaksi antarseniman dan dokumentasi komunitas budaya pesisir.",
+    "category": "sastra",
     "featuredImage": "https://mediaekspres.id/wp-content/uploads/2020/05/IMG-20200520-WA0015.jpg",
     "images": [
       "https://mediaekspres.id/wp-content/uploads/2020/05/IMG-20200520-WA0015.jpg"
@@ -41,6 +45,7 @@
   {
     "name": "Jepa",
     "description": "Roti pipih dari parutan singkong yang dipanggang di atas lempeng tanah liat atau wajan besi, lazim menjadi makanan pokok pendamping ikan bakar. Teksturnya renyah di luar dan lembut di dalam, praktis untuk bekal pelaut. Jepa menegaskan kecakapan kuliner pesisir yang hemat bahan namun bernutrisi.",
+    "category": "makanan",
     "featuredImage": "https://digitani.ipb.ac.id/wp-content/uploads/2024/09/31f1e46d4d79d2599aa8179434e325ba-1024x683.jpg",
     "images": [
       "https://digitani.ipb.ac.id/wp-content/uploads/2024/09/31f1e46d4d79d2599aa8179434e325ba-1024x683.jpg",

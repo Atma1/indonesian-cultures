@@ -2,6 +2,7 @@
   {
     "name": "Tari Caci",
     "description": "Caci adalah tarian perang tradisional Manggarai, Flores. Dua pria berdansa sambil memukul dengan cambuk dan perisai timpang. Disertai nyanyian pujian, tari ini dipentaskan saat panen atau festival adat. Ia merefleksikan keberanian dan daya tahan masyarakat NTT.",
+    "category": "tarian",
     "featuredImage": "https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/24/2022/02/Tari-Caci_-Sejarah-Makna-Tarian-dan-Gerakan.jpg",
     "images": [
       "https://static.cdntap.com/tap-assets-prod/wp-content/uploads/sites/24/2022/02/Tari-Caci_-Sejarah-Makna-Tarian-dan-Gerakan.jpg",
@@ -12,6 +13,7 @@
   {
     "name": "Sasando",
     "description": "Sasando adalah alat musik petik tradisional dari Rote—dibuat dari bambu dan daun lontar, dimainkan dengan dipetik. Melodi yang dihasilkan lembut, dan alat ini menjadi ikon musik Timor dan satu-satunya alat dawai asli Indonesia bagian timur.",
+    "category": "musik",
     "featuredImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Alat_Musik_Sasando.jpg/1200px-Alat_Musik_Sasando.jpg",
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Alat_Musik_Sasando.jpg/1200px-Alat_Musik_Sasando.jpg",
@@ -22,6 +24,7 @@
   {
     "name": "Se'i",
     "description": "Se’i adalah daging sapi atau babi asap khas Kupang, diasapi dengan metode tradisional menggunakan kayu bekas sagu dan dilapisi bumbu ringan. Rasanya kaya akan aroma asap dan kelezatannya telah menyebar menjadi salah satu kuliner top NTT.",
+    "category": "makanan",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS351L9vxBYN2io0srwtLzbMAA4aJrEHzOJbw&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS351L9vxBYN2io0srwtLzbMAA4aJrEHzOJbw&s",
@@ -32,6 +35,7 @@
   {
     "name": "Rumah Adat Boti",
     "description": "Rumah Boti adalah rumah panggung tradisional masyarakat di Pulau Alor—dibuat dari kayu dan alang-alang. Struktur ini tinggi, berornamen simbolik, dan merupakan pusat pengambilan keputusan adat suku.",
+    "category": "bangunan",
     "featuredImage": "https://statik.tempo.co/data/2018/12/03/id_801263/801263_720.jpg",
     "images": [
       "https://statik.tempo.co/data/2018/12/03/id_801263/801263_720.jpg",
@@ -42,6 +46,7 @@
   {
     "name": "Upacara Penti",
     "description": "Festival tahunan antar-desa adat menampilkan tarian, musik sasando, kerajinan ikat, dan pertunjukan cerita rakyat. Merupakan ajang pelestarian budaya dan edukasi generasi muda.",
+    "category": "adat",
     "featuredImage": "https://asumsi.co/wp-content/uploads/1616855508634_PaketWisataUpacaraAdatPentiWaereboFloresPesonaIndonesiafototrip3.jpg",
     "images": [
       "https://asumsi.co/wp-content/uploads/1616855508634_PaketWisataUpacaraAdatPentiWaereboFloresPesonaIndonesiafototrip3.jpg"

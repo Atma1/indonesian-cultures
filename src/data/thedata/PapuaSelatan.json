@@ -2,6 +2,7 @@
   {
     "name": "Seni Ukir Kayu Suku Asmat",
     "description": "Tradisi memahat kayu khas suku Asmat dengan detail tinggi, digunakan sebagai seni rupa, benda ritual, dan ekspresi budaya.",
+    "category": "kerajinan",
     "featuredImage": "https://pesonapapua.com/wp-content/uploads/2025/03/ukir.jpg",
     "images": [
       "https://pesonapapua.com/wp-content/uploads/2025/03/ukir.jpg",
@@ -12,6 +13,7 @@
   {
     "name": "Festival Seni Kreasi dan Budaya Papua Selatan",
     "description": "Festival tahunan lima hari (contoh November 2023) di Merauke menampilkan tarian tradisional dari kabupaten Merauke, Asmat, Mappi, dan Boven Digoel, serta pameran kuliner dan seni kreatif.",
+    "category": "adat",
     "featuredImage": "https://cdn.rri.co.id/berita/103/images/1700094669724-I/cacep8o41k1kf7y.jpeg",
     "images": [
       "https://cdn.rri.co.id/berita/103/images/1700094669724-I/cacep8o41k1kf7y.jpeg",
@@ -22,6 +24,7 @@
   {
     "name": "Museum Loka Budaya Merauke",
     "description": "Museum rintisan yang memperkenalkan tradisi dan warisan budaya Suku Malind sebagai sarana edukasi dan pelestarian budaya.",
+    "category": "bangunan",
     "featuredImage": "https://parksidehotels.co.id/wp-content/uploads/2024/07/loka-budaya.jpg",
     "images": [
       "https://parksidehotels.co.id/wp-content/uploads/2024/07/loka-budaya.jpg"

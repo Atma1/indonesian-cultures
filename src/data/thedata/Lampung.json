@@ -2,6 +2,7 @@
   {
     "name": "Adat Begawi Cakak Pepadun",
     "description": "Upacara adat pengukuhan gelar kebangsawanan dalam masyarakat Pepadun Lampung. Prosesi ini melibatkan musyawarah adat, pemberian gelar (juluk adok), penyembelihan kerbau, tari-tarian, hingga pembacaan hukum adat. Begawi melambangkan legitimasi sosial serta penghormatan kepada leluhur.",
+    "category": "adat",
     "featuredImage": "https://assets.pikiran-rakyat.com/crop/0x0:0x0/750x500/photo/2023/08/30/353726796.jpg",
     "images": [
       "https://assets.pikiran-rakyat.com/crop/0x0:0x0/750x500/photo/2023/08/30/353726796.jpg"
@@ -11,6 +12,7 @@
   {
     "name": "Tari Sigeh Penguten",
     "description": "Tari penyambutan tamu agung khas Lampung, dibawakan oleh penari wanita dengan membawa siger (mahkota emas) dan kembang melati. Gerakannya anggun, menggambarkan keramahan, penghormatan, dan kebesaran budaya Lampung.",
+    "category": "tarian",
     "featuredImage": "https://indonesiakaya.com/wp-content/uploads/2020/10/Tari_Sigeh_Pengunten_1200.jpg",
     "images": [
       "https://indonesiakaya.com/wp-content/uploads/2020/10/Tari_Sigeh_Pengunten_1200.jpg"
@@ -20,6 +22,7 @@
   {
     "name": "Seruit",
     "description": "Makanan khas berupa ikan sungai (baung, patin, atau belida) yang digoreng atau dibakar, lalu disiram sambal terasi, tempoyak, atau mangga muda. Seruit disajikan dalam acara adat dan pesta keluarga, menjadi simbol kebersamaan masyarakat Lampung.",
+    "category": "makanan",
     "featuredImage": "https://ik.trn.asia/uploads/2021/09/1631283526307.jpeg",
     "images": [
       "https://ik.trn.asia/uploads/2021/09/1631283526307.jpeg"
@@ -29,6 +32,7 @@
   {
     "name": "Kain Tapis",
     "description": "Kain tenun khas Lampung dari benang kapas dengan sulaman benang emas atau perak. Motifnya menggambarkan flora, fauna, serta falsafah hidup masyarakat. Kain Tapis dipakai pada acara resmi adat dan kini dikembangkan menjadi busana modern.",
+    "category": "kerajinan",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQom-uutGmcJquSFzxtWsizd3Nyrytj7IMn9g&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQom-uutGmcJquSFzxtWsizd3Nyrytj7IMn9g&s"
@@ -38,6 +42,7 @@
   {
     "name": "Rumah Adat Nuwou Sesat",
     "description": "Rumah adat Lampung berbentuk panggung dari kayu dengan atap ijuk. Difungsikan sebagai balai musyawarah adat, tempat pertemuan penyimbang (tetua adat). Melambangkan keterbukaan, musyawarah, dan demokrasi lokal.",
+    "category": "bangunan",
     "featuredImage": "https://cnc-magazine.oramiland.com/parenting/images/rumah_adat_lampung.width-800.format-webp.webp",
     "images": [
       "https://cnc-magazine.oramiland.com/parenting/images/rumah_adat_lampung.width-800.format-webp.webp"
@@ -47,6 +52,7 @@
   {
     "name": "Ngumbai Lawok",
     "description": "Tradisi pesta laut di pesisir Lampung untuk mensyukuri hasil tangkapan ikan. Nelayan menghias perahu, melakukan doa bersama, melarung sesaji, diiringi tari dan musik gamolan pekhing.",
+    "category": "adat",
     "featuredImage": "https://indonesiatraveler.id/wp-content/uploads/2020/08/Lampung-Ngumbai-Lawok-photo-by-SekitarLampungDotCom.jpg",
     "images": [
       "https://indonesiatraveler.id/wp-content/uploads/2020/08/Lampung-Ngumbai-Lawok-photo-by-SekitarLampungDotCom.jpg"

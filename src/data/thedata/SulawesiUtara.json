@@ -2,6 +2,7 @@
   {
     "name": "Mapalus",
     "description": "Sistem gotong royong Minahasa untuk mengerjakan pekerjaan besar—membuka lahan, membangun rumah, atau pesta panen—dengan prinsip kerja bergilir dan imbal jasa sosial. Mapalus memperkuat kepercayaan, mengurangi biaya, dan menjadi ‘asuransi sosial’ saat keluarga mengalami musibah. Di wilayah urban, prinsip ini diadaptasi menjadi arisan kerja dan kelompok relawan komunitas.",
+    "category": "adat",
     "featuredImage": "https://cdn.kemenag.go.id/storage/posts/16_9/big/1652251535.jpg",
     "images": [
       "https://cdn.kemenag.go.id/storage/posts/16_9/big/1652251535.jpg",
@@ -12,6 +13,7 @@
   {
     "name": "Tari Kabasaran",
     "description": "Tari perang Minahasa yang dibawakan penari pria bersenjatakan tombak dan pedang, mengenakan kostum merah dan hias bulu ayam. Gerakannya tegas dan berulang, mensimbolkan kesiagaan melindungi walak (kampung). Kini, Kabasaran tampil pada penyambutan tamu agung dan festival budaya untuk menegaskan identitas Minahasa.",
+    "category": "tarian",
     "featuredImage": "https://indonesiakaya.com/wp-content/uploads/2020/10/tarian_kabasaran_ie_1200.jpg",
     "images": [
       "https://indonesiakaya.com/wp-content/uploads/2020/10/tarian_kabasaran_ie_1200.jpg",
@@ -22,6 +24,7 @@
   {
     "name": "Kolintang",
     "description": "Ansambel idiophone kayu ringan (biasanya kayu telor atau bandaran) yang menghasilkan nada jernih. Permainan kolintang modern mencakup melodi, harmoni, dan bas sehingga mampu membawakan repertoar tradisi hingga pop. Ia menjadi simbol diplomasi budaya Sulut di panggung nasional dan internasional.",
+    "category": "musik",
     "featuredImage": "https://www.djkn.kemenkeu.go.id/files/images/2021/09/Manado_-_Kolintang_IE1.jpeg",
     "images": [
       "https://www.djkn.kemenkeu.go.id/files/images/2021/09/Manado_-_Kolintang_IE1.jpeg",
@@ -32,6 +35,7 @@
   {
     "name": "Tinutuan",
     "description": "Kuliner sarapan khas Manado yang memadukan beras, labu kuning, jagung, kangkung, dan berbagai sayuran daun. Disajikan dengan sambal roa, ikan asin, atau cakalang, tinutuan merepresentasikan gizi seimbang dan cita rasa segar. Ia lahir dari kreativitas rumah tangga memanfaatkan hasil kebun dan tangkapan pesisir.",
+    "category": "makanan",
     "featuredImage": "https://ik.imagekit.io/goodid/gnfi/uploads/articles/large-shutterstock-1990956131-fdca6077e61fa78ac4eed782fdd86070.jpg?tr=w-768,h-576,fo-center",
     "images": [
       "https://ik.imagekit.io/goodid/gnfi/uploads/articles/large-shutterstock-1990956131-fdca6077e61fa78ac4eed782fdd86070.jpg?tr=w-768,h-576,fo-center",
@@ -42,6 +46,7 @@
   {
     "name": "Waruga",
     "description": "Sarkofagus batu prasejarah Minahasa berbentuk kubus–atap piramida, digunakan sebagai kubur duduk. Reliefnya menampilkan motif flora–fauna serta aktivitas manusia, menjadi sumber pengetahuan struktur sosial dan spiritual kuno. Situs waruga kini dipugar sebagai arsip arkeologi sekaligus sarana edukasi publik.",
+    "category": "bangunan",
     "featuredImage": "https://indonesia.go.id/assets/upload/headline/1575290843_PO2016021000340_20170426135840_thumb.jpg",
     "images": [
       "https://indonesia.go.id/assets/upload/headline/1575290843_PO2016021000340_20170426135840_thumb.jpg",

@@ -2,6 +2,7 @@
   {
     "name": "Triton (Alat Musik Tiup)",
     "description": "Alat musik tiup tradisional yang ditemukan di pesisir seperti di Nabire, digunakan sebagai media komunikasi dan hiburan adat.",
+    "category": "musik",
     "featuredImage": "https://arsip.jubi.id/wp-content/uploads/2022/03/tempo.jpg",
     "images": [
       "https://arsip.jubi.id/wp-content/uploads/2022/03/tempo.jpg",
@@ -12,6 +13,7 @@
   {
     "name": "Upacara Sambutan Adat di Bandara Nabire",
     "description": "Prosesi adat menyambut tamu di Bandara Nabire, termasuk tarian adat, injak piring gantung, penyerahan bunga—memperkuat identitas budaya dan penghormatan tradisional setempat.",
+    "category": "adat",
     "featuredImage": "https://www.nabire.net/wp-content/uploads/2023/08/IMG-20230824-WA0142.jpg",
     "images": [
       "https://www.nabire.net/wp-content/uploads/2023/08/IMG-20230824-WA0142.jpg",

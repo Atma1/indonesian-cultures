@@ -2,6 +2,7 @@
   {
     "name": "Baayun Maulid",
     "description": "Tradisi mengayun bayi saat Maulid Nabi di pesantren/masjid Banjar; doa keselamatan dan syukur keluarga.",
+    "category": "adat",
     "featuredImage": "https://diskominfomc.kalselprov.go.id/wp-content/uploads/2022/10/43ED0B8D-37BD-440A-BE87-4D1890C484E1.jpeg",
     "images": [
       "https://diskominfomc.kalselprov.go.id/wp-content/uploads/2022/10/43ED0B8D-37BD-440A-BE87-4D1890C484E1.jpeg"
@@ -11,6 +12,7 @@
   {
     "name": "Madihin",
     "description": "Seni tutur/komedi berpantun dengan gendang kecil; mengulas isu sosial dengan jenaka dan kritik halus.",
+    "category": "seni",
     "featuredImage": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Kesenian_Madihin.jpg",
     "images": [
       "https://upload.wikimedia.org/wikipedia/commons/c/c2/Kesenian_Madihin.jpg"
@@ -20,6 +22,7 @@
   {
     "name": "Balogo",
     "description": "Permainan memukul keping (logo) dari tempurung/keras menuju sasaran; populer saat Hari Raya/Festival.",
+    "category": "permainan",
     "featuredImage": "https://mc.tanahbumbukab.go.id/wp-content/uploads/2017/10/IMG_20171006_153947.jpg",
     "images": [
       "https://mc.tanahbumbukab.go.id/wp-content/uploads/2017/10/IMG_20171006_153947.jpg"
@@ -29,6 +32,7 @@
   {
     "name": "Soto Banjar",
     "description": "Soto ayam rempah (kayu manis, kapulaga, cengkeh) dengan ketupat/lontong, perkedel, suwiran, dan telur.",
+    "category": "makanan",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKuuSQVVxUX1DyZjdwL0_K_f6YYJVEZX-JQ&s",
     "images": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKuuSQVVxUX1DyZjdwL0_K_f6YYJVEZX-JQ&s"

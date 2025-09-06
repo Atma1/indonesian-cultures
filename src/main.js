@@ -15,8 +15,6 @@ import { addCloudsLayer } from "./effects/clouds.js";
 import { registerGlobalHotkeys } from "./utils/hotkeys.js";
 import { initGame } from "./ui/game.js";
 
-
-
 /* ====== LEAFLET ====== */
 const H = 1365,
   W = 2048;

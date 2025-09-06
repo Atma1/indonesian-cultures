@@ -2,23 +2,23 @@
 // Sidebar + LoL-like Lightbox (vertical slides: image left + info right)
 
 export function initSidebar({ assets }) {
-  const backdrop   = document.getElementById("backdrop");
-  const sidebar    = document.getElementById("sidebar");
-  const sbIcon     = document.getElementById("sbIcon");
-  const sbTitle    = document.getElementById("sbTitle");
+  const backdrop = document.getElementById("backdrop");
+  const sidebar = document.getElementById("sidebar");
+  const sbIcon = document.getElementById("sbIcon");
+  const sbTitle = document.getElementById("sbTitle");
   const sbSubtitle = document.getElementById("sbSubtitle");
-  const sbList     = document.getElementById("sbList");
+  const sbList = document.getElementById("sbList");
 
   // panel sidebar
-  const sbHero    = document.getElementById("sbHero");
-  const sbDesc    = document.getElementById("sbDesc");
+  const sbHero = document.getElementById("sbHero");
+  const sbDesc = document.getElementById("sbDesc");
   const sbGallery = document.getElementById("sbGallery");
   const sbYoutube = document.getElementById("sbYoutube");
 
   // lightbox (markup sudah ada di HTML)
-  const iScrim    = document.getElementById("iscrim");
-  const iModal    = document.getElementById("imodal");
-  const imgClose  = document.getElementById("imgClose");
+  const iScrim = document.getElementById("iscrim");
+  const iModal = document.getElementById("imodal");
+  const imgClose = document.getElementById("imgClose");
   const imgStream = document.getElementById("imgStream");
 
   let _lightbox = { images: [], index: 0, provName: "", provDesc: "" };
@@ -72,13 +72,42 @@ export function initSidebar({ assets }) {
     const slides = getSlidesOf(prov);
     sbGallery.innerHTML = "";
 
+    // helper: set kartu aktif (border emas)
+    const setActiveCard = (idx) => {
+      sbGallery.querySelectorAll(".nox-card").forEach((el, i) => {
+        el.classList.toggle("is-active", i === idx);
+      });
+    };
+
     slides.forEach((s, i) => {
-      const img = document.createElement("img");
-      img.src = s.cover;
-      img.alt = s.title || "Gallery image";
-      img.className = "gallery-img";
-      img.addEventListener("click", () => openLightbox(prov, i));
-      sbGallery.appendChild(img);
+      const card = document.createElement("a");
+      card.href = "#";
+      card.className = "nox-card";
+      card.addEventListener("click", (e) => {
+        e.preventDefault();
+        setActiveCard(i);
+        openLightbox(prov, i);
+      });
+
+      const bg = document.createElement("img");
+      bg.src = s.cover;
+      bg.alt = s.title || "Gallery image";
+      bg.className = "nox-card__bg";
+
+      const content = document.createElement("div");
+      content.className = "nox-card__content";
+
+      const sub = document.createElement("div");
+      sub.className = "nox-sub";
+      sub.textContent = "BUDAYA & WARISAN";
+
+      const ttl = document.createElement("div");
+      ttl.className = "nox-title";
+      ttl.textContent = (s.title || prov.id).toUpperCase();
+
+      content.append(sub, ttl);
+      card.append(bg, content);
+      sbGallery.appendChild(card);
     });
   }
 
@@ -272,7 +301,10 @@ export function initSidebar({ assets }) {
     iScrim.classList.remove("active");
     iModal.classList.remove("active");
     document.removeEventListener("keydown", onKey);
-    if (_obs) { _obs.disconnect(); _obs = null; }
+    if (_obs) {
+      _obs.disconnect();
+      _obs = null;
+    }
   }
 
   // bindings modal

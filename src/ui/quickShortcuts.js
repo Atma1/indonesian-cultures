@@ -21,9 +21,9 @@ export function initQuickShortcuts({
 
   // Build quick shortcuts dari PROVINCES (1 item per budaya)
   const SHORTCUTS = provinces.flatMap((p) =>
-    (p.culture || []).map((c, idx) => ({
-      id: `${p.id}::${c.t}::${idx}`,
-      title: `${c.t} — ${c.d}`,
+    (p.slides || []).map((c, idx) => ({
+      id: `${p.id}::${c.category}::${idx}`,
+      title: `${formatCategory(c.category)} — ${c.title}`,
       provId: p.id,
       prov: p,
       lat: p.y * H,
@@ -144,4 +144,12 @@ export function initQuickShortcuts({
   renderList(filtered, 0);
 
   return { open };
+}
+
+function formatCategory(title) {
+  if (!title) return "";
+  return title
+    .split("_")
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 }

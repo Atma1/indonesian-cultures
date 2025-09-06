@@ -224,6 +224,7 @@ function slidesFromJsonArray(arr, fallbackTitle) {
     .map((it) => ({
       cover: it.featuredImage || (Array.isArray(it.images) ? it.images[0] : "") || "",
       title: it.name || fallbackTitle,
+      category: it.category || "Budaya & Warisan",
       desc: it.description || "",
       images: Array.isArray(it.images) ? it.images : [],
       youtube: it.youtubeLink || "",

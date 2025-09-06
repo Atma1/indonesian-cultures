@@ -1,7 +1,7 @@
 [
   {
     "name": "Sekaten Yogyakarta",
-    "description": "Perayaan Sekaten di Yogyakarta merayakan hari kelahiran Nabi Muhammad. Festival berlangsung seminggu dan mencakup arak-arakan gamelan sekaten, pembacaan riwayat Nabi, serta Grebeg Maulud dengan gunungan berisi hasil bumi yang diperebutkan masyarakat:contentReference[oaicite:48]{index=48}.",
+    "description": "Perayaan Sekaten di Yogyakarta merayakan hari kelahiran Nabi Muhammad. Festival berlangsung seminggu dan mencakup arak-arakan gamelan sekaten, pembacaan riwayat Nabi, serta Grebeg Maulud dengan gunungan berisi hasil bumi yang diperebutkan masyarakat.",
     "category": "adat",
     "featuredImage": "https://mmc.tirto.id/image/2024/09/14/sekaten-keraton-ngayogyakarta--3_ratio-16x9.jpg",
     "images": [
@@ -12,8 +12,8 @@
   },
   {
     "name": "Wayang Kulit",
-    "description": "Wayang Kulit menjadi seni pertunjukan khas Yogyakarta; dalang memainkan boneka kulit di balik layar sambil menembang dan menceritakan kisah epos. Wayang diakui UNESCO sebagai warisan budaya:contentReference[oaicite:49]{index=49}.",
-    "category": "senipertunjukan",
+    "description": "Wayang Kulit menjadi seni pertunjukan khas Yogyakarta; dalang memainkan boneka kulit di balik layar sambil menembang dan menceritakan kisah epos. Wayang diakui UNESCO sebagai warisan budaya.",
+    "category": "seni_pertunjukan",
     "featuredImage": "https://ik.imagekit.io/goodid/gnfi/uploads/articles/large-reynan-tutup-lawang-sigotaka-palembang-4a9a0454cbaa30728220e3bf4d0d59f8.jpg?tr=w-768,h-576,fo-center",
     "images": [
       "https://ik.imagekit.io/goodid/gnfi/uploads/articles/large-reynan-tutup-lawang-sigotaka-palembang-4a9a0454cbaa30728220e3bf4d0d59f8.jpg?tr=w-768,h-576,fo-center"
@@ -22,7 +22,7 @@
   },
   {
     "name": "Egrang",
-    "description": "Permainan egrang (berjalan dengan bambu tinggi) dimainkan di desa-desa Yogyakarta untuk melatih keterampilan dan keberanian. Permainan ini dikenal di seluruh Pulau Jawa:contentReference[oaicite:50]{index=50}.",
+    "description": "Permainan egrang (berjalan dengan bambu tinggi) dimainkan di desa-desa Yogyakarta untuk melatih keterampilan dan keberanian. Permainan ini dikenal di seluruh Pulau Jawa.",
     "category": "permainan",
     "featuredImage": "https://indonesia.go.id/assets/upload/headline/1571027426_Egrang_thumb.jpg",
     "images": [
@@ -32,7 +32,7 @@
   },
   {
     "name": "Gudeg Yogyakarta",
-    "description": "Gudeg merupakan makanan khas Yogyakarta terbuat dari nangka muda dimasak dengan gula aren, santan dan daun jati sehingga berwarna cokelat gelap. Disajikan dengan opor ayam, telur pindang dan sambal goreng krecek:contentReference[oaicite:51]{index=51}.",
+    "description": "Gudeg merupakan makanan khas Yogyakarta terbuat dari nangka muda dimasak dengan gula aren, santan dan daun jati sehingga berwarna cokelat gelap. Disajikan dengan opor ayam, telur pindang dan sambal goreng krecek.",
     "category": "makanan",
     "featuredImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5rmFRXwp7hnfG-D1C8fc0EABBmbxzeNV1Aw&s",
     "images": [
@@ -52,7 +52,7 @@
   },
   {
     "name": "Keris Yogyakarta",
-    "description": "Keris Yogyakarta terkenal dengan bentuk bilah yang indah dan pamor unik; selain senjata, keris dianggap bertuah dan diwariskan antar generasi:contentReference[oaicite:52]{index=52}.",
+    "description": "Keris Yogyakarta terkenal dengan bentuk bilah yang indah dan pamor unik; selain senjata, keris dianggap bertuah dan diwariskan antar generasi.",
     "category": "senjata",
     "featuredImage": "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/214/2024/07/31/10-2330305214.jpg",
     "images": [

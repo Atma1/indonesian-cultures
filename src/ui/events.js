@@ -116,20 +116,7 @@ function renderEventList(list) {
     </div>
   `;
 
-  const right = `
-    <aside class="evt2-aside">
-      <div class="hintbox">
-        <h4>Filter (Soon)</h4>
-        <p>Pilih provinsi & kata kunci (segera hadir).</p>
-      </div>
-      <div class="hintbox">
-        <h4>Sumber Data</h4>
-        <p>Memakai file JSON dari <code>src/data/thedata/*.json</code> (via <code>import.meta.glob</code>).</p>
-      </div>
-    </aside>
-  `;
-
-  eBody.innerHTML = `<div class="evt2-wrap">${left}${right}</div>`;
+  eBody.innerHTML = `<div class="evt2-wrap">${left}</div>`;
 }
 
 /* ===== open/close ===== */

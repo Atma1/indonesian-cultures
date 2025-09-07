@@ -2,57 +2,74 @@
 // Sidebar + LoL-like Lightbox (vertical slides: image left + info right)
 
 export function initSidebar({ assets }) {
-  const backdrop = document.getElementById("backdrop");
-  const sidebar = document.getElementById("sidebar");
-  const sbIcon = document.getElementById("sbIcon");
-  const sbTitle = document.getElementById("sbTitle");
+  const backdrop   = document.getElementById("backdrop");
+  const sidebar    = document.getElementById("sidebar");
+  const sbIcon     = document.getElementById("sbIcon");
+  const sbTitle    = document.getElementById("sbTitle");
   const sbSubtitle = document.getElementById("sbSubtitle");
-  const sbList = document.getElementById("sbList");
+  const sbList     = document.getElementById("sbList");
 
   // panel sidebar
-  const sbHero = document.getElementById("sbHero");
-  const sbDesc = document.getElementById("sbDesc");
+  const sbHero    = document.getElementById("sbHero");
+  const sbDesc    = document.getElementById("sbDesc");
   const sbGallery = document.getElementById("sbGallery");
   const sbYoutube = document.getElementById("sbYoutube");
 
   // lightbox (markup sudah ada di HTML)
-  const iScrim = document.getElementById("iscrim");
-  const iModal = document.getElementById("imodal");
-  const imgClose = document.getElementById("imgClose");
+  const iScrim    = document.getElementById("iscrim");
+  const iModal    = document.getElementById("imodal");
+  const imgClose  = document.getElementById("imgClose");
   const imgStream = document.getElementById("imgStream");
 
-  let _lightbox = { images: [], index: 0, provName: "", provDesc: "" };
+  let _lightbox = { index: 0 };
   let _obs = null;
 
   /* -----------------------------------------
-     UTIL: Normalisasi slides dari berbagai bentuk data
-     - Prioritas: prov.slides (hasil dari JSON per-budaya)
-       item boleh {cover|featuredImage|images[0], title|name, desc|description}
-     - Fallback: featuredImage + images (lama)
+     Normalisasi slides per-budaya:
+     item boleh {cover|featuredImage|images[0]|image, title|name, desc|description,
+                 category, images[], youtubeLink}
   ----------------------------------------- */
   function getSlidesOf(prov) {
     if (Array.isArray(prov.slides) && prov.slides.length) {
       return prov.slides
-        .map((s) => ({
-          cover:
+        .map((s) => {
+          const images =
+            Array.isArray(s.images) && s.images.length
+              ? s.images.filter(Boolean)
+              : (s.image ? [s.image] : []);
+          // cover prioritas, lalu featuredImage, lalu images[0]
+          const cover =
             s.cover ||
             s.featuredImage ||
-            (Array.isArray(s.images) ? s.images[0] : s.image) ||
-            "",
-          title: s.title || s.name || prov.id,
-          desc: s.desc || s.description || prov.desc || "",
-        }))
+            (images.length ? images[0] : "") ||
+            "";
+
+          return {
+            cover,
+            title    : s.title || s.name || prov.id,
+            desc     : s.desc  || s.description || prov.desc || "",
+            category : s.category || s.kategori || "",
+            images,
+            youtube  : s.youtubeLink || s.youtube || s.yt || "",
+            province : prov.id,
+          };
+        })
         .filter((s) => !!s.cover);
     }
 
+    // fallback lama (pakai featuredImage + images level provinsi)
     const imgs = [];
     if (prov.featuredImage) imgs.push(prov.featuredImage);
     if (Array.isArray(prov.images)) imgs.push(...prov.images);
 
     return imgs.map((src) => ({
-      cover: src,
-      title: prov.id,
-      desc: prov.desc || "",
+      cover   : src,
+      title   : prov.id,
+      desc    : prov.desc || "",
+      category: "",
+      images  : [src],
+      youtube : "",
+      province: prov.id,
     }));
   }
 
@@ -72,7 +89,6 @@ export function initSidebar({ assets }) {
     const slides = getSlidesOf(prov);
     sbGallery.innerHTML = "";
 
-    // helper: set kartu aktif (border emas)
     const setActiveCard = (idx) => {
       sbGallery.querySelectorAll(".nox-card").forEach((el, i) => {
         el.classList.toggle("is-active", i === idx);
@@ -96,14 +112,10 @@ export function initSidebar({ assets }) {
 
       const content = document.createElement("div");
       content.className = "nox-card__content";
-
       const sub = document.createElement("div");
-      sub.className = "nox-sub";
-      sub.textContent = "BUDAYA & WARISAN";
-
+      sub.className = "nox-sub"; sub.textContent = "BUDAYA & WARISAN";
       const ttl = document.createElement("div");
-      ttl.className = "nox-title";
-      ttl.textContent = (s.title || prov.id).toUpperCase();
+      ttl.className = "nox-title"; ttl.textContent = (s.title || prov.id).toUpperCase();
 
       content.append(sub, ttl);
       card.append(bg, content);
@@ -119,7 +131,7 @@ export function initSidebar({ assets }) {
     sbTitle.textContent = prov.id;
     sbSubtitle.textContent = "Budaya & Warisan • " + prov.id;
 
-    // hero (klik buat buka lightbox)
+    // hero (klik => buka lightbox)
     if (slides.length) {
       sbHero.src = slides[0].cover;
       sbHero.style.display = "block";
@@ -134,7 +146,7 @@ export function initSidebar({ assets }) {
       sbHero.onclick = null;
     }
 
-    // desc + youtube (desc umum prov; detail per slide ada di lightbox)
+    // desc + youtube
     sbDesc.textContent = prov.desc || "";
     if (prov.linkYt) {
       sbYoutube.href = prov.linkYt;
@@ -143,7 +155,6 @@ export function initSidebar({ assets }) {
       sbYoutube.style.display = "none";
     }
 
-    // gallery + chips
     renderGallery(prov);
     renderChips(prov);
 
@@ -181,18 +192,43 @@ export function initSidebar({ assets }) {
   /* ---------- Lightbox (LoL-like, vertical stream) ---------- */
   const pad = (n) => String(n).padStart(2, "0");
 
-  function buildSlide({ src, i, total, title, desc }) {
+  // helper swap: ganti gambar utama dalam 1 slide
+  function swapImageInSlide(slideEl, newIdx) {
+    try {
+      const photos = JSON.parse(slideEl.dataset.photos || "[]");
+      if (!photos.length) return;
+      const idx = Math.max(0, Math.min(newIdx, photos.length - 1));
+      const img = slideEl.querySelector(".img-wrap img");
+      if (img) img.src = photos[idx];
+
+      // update active state pada thumbs
+      slideEl.querySelectorAll(".img-thumbs .thumb").forEach((b, i) => {
+        b.classList.toggle("is-active", i === idx);
+      });
+
+      slideEl.dataset.current = String(idx);
+    } catch (e) {
+      // ignore
+    }
+  }
+
+  // build 1 SLIDE per item (thumbs menukar gambar di slide yang sama)
+  function buildSlide({
+    i, total, title, desc, category, province, youtube, thumbs = []
+  }) {
     const slide = document.createElement("article");
     slide.className = "slide";
     slide.dataset.index = i;
+    slide.dataset.photos = JSON.stringify(thumbs);
+    slide.dataset.current = "0";
 
-    // kiri: gambar + tombol nav
+    // kiri: gambar (pakai thumbs[0]) + tombol nav antar-ITEM (bukan antar-foto)
     const wrap = document.createElement("div");
     wrap.className = "img-wrap";
 
     const img = document.createElement("img");
-    img.src = src;
-    img.alt = title;
+    img.src = thumbs[0] || "";
+    img.alt = title || "";
     wrap.appendChild(img);
 
     if (i > 0) {
@@ -212,14 +248,40 @@ export function initSidebar({ assets }) {
       wrap.appendChild(next);
     }
 
-    // kanan: meta
+    // kanan: meta + thumbs
     const meta = document.createElement("aside");
     meta.className = "img-meta";
+
+    const locLine = province || "BUDAYA & WARISAN";
+    const chips = [
+      category ? `<span class="pill">${category}</span>` : "",
+      thumbs.length > 1 ? `<span class="pill ghost">${thumbs.length} Foto</span>` : "",
+    ].join("");
+
+    const thumbsHtml = thumbs.length > 1
+      ? `<div class="img-thumbs" role="list" aria-label="Foto terkait">
+           ${thumbs.map((t,ti)=>
+             `<button class="thumb ${ti===0?"is-active":""}"
+                      data-pidx="${ti}" aria-label="Foto ${ti+1}">
+                <img src="${t}" alt="" loading="lazy" />
+              </button>`).join("")}
+         </div>`
+      : "";
+
     meta.innerHTML = `
       <div class="img-count">${pad(i + 1)} / ${pad(total)}</div>
       <h3 class="img-title">${(title || "").toUpperCase()}</h3>
-      <div class="img-sub">BUDAYA &amp; WARISAN</div>
+      <div class="img-sub">${locLine}</div>
+      <div class="img-chips">${chips}</div>
       <p class="img-desc">${desc || ""}</p>
+      ${thumbsHtml}
+      ${
+        youtube
+          ? `<div class="img-actions">
+               <a class="btn yt" href="${youtube}" target="_blank" rel="noopener">Tonton Video</a>
+             </div>`
+          : ""
+      }
     `;
 
     slide.appendChild(wrap);
@@ -228,26 +290,30 @@ export function initSidebar({ assets }) {
   }
 
   function openLightbox(prov, startIndex = 0) {
-    const slides = getSlidesOf(prov);
-    if (!slides.length) return;
+    const items = getSlidesOf(prov);
+    if (!items.length) return;
 
-    _lightbox = {
-      images: slides.map((s) => s.cover),
-      index: Math.max(0, Math.min(startIndex, slides.length - 1)),
-      provName: prov.id,
-      provDesc: prov.desc || "",
-    };
+    _lightbox.index = Math.max(0, Math.min(startIndex, items.length - 1));
 
-    // bangun stream vertikal — pakai meta per slide
+    // build stream: 1 item = 1 slide, thumbs = images (dedup cover + images)
     imgStream.innerHTML = "";
-    slides.forEach((s, i) => {
+    const total = items.length;
+
+    items.forEach((s, i) => {
+      const base = [];
+      if (s.cover) base.push(s.cover);
+      if (Array.isArray(s.images)) {
+        for (const x of s.images) if (x && !base.includes(x)) base.push(x);
+      }
       imgStream.appendChild(
         buildSlide({
-          src: s.cover,
-          i,
-          total: slides.length,
-          title: s.title || prov.id,
-          desc: s.desc ?? prov.desc ?? "",
+          i, total,
+          title : s.title || prov.id,
+          desc  : s.desc ?? prov.desc ?? "",
+          category: s.category || "",
+          province: s.province || prov.id,
+          youtube : s.youtube || "",
+          thumbs  : base.length ? base : [s.cover],
         })
       );
     });
@@ -301,15 +367,23 @@ export function initSidebar({ assets }) {
     iScrim.classList.remove("active");
     iModal.classList.remove("active");
     document.removeEventListener("keydown", onKey);
-    if (_obs) {
-      _obs.disconnect();
-      _obs = null;
-    }
+    if (_obs) { _obs.disconnect(); _obs = null; }
   }
 
-  // bindings modal
+  // bindings
   iScrim.addEventListener("click", closeLightbox);
   imgClose.addEventListener("click", closeLightbox);
+
+  // delegasi klik thumbnail → ganti gambar pada slide yang sama
+  document.addEventListener("click", (e) => {
+    const t = e.target.closest(".img-thumbs .thumb");
+    if (!t) return;
+    const slide = t.closest(".slide");
+    if (!slide) return;
+    const idx = Number(t.getAttribute("data-pidx"));
+    if (!Number.isFinite(idx)) return;
+    swapImageInSlide(slide, idx);
+  });
 
   // API
   return {
@@ -319,3 +393,4 @@ export function initSidebar({ assets }) {
     backdropEl: backdrop,
   };
 }
+  

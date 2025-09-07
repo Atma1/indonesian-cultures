@@ -14,6 +14,14 @@ import { initOnboarding } from "./ui/onboarding.js";
 import { addCloudsLayer } from "./effects/clouds.js";
 import { registerGlobalHotkeys } from "./utils/hotkeys.js";
 import { initGame } from "./ui/game.js";
+import { registerSubscriptionUI } from "./ui/subscription.js";
+import "./ui/events.js";
+
+
+registerSubscriptionUI(); // inisialisasi sekali
+
+window.openEvents();
+
 
 /* ====== LEAFLET ====== */
 const H = 1365,

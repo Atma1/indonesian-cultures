@@ -33,7 +33,7 @@ export function buildDefaultDockItems({ showModal, toastEl }) {
       icon: "assets/menus/dashboard.png",
       action: () => {
         window.open(
-          "https://push-indonesia.vercel.app/premium",
+          "https://push-indonesia.vercel.app/dashboard",
           "_blank",
           "noopener,noreferrer"
         );

@@ -171,7 +171,7 @@
       </div>
     </section>
 
-    <!-- Subscription -->
+    <!-- Subscription (FULL) -->
     <div id="sscrim" class="sscrim" aria-hidden="true"></div>
     <section
       id="smodal"
@@ -185,25 +185,45 @@
         <div class="stitle" id="stitle">
           Choose Your Plan <span class="sbadge">New 2025</span>
         </div>
-        <div class="sbill">
-          <span>Monthly</span>
-          <div
-            id="billSwitch"
-            class="switch"
-            role="switch"
-            aria-label="Billing Period"
-            aria-checked="false"
-            tabindex="0"
+
+        <!-- Segmented control 3 periode (hapus switch lama) -->
+        <div
+          class="sbill"
+          role="tablist"
+          aria-label="Billing Period"
+          id="billTabs"
+        >
+          <button
+            class="seg active"
+            role="tab"
+            aria-selected="true"
+            data-period="weekly"
           >
-            <div class="knob"></div>
-          </div>
-          <span
-            >Yearly
-            <span style="color: #e9d596; font-weight: 800">–20%</span></span
+            Weekly
+          </button>
+          <button
+            class="seg"
+            role="tab"
+            aria-selected="false"
+            data-period="monthly"
           >
+            Monthly
+          </button>
+          <button
+            class="seg"
+            role="tab"
+            aria-selected="false"
+            data-period="yearly"
+          >
+            Yearly <span style="color: #e9d596; font-weight: 800">–20%</span>
+          </button>
         </div>
       </header>
-      <div class="sbody"><div class="grid" id="planGrid"></div></div>
+
+      <div class="sbody">
+        <div class="grid" id="planGrid"></div>
+      </div>
+
       <footer class="sfoot">
         <button class="btn" id="scloseBtn">Close (Esc)</button>
         <div class="snote">

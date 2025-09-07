@@ -1955,3 +1955,41 @@ body {
     max-height: 40vh;
   }
 }
+
+/* ======== SUBSCRIPTION ======== */
+.sbill { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
+.sbill .seg {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  padding:.45rem .8rem; border-radius:999px; font-weight:700;
+  transition: .15s; cursor:pointer;
+}
+.sbill .seg:hover { transform: translateY(-1px); }
+.sbill .seg.active {
+  background:#1b2a38; border-color:#e9d596; box-shadow:0 0 0 1px #e9d59622 inset;
+}
+
+.sbody .grid {
+  display:grid; gap:16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.card.plan {
+  background: rgba(12,21,29,.8);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px; padding:16px;
+}
+.card.plan.featured { border-color:#e9d59666; box-shadow:0 0 0 1px #e9d59622 inset; }
+.plan-head { display:flex; align-items:baseline; gap:.5rem; justify-content:space-between; }
+.plan-name { font-weight:900; letter-spacing:.3px; }
+.plan-tag { color:#8aa0bb; font-size:.9rem; }
+.badge { background:#2a3a22; color:#e9d596; padding:.1rem .5rem; border-radius:999px; font-size:.75rem; }
+.plan-price { font-size:1.8rem; font-weight:900; margin:.5rem 0; }
+.plan-price small { font-size:.9rem; color:#8aa0bb; margin-left:.25rem; }
+.plan-sub { color:#cbd5e1; font-size:.9rem; margin-bottom:.5rem; }
+.plan-list { color:#cbd5e1; display:grid; gap:.25rem; margin:0 0 .75rem 0; padding:0; list-style:none; }
+.plan-cta { display:grid; gap:.35rem; }
+.tiny-note { color:#8aa0bb; font-size:.8rem; }
+.btn.gold { background: linear-gradient(180deg,#e9d596,#c8aa6e); color:#0c151d; font-weight:900; }
+.toast { opacity:0; transition:.25s; }
+.toast.show { opacity:1; }
+

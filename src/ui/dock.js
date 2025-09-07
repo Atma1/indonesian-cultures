@@ -32,14 +32,11 @@ export function buildDefaultDockItems({ showModal, toastEl }) {
       label: "Dashboard",
       icon: "assets/menus/dashboard.png",
       action: () => {
-        if (!toastEl) return;
-        toastEl.textContent = "Dashboard masih dalam pengembangan";
-        toastEl.style.opacity = "1";
-        toastEl.style.transform = "translateX(-50%) translateY(0)";
-        setTimeout(() => {
-          toastEl.style.opacity = "0";
-          toastEl.style.transform = "translateX(-50%) translateY(16px)";
-        }, 2000);
+        window.open(
+          "https://push-indonesia.vercel.app/premium",
+          "_blank",
+          "noopener,noreferrer"
+        );
       },
     },
     {

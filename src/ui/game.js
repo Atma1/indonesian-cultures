@@ -37,7 +37,8 @@ export function initGame() {
     const uniques = [];
     by.forEach((list) => {
       const set = new Set(list.map((x) => x.provId));
-      if (set.size === 1) uniques.push({ name: list[0].name, provId: list[0].provId });
+      if (set.size === 1)
+        uniques.push({ name: list[0].name, provId: list[0].provId });
     });
     return uniques;
   }
@@ -114,7 +115,9 @@ export function initGame() {
     answersEl.innerHTML = q.options
       .map(
         (opt, i) =>
-          `<button type="button" class="ans" data-value="${opt}">${i + 1}. ${opt}</button>`
+          `<button type="button" class="ans" data-value="${opt}">${
+            i + 1
+          }. ${opt}</button>`
       )
       .join("");
 

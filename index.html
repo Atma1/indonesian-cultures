@@ -30,21 +30,52 @@
       <div class="onboard-inner">
         <div class="ob-subtitle">Explore &amp; Discover</div>
         <h1 id="obTitle">PUSH</h1>
-        <svg class="onboard-rule" viewBox="0 0 622 23" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg
+          class="onboard-rule"
+          viewBox="0 0 622 23"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
           <defs>
-            <linearGradient id="splash-gold" gradientUnits="userSpaceOnUse" x1="0" y1="1" x2="622" y2="1">
+            <linearGradient
+              id="splash-gold"
+              gradientUnits="userSpaceOnUse"
+              x1="0"
+              y1="1"
+              x2="622"
+              y2="1"
+            >
               <stop offset="0.05" stop-color="#785A28" stop-opacity="0" />
               <stop offset="0.50" stop-color="#C8AA6E" />
               <stop offset="0.95" stop-color="#785A28" stop-opacity="0" />
             </linearGradient>
           </defs>
-          <polyline id="ruleMain" points="622,1 332.6,1 331.4,1 311.2,21.1 290.9,1 276.8,1 0,1"
-            stroke="url(#splash-gold)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <polyline id="ruleSub" points="395,1 389.6,6.4 317.7,6.4 310.8,12.7 303.8,6.4 232,6.4 227,1.4"
-            stroke="#C8AA6E" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline
+            id="ruleMain"
+            points="622,1 332.6,1 331.4,1 311.2,21.1 290.9,1 276.8,1 0,1"
+            stroke="url(#splash-gold)"
+            stroke-width="2"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <polyline
+            id="ruleSub"
+            points="395,1 389.6,6.4 317.7,6.4 310.8,12.7 303.8,6.4 232,6.4 227,1.4"
+            stroke="#C8AA6E"
+            stroke-width="1.5"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
         </svg>
-        <p>Platform for Upholding Socio-cultural Heritage: Bridging Generations to Preserve Our Cultural Legacy</p>
-        <button id="btnExplore" class="cta"><span class="cta-label">BEGIN EXPLORE</span></button>
+        <p>
+          Platform for Upholding Socio-cultural Heritage: Bridging Generations
+          to Preserve Our Cultural Legacy
+        </p>
+        <button id="btnExplore" class="cta">
+          <span class="cta-label">BEGIN EXPLORE</span>
+        </button>
       </div>
     </div>
 
@@ -55,7 +86,9 @@
         <img id="sbIcon" alt="" />
         <div>
           <h2 id="sbTitle">Provinsi</h2>
-          <div id="sbSubtitle" style="font: 12px/1.2 system-ui; color: #8aa0bb">Budaya & Warisan</div>
+          <div id="sbSubtitle" style="font: 12px/1.2 system-ui; color: #8aa0bb">
+            Budaya & Warisan
+          </div>
         </div>
       </div>
 
@@ -66,7 +99,14 @@
 
       <div class="sb-desc">
         <p id="sbDesc"></p>
-        <a id="sbYoutube" class="yt-link" href="#" target="_blank" rel="noopener" style="display:none;">
+        <a
+          id="sbYoutube"
+          class="yt-link"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          style="display: none"
+        >
           🎥 Tonton di YouTube
         </a>
       </div>
@@ -76,7 +116,9 @@
 
       <!-- chips budaya (logic lama tetap) -->
       <div class="sb-list" id="sbList"></div>
-      <div class="sb-footer">Klik overlay untuk menutup • Scroll daftar untuk eksplor</div>
+      <div class="sb-footer">
+        Klik overlay untuk menutup • Scroll daftar untuk eksplor
+      </div>
     </aside>
 
     <!-- Dock -->
@@ -90,60 +132,145 @@
     <!-- Controls/Hints -->
     <div class="music-btn" id="musicBtn">🎵 BG Music: OFF</div>
     <div class="hint">
-      ☁️ Awan • Hover ikon = SFX • Scroll zoom mulus • Klik ikon = Zoom offset + Sidebar • Tekan <b>M</b> untuk musik
+      ☁️ Awan • Hover ikon = SFX • Scroll zoom mulus • Klik ikon = Zoom offset +
+      Sidebar • Tekan <b>M</b> untuk musik
     </div>
 
     <!-- Quick Search -->
     <div id="qscrim" class="qscrim" aria-hidden="true"></div>
-    <section id="qmodal" class="qmodal" role="dialog" aria-modal="true" aria-labelledby="qtitle" aria-hidden="true">
+    <section
+      id="qmodal"
+      class="qmodal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="qtitle"
+      aria-hidden="true"
+    >
       <div class="qrow">
-        <input id="qinput" class="qinput" type="search"
-          placeholder="Cari fitur cepat… (contoh: Dashboard, Game, Bakar Batu, Papeda)" autocomplete="off"/>
+        <input
+          id="qinput"
+          class="qinput"
+          type="search"
+          placeholder="Cari fitur cepat… (contoh: Dashboard, Game, Bakar Batu, Papeda)"
+          autocomplete="off"
+        />
         <div class="qk">ESC</div>
       </div>
-      <div id="qlist" class="qlist" role="listbox" aria-label="Hasil pencarian"></div>
+      <div
+        id="qlist"
+        class="qlist"
+        role="listbox"
+        aria-label="Hasil pencarian"
+      ></div>
       <div class="qfoot">
-        <div class="qkbd"><span>Navigasi:</span><kbd>↑</kbd><kbd>↓</kbd><span>&nbsp;•&nbsp;Pilih:</span><kbd>Enter</kbd></div>
+        <div class="qkbd">
+          <span>Navigasi:</span><kbd>↑</kbd><kbd>↓</kbd
+          ><span>&nbsp;•&nbsp;Pilih:</span><kbd>Enter</kbd>
+        </div>
         <div>Tip: Ketik untuk memfilter • Hasil realtime</div>
       </div>
     </section>
 
-    <!-- Subscription -->
+    <!-- Subscription (FULL) -->
     <div id="sscrim" class="sscrim" aria-hidden="true"></div>
-    <section id="smodal" class="smodal" role="dialog" aria-modal="true" aria-labelledby="stitle" aria-hidden="true">
+    <section
+      id="smodal"
+      class="smodal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="stitle"
+      aria-hidden="true"
+    >
       <header class="shead">
-        <div class="stitle" id="stitle">Choose Your Plan <span class="sbadge">New 2025</span></div>
-        <div class="sbill">
-          <span>Monthly</span>
-          <div id="billSwitch" class="switch" role="switch" aria-label="Billing Period" aria-checked="false" tabindex="0">
-            <div class="knob"></div>
-          </div>
-          <span>Yearly <span style="color: #e9d596; font-weight: 800">–20%</span></span>
+        <div class="stitle" id="stitle">
+          Choose Your Plan <span class="sbadge">New 2025</span>
+        </div>
+
+        <!-- Segmented control 3 periode (hapus switch lama) -->
+        <div
+          class="sbill"
+          role="tablist"
+          aria-label="Billing Period"
+          id="billTabs"
+        >
+          <button
+            class="seg active"
+            role="tab"
+            aria-selected="true"
+            data-period="weekly"
+          >
+            Weekly
+          </button>
+          <button
+            class="seg"
+            role="tab"
+            aria-selected="false"
+            data-period="monthly"
+          >
+            Monthly
+          </button>
+          <button
+            class="seg"
+            role="tab"
+            aria-selected="false"
+            data-period="yearly"
+          >
+            Yearly <span style="color: #e9d596; font-weight: 800">–20%</span>
+          </button>
         </div>
       </header>
-      <div class="sbody"><div class="grid" id="planGrid"></div></div>
+
+      <div class="sbody">
+        <div class="grid" id="planGrid"></div>
+      </div>
+
       <footer class="sfoot">
         <button class="btn" id="scloseBtn">Close (Esc)</button>
-        <div class="snote">Harga dapat berubah sewaktu-waktu. Pajak/biaya lain mengikuti kebijakan wilayah.</div>
+        <div class="snote">
+          Harga dapat berubah sewaktu-waktu. Pajak/biaya lain mengikuti
+          kebijakan wilayah.
+        </div>
       </footer>
     </section>
 
     <!-- Profile -->
     <div id="pscrim" class="pscrim" aria-hidden="true"></div>
-    <section id="pmodal" class="pmodal" role="dialog" aria-modal="true" aria-labelledby="ptitle" aria-hidden="true">
+    <section
+      id="pmodal"
+      class="pmodal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="ptitle"
+      aria-hidden="true"
+    >
       <header class="phead">
         <div class="pheadL">
           <div class="pname" id="ptitle">User Profile</div>
-          <div class="pmeta" id="pmeta">Kelola foto, nama tampilan, dan email</div>
+          <div class="pmeta" id="pmeta">
+            Kelola foto, nama tampilan, dan email
+          </div>
         </div>
-        <div class="pheadR"><button id="pCloseX" class="btn" type="button" aria-label="Close">Close</button></div>
+        <div class="pheadR">
+          <button id="pCloseX" class="btn" type="button" aria-label="Close">
+            Close
+          </button>
+        </div>
       </header>
       <div class="pbody">
         <div class="pcol sticky">
-          <label for="pAvatarFile" class="avatar-drop" id="avatarDrop" tabindex="0" aria-label="Unggah foto profil">
+          <label
+            for="pAvatarFile"
+            class="avatar-drop"
+            id="avatarDrop"
+            tabindex="0"
+            aria-label="Unggah foto profil"
+          >
             <img id="pAvatar" class="avatar-preview" alt="Preview avatar" />
             <div id="pAvatarInitials" class="avatar-initials">UP</div>
-            <div class="avatar-hint"><b>Klik / seret foto</b> ke area ini<br />PNG/JPG • Rasio 1:1 disarankan</div>
+            <div class="avatar-hint">
+              <b>Klik / seret foto</b> ke area ini<br />PNG/JPG • Rasio 1:1
+              disarankan
+            </div>
           </label>
           <div class="avatar-actions">
             <label class="btn gold" for="pAvatarFile">Upload</label>
@@ -154,30 +281,60 @@
           <div class="fstack">
             <div class="fgroup">
               <label class="flabel" for="pName">Display Name</label>
-              <input id="pName" class="input" type="text" placeholder="Nama tampilan" maxlength="40"/>
-              <div class="helper" id="nameHelp">Muncul pada sidebar dan konten yang kamu buat.</div>
+              <input
+                id="pName"
+                class="input"
+                type="text"
+                placeholder="Nama tampilan"
+                maxlength="40"
+              />
+              <div class="helper" id="nameHelp">
+                Muncul pada sidebar dan konten yang kamu buat.
+              </div>
             </div>
             <div class="fgroup">
               <label class="flabel" for="pEmail">Email</label>
-              <input id="pEmail" class="input" type="email" placeholder="nama@domain.com" inputmode="email" autocomplete="email"/>
-              <div class="helper" id="emailHelp">Kami tidak akan membagikan email kamu.</div>
+              <input
+                id="pEmail"
+                class="input"
+                type="email"
+                placeholder="nama@domain.com"
+                inputmode="email"
+                autocomplete="email"
+              />
+              <div class="helper" id="emailHelp">
+                Kami tidak akan membagikan email kamu.
+              </div>
             </div>
           </div>
         </div>
       </div>
       <footer class="pfoot">
-        <button id="pReset" class="btn danger" type="button">Reset to Defaults</button>
+        <button id="pReset" class="btn danger" type="button">
+          Reset to Defaults
+        </button>
         <button id="pSave" class="btn gold" type="button">Save Changes</button>
       </footer>
     </section>
 
     <!-- Game -->
     <div id="gscrim" class="gscrim" aria-hidden="true"></div>
-    <section id="gmodal" class="gmodal" role="dialog" aria-modal="true" aria-labelledby="gtitle" aria-hidden="true">
+    <section
+      id="gmodal"
+      class="gmodal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="gtitle"
+      aria-hidden="true"
+    >
       <div class="confetti" id="gconfetti"></div>
       <header class="ghead">
         <div class="gtitle" id="gtitle">Mini Game: Tebak Budaya Papua</div>
-        <div class="gstats"><div class="pill" id="gRound">Round 1/5</div><div class="pill" id="gScore">Score: 0</div><div class="pill" id="gStreak">Streak: 0</div></div>
+        <div class="gstats">
+          <div class="pill" id="gRound">Round 1/5</div>
+          <div class="pill" id="gScore">Score: 0</div>
+          <div class="pill" id="gStreak">Streak: 0</div>
+        </div>
       </header>
       <div class="gbody">
         <article class="gq" id="gQuestion">
@@ -186,9 +343,20 @@
           <div class="answers" id="answers"></div>
         </article>
         <aside>
-          <div class="hintbox"><h4>Petunjuk</h4><p id="gHint">Budaya khas yang ditanyakan berasal dari salah satu provinsi di peta…</p></div>
+          <div class="hintbox">
+            <h4>Petunjuk</h4>
+            <p id="gHint">
+              Budaya khas yang ditanyakan berasal dari salah satu provinsi di
+              peta…
+            </p>
+          </div>
           <div style="height: 12px"></div>
-          <div class="hintbox"><h4>Kendali</h4><p class="gcaps">Klik jawaban • Atau tekan <b>1–4</b> • Enter untuk Next</p></div>
+          <div class="hintbox">
+            <h4>Kendali</h4>
+            <p class="gcaps">
+              Klik jawaban • Atau tekan <b>1–4</b> • Enter untuk Next
+            </p>
+          </div>
         </aside>
       </div>
       <footer class="gfoot">
@@ -200,24 +368,51 @@
 
     <!-- Event -->
     <div id="escrim" class="gscrim" aria-hidden="true"></div>
-    <section id="emodal" class="gmodal" role="dialog" aria-modal="true" aria-labelledby="etitle" aria-hidden="true">
-      <header class="ghead"><div class="gtitle" id="etitle">Event Budaya Terbaru</div><div class="gstats"><div class="pill">Beta</div></div></header>
+    <section
+      id="emodal"
+      class="gmodal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="etitle"
+      aria-hidden="true"
+    >
+      <header class="ghead">
+        <div class="gtitle" id="etitle">Event Budaya Terbaru</div>
+        <div class="gstats"><div class="pill">Beta</div></div>
+      </header>
       <div class="gbody">
-        <article class="gq"><h3>Segera Hadir</h3><p>Daftar agenda budaya akan tampil di sini.</p></article>
-        <aside><div class="hintbox"><h4>Info</h4><p>Hubungkan API/event.json untuk isi otomatis.</p></div></aside>
+        <article class="gq">
+          <h3>Segera Hadir</h3>
+          <p>Daftar agenda budaya akan tampil di sini.</p>
+        </article>
+        <aside>
+          <div class="hintbox">
+            <h4>Info</h4>
+            <p>Hubungkan API/event.json untuk isi otomatis.</p>
+          </div>
+        </aside>
       </div>
-      <footer class="gfoot"><button id="eCloseBtn" class="gbtn" type="button">Close</button></footer>
+      <footer class="gfoot">
+        <button id="eCloseBtn" class="gbtn" type="button">Close</button>
+      </footer>
     </section>
 
     <div id="iscrim" class="imgscrim" aria-hidden="true"></div>
-    <section id="imodal" class="imgmodal" role="dialog" aria-modal="true" aria-labelledby="imgTitle" aria-hidden="true">
+    <section
+      id="imodal"
+      class="imgmodal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="imgTitle"
+      aria-hidden="true"
+    >
       <button class="img-close" id="imgClose" aria-label="Close">✕</button>
       <div id="imgStream" class="img-stream" aria-live="polite"></div>
     </section>
-    
 
-
-    <div id="toast" class="toast" role="status" aria-live="polite">Tersimpan</div>
+    <div id="toast" class="toast" role="status" aria-live="polite">
+      Tersimpan
+    </div>
 
     <!-- CDN -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

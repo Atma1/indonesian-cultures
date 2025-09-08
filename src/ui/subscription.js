@@ -32,7 +32,11 @@ const PLANS = {
   free: {
     name: "Free",
     tagline: "Coba dulu versi gratis",
-    features: ["Peta dasar & beberapa ikon", "Sidebar dasar", "Tanpa event premium"],
+    features: [
+      "Peta dasar & beberapa ikon",
+      "Sidebar dasar",
+      "Tanpa event premium",
+    ],
   },
 };
 
@@ -73,7 +77,9 @@ function renderPlans(period = "monthly") {
         <div class="plan-tag">${PLANS.free.tagline}</div>
       </div>
       <div class="plan-price"><span>Rp 0</span><small>${suffix}</small></div>
-      <ul class="plan-list">${PLANS.free.features.map((f) => `<li>• ${f}</li>`).join("")}</ul>
+      <ul class="plan-list">${PLANS.free.features
+        .map((f) => `<li>• ${f}</li>`)
+        .join("")}</ul>
       <div class="plan-cta">
         <button type="button" class="btn" data-action="try-free">Mulai Gratis</button>
       </div>
@@ -93,9 +99,15 @@ function renderPlans(period = "monthly") {
         <span>${currency(priceNum)}</span><small>${suffix}</small>
       </div>
       <div class="plan-sub">
-        ${p.trialDays ? `Termasuk uji coba <b>${p.trialDays} hari</b>. Batalkan kapan saja.` : ``}
+        ${
+          p.trialDays
+            ? `Termasuk uji coba <b>${p.trialDays} hari</b>. Batalkan kapan saja.`
+            : ``
+        }
       </div>
-      <ul class="plan-list">${p.features.map((f) => `<li>• ${f}</li>`).join("")}</ul>
+      <ul class="plan-list">${p.features
+        .map((f) => `<li>• ${f}</li>`)
+        .join("")}</ul>
       <div class="plan-cta">
         <button type="button" class="btn gold" data-buy="premium" data-period="${period}">
           Beli Premium
@@ -108,21 +120,79 @@ function renderPlans(period = "monthly") {
   planGrid.innerHTML = free + premium;
 
   // Try Free
-  planGrid.querySelector('[data-action="try-free"]')?.addEventListener("click", () => {
-    closeSubscription();
-    showToast("Mode Free diaktifkan");
-  });
+  planGrid
+    .querySelector('[data-action="try-free"]')
+    ?.addEventListener("click", () => {
+      closeSubscription();
+      showToast("Mode Free diaktifkan");
+    });
 
   // Beli
   planGrid.querySelectorAll("[data-buy]").forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", async () => {
       const plan = btn.getAttribute("data-buy");
       const per = btn.getAttribute("data-period");
-      // === GANTI dengan alur pembayaran kamu ===
-      const checkoutUrl = `/checkout?plan=${encodeURIComponent(plan)}&period=${encodeURIComponent(per)}`;
-      console.log("Checkout URL:", checkoutUrl);
-      showToast("Mengarahkan ke pembayaran…");
-      // window.location.href = checkoutUrl;
+
+      try {
+        const price =
+          plan === "premium" && per === "weekly"
+            ? 25000
+            : plan === "premium" && per === "monthly"
+            ? 75000
+            : plan === "premium" && per === "yearly"
+            ? 75000 * 12 * 0.8
+            : 0;
+
+        const res = await fetch(
+          "https://push-indonesia.vercel.app/api/transactions",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              transaction_details: { gross_amount: price },
+              item_details: [
+                { id: plan, price, quantity: 1, name: `${plan} (${per})` },
+              ],
+              payment_type: "subscription",
+            }),
+          }
+        );
+
+        const data = await res.json();
+
+        if (data.data?.token) {
+          showToast("Membuka pembayaran…");
+          try {
+            window.snap.pay(data.data.token, {
+              onSuccess: (result) => {
+                console.log("Success:", result);
+                showToast("Pembayaran berhasil!");
+              },
+              onPending: (result) => {
+                console.log("Pending:", result);
+                showToast("Pembayaran tertunda…");
+              },
+              onError: (result) => {
+                console.error("Error:", result);
+                showToast("Terjadi error pada pembayaran");
+              },
+              onClose: () => {
+                console.warn("User menutup popup");
+                showToast("Pembayaran dibatalkan");
+              },
+            });
+          } catch (snapErr) {
+            console.error("Snap error:", snapErr);
+            showToast("Tidak bisa membuka Snap");
+          }
+        } else {
+          showToast("Gagal membuat transaksi");
+          console.error("API response:", data);
+        }
+      } catch (err) {
+        console.error("Fetch error:", err);
+        showToast("Terjadi error saat menghubungi server");
+      }
     });
   });
 }
@@ -160,7 +230,9 @@ export function registerSubscriptionUI() {
 
   // Default tab safety (jaga-jaga bila HTML tak set .active)
   if (billTabs && !billTabs.querySelector("button.seg.active")) {
-    billTabs.querySelector('button[data-period="monthly"]')?.classList.add("active");
+    billTabs
+      .querySelector('button[data-period="monthly"]')
+      ?.classList.add("active");
   }
 
   // 1) Pre-render sekali setelah load — FIX setelah refresh isi langsung ada
@@ -170,7 +242,8 @@ export function registerSubscriptionUI() {
   sCloseBtn?.addEventListener("click", closeSubscription);
   sScrim?.addEventListener("click", closeSubscription);
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && sModal.getAttribute("aria-hidden") === "false") closeSubscription();
+    if (e.key === "Escape" && sModal.getAttribute("aria-hidden") === "false")
+      closeSubscription();
   });
 
   // 3) Segmented billing
@@ -190,7 +263,10 @@ export function registerSubscriptionUI() {
     const i = btns.findIndex((b) => b.classList.contains("active"));
     if (["ArrowRight", "ArrowLeft"].includes(e.key)) {
       e.preventDefault();
-      const next = e.key === "ArrowRight" ? (i + 1) % btns.length : (i - 1 + btns.length) % btns.length;
+      const next =
+        e.key === "ArrowRight"
+          ? (i + 1) % btns.length
+          : (i - 1 + btns.length) % btns.length;
       btns[next].focus();
       btns[next].click();
     }

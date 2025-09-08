@@ -17,11 +17,9 @@ import { initGame } from "./ui/game.js";
 import { registerSubscriptionUI } from "./ui/subscription.js";
 import "./ui/events.js";
 
-
 registerSubscriptionUI(); // inisialisasi sekali
 
 window.openEvents();
-
 
 /* ====== LEAFLET ====== */
 const H = 1365,

@@ -1,16 +1,14 @@
 // src/map/markers.js
-// Membuat marker ikon provinsi dan wiring hover/click persis seperti sebelumnya.
-
 export function addProvinceMarkers({
   map,
   provinces,
   assets,
   H,
   W,
-  onSelect, // callback saat marker selesai fly (openSidebar)
-  fadeBorder, // dari createBorders()
-  audioCtl, // modul audio (opsional, tetap aman kalau null)
-  computeOffsetCenter, // helper center offset
+  onSelect,
+  fadeBorder,
+  audioCtl,
+  computeOffsetCenter,
 }) {
   const createdMarkers = [];
 
@@ -33,13 +31,31 @@ export function addProvinceMarkers({
       riseOnHover: true,
     }).addTo(map);
 
+    // === Tooltip Label dengan animasi reveal (trend 2025) ===
+    marker.bindTooltip(
+      `<span class="label-text">${p.id}</span><span class="reveal-line"></span>`,
+      {
+        direction: "top",
+        offset: [0, -28],
+        permanent: false,
+        opacity: 1, // biar CSS yang atur opacity
+        className: "prov-label", // styling & animasi di CSS
+        sticky: true, // mengikuti cursor saat hover
+      }
+    );
+
+    let hideT;
     marker.on("mouseover", () => {
+      clearTimeout(hideT);
       fadeBorder?.(p.id, 1);
       audioCtl?.playHoverSfx?.();
+      marker.openTooltip();
     });
 
     marker.on("mouseout", () => {
       fadeBorder?.(p.id, 0);
+      clearTimeout(hideT);
+      hideT = setTimeout(() => marker.closeTooltip(), 120);
     });
 
     marker.on("click", () => {
